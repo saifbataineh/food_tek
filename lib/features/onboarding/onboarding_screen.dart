@@ -31,7 +31,7 @@ class OnboardingScreen extends StatelessWidget {
                 image: AppImageStrings.onBoadring1,
                 title: "welcome to sahlah",
                 subTitle:
-                    'enjoy a fast and smooth food delivery at your doorstep ',
+                    'enjoy a fast and smooth food delivery at your doorstep',
               ),
             ],
           ),
