@@ -16,9 +16,11 @@ class OnboardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 30,
       children: [
-        Image.asset(image),
+        Image.asset(
+          image,
+
+        ),
         Text(
           title,
           textAlign: TextAlign.center,
@@ -36,15 +38,13 @@ class OnboardingWidget extends StatelessWidget {
           ),
         ),
         Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(69),
-                gradient: LinearGradient(colors: [
-                  Color(0xff25AE4B),
-                  Color(0xff0F481F),
-                ])),
-            width: 307,
-            height: 48,
-           )
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(69),
+              gradient: LinearGradient(colors: [
+                Color(0xff25AE4B),
+                Color(0xff0F481F),
+              ])),
+        )
       ],
     );
   }

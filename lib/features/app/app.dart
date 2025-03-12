@@ -4,7 +4,7 @@ import 'package:food_tek/controller/onboarding_controller.dart';
 import 'package:food_tek/features/onboarding/onboarding_screen.dart';
 import 'package:food_tek/features/slpash_screen/splash_screen.dart';
 import 'package:food_tek/signin.dart';
- 
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -25,23 +25,11 @@ class App extends StatelessWidget {
   }
 }
 
-
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: BlocBuilder<AppCubit, OnboardingState>(
-        builder: (context, state) {
-          if (state == OnboardingState.initial) {
-            return SplashScreen();  
-          } else if (state == OnboardingState.onBoarding) {
-            return OnboardingScreen();  
-          } else {
-            return Signin();  
-          }
-        },
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
