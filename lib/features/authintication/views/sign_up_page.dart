@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
+import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/app/app.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/sign_up_form_widget.dart';
@@ -14,7 +16,7 @@ class SignUpPage extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: AppColors.mainColor,
         body: SafeArea(
             child: Container(
                 height: double.infinity,
@@ -43,6 +45,13 @@ class SignUpPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         spacing: height * 0.01,
                         children: [
+                          IconButton(
+                            onPressed: () {
+                              AppNavigatorService.pushReplacementNamed(context,
+                                  routeName: Routes.loginPage);
+                            },
+                            icon: Icon(Icons.arrow_back),
+                          ),
                           AuthHeadingWidget(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             wantedScreen: Routes.loginPage,

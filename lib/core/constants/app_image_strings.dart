@@ -10,4 +10,6 @@ class AppImageStrings {
   static const String googleLogo = 'assets/authintication/google.png';
   static const String facebookLogo = 'assets/authintication/facebook.png';
   static const String appleLogo = 'assets/authintication/apple.png';
+  static const String messageSentLogo = 'assets/authintication/message_sent_successfully.png';
+  static const String passwordUpdatedSuccessfullyLogo = 'assets/authintication/password_updated_successfully.png';
 }

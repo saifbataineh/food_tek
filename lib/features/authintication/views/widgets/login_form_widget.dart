@@ -34,7 +34,7 @@ class LoginFormWidget extends StatelessWidget {
               Spacer(),
               TextButton(
                 onPressed: () {
-                  AppNavigatorService.pushReplacementNamed(context, routeName: Routes.forgetPassPage);
+                  AppNavigatorService.pushNamed(context, routeName: Routes.forgetPassPage);
                 },
                 child: Text(
                   "Forgot Password ?",

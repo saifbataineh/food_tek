@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/routes/routes.dart';
+import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/sub_head_line_text_widget.dart';
 
 class AuthHeadingWidget extends StatelessWidget {
@@ -19,6 +20,7 @@ final CrossAxisAlignment crossAxisAlignment;
       crossAxisAlignment: crossAxisAlignment,
       spacing: 12,
       children: [
+     
         Text(
          title ,
           style: Theme.of(context).textTheme.headlineLarge,
