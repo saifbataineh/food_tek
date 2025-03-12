@@ -15,25 +15,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
+
     return Scaffold(
       body: Stack(
         children: [
-          // خلفية الشاشة العلوية
+          
           Container(
             height: 0.3 * height,
             width: width,
-            child: Image.asset(
-              fit: BoxFit.cover,
-              AppImageStrings.splashBackground,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AppImageStrings.splashBackground),
+                fit: BoxFit.cover,
+                alignment: Alignment.topCenter,
+              ),
             ),
           ),
+
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 35),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: height * 0.5,
+               
+                Expanded(
                   child: PageView(
                     onPageChanged: (value) {
                       setState(() {
@@ -43,19 +49,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     controller: pageController,
                     children: [
                       OnboardingWidget(
-                          title: "welcome to sahlah",
+                          title: "Welcome to Sahlah",
                           subTitle:
-                              "enjoy a fast and smooth food delivery at your doorstep",
+                              "Enjoy a fast and smooth food delivery at your doorstep",
                           image: AppImageStrings.onBoadring1),
                       OnboardingWidget(
-                          title: "get delivery on time",
+                          title: "Get delivery on time",
                           subTitle:
-                              "order your favorite food within the palm of your hand and the zone of your comfort",
+                              "Order your favorite food within the palm of your hand and the zone of your comfort",
                           image: AppImageStrings.onBoarding2),
                       OnboardingWidget(
-                          title: "choose your food",
+                          title: "Choose your food",
                           subTitle:
-                              "order your favorite food within the palm of your hand and the zone of your comfort",
+                              "Order your favorite food within the palm of your hand and the zone of your comfort",
                           image: AppImageStrings.onBoarding3),
                       OnboardingWidget(
                         title: "Turn On Your Location",
@@ -66,16 +72,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 50,),
-                if (currentIndex == 3) 
+
+                const SizedBox(height: 20),
+
+                 
+                if (currentIndex == 3)
                   Column(
                     children: [
                       SizedBox(
                         width: 300,
                         child: ElevatedButton(
-                          onPressed: () {
-                          
-                          },
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             padding: EdgeInsets.symmetric(vertical: 15),
@@ -90,9 +97,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       SizedBox(
                         width: 300,
                         child: OutlinedButton(
-                          onPressed: () {
-                          
-                          },
+                          onPressed: () {},
                           style: OutlinedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 15),
                             side: BorderSide(color: Colors.grey),
@@ -107,9 +112,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   )
                 else
                   SizedBox(
-                    height: 30,
+                    height: 50,
                     width: 300,
-                    
                     child: ElevatedButton(
                       onPressed: () {
                         pageController.nextPage(
@@ -126,12 +130,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 120,),
-                  SizedBox(
-                  height: height * 0.05,
-                  width: double.infinity,
-                  child: Center(
-                    child: Row(
+
+                const SizedBox(height: 50),
+
+                
+                Row(
+                  children: [
+                    /// زر "Skip"
+                    TextButton(
+                      onPressed: () {
+                        pageController.jumpToPage(3);
+                      },
+                      child: Text("Skip"),
+                    ),
+
+                    Spacer(),
+
+                    
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
                         4,
@@ -148,8 +164,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                     ),
-                  ),
+
+                    Spacer(),
+
+                     
+                    IconButton(
+                      onPressed: () {
+                        if (currentIndex < 3) {
+                          pageController.nextPage(
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.easeInOut,
+                          );
+                        }
+                      },
+                      icon: Icon(Icons.arrow_right_alt_outlined),
+                      color: Colors.green,
+                    ),
+                  ],
                 ),
+
+                const SizedBox(height: 20),
               ],
             ),
           ),
