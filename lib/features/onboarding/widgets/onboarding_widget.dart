@@ -8,10 +8,12 @@ class OnboardingWidget extends StatelessWidget {
     required this.title,
     required this.subTitle,
     required this.image,
+    this.btn,
   });
   final String title;
   final String subTitle;
   final String image;
+   final Widget? btn;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,6 @@ class OnboardingWidget extends StatelessWidget {
       children: [
         Image.asset(
           image,
-
         ),
         Text(
           title,
@@ -44,7 +45,8 @@ class OnboardingWidget extends StatelessWidget {
                 Color(0xff25AE4B),
                 Color(0xff0F481F),
               ])),
-        )
+        ),
+       // ElevatedButton(onPressed: () {}, child: Text('continue'))
       ],
     );
   }
