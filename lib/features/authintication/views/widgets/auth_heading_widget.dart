@@ -5,21 +5,28 @@ import 'package:food_tek/features/authintication/views/widgets/sub_head_line_tex
 class AuthHeadingWidget extends StatelessWidget {
   const AuthHeadingWidget({
     super.key,
+    
+    this.crossAxisAlignment=CrossAxisAlignment.center, required this.title, required this.actionText,required this.infoText, required this.wantedScreen
   });
-
+final String title;
+final String infoText;
+final String actionText;
+final String wantedScreen;
+final CrossAxisAlignment crossAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: crossAxisAlignment,
       spacing: 12,
       children: [
         Text(
-          "Login",
+         title ,
           style: Theme.of(context).textTheme.headlineLarge,
         ),
         SubHeadLineTextWidget(
-          actionText: 'Sign Up',
-          infoText: 'Don\'t have an account? ',
-          wantedScreen: Routes.signUpPage,
+          actionText: actionText,
+          infoText: infoText,
+          wantedScreen: wantedScreen,
         ),
       ],
     );

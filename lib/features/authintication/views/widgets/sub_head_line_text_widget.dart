@@ -19,7 +19,7 @@ class SubHeadLineTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    final GestureRecognizer gestureRecognizer=TapGestureRecognizer()..onTap=(){
-AppNavigatorService.pushNamed(context, routeName: wantedScreen);
+AppNavigatorService.pushReplacementNamed(context, routeName: wantedScreen);
     };
     return Text.rich(TextSpan(children: [
       TextSpan(text: infoText, style: Theme.of(context).textTheme.bodySmall),
