@@ -12,7 +12,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
         body: Stack(
       children: [
-        Container(
+        SizedBox(
           width: width,
           height: 0.3 * height,
           child: Image.asset(
