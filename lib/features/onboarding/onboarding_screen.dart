@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_tek/core/app_image_strings.dart';
+import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/features/onboarding/widgets/onboarding_widget.dart';
 
 class OnboardingScreen extends StatelessWidget {
