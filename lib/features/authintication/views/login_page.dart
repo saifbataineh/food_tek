@@ -24,54 +24,61 @@ class LoginPage extends StatelessWidget {
             image: DecorationImage(
                 image: AssetImage(AppImageStrings.splashBackground)),
           ),
-          child: Column(
-            spacing: height * 0.03,
-            children: [
-              Image(
-                image: AssetImage(AppImageStrings.appLogo),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.white,
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: height * 0.03,
+              children: [
+                Image(
+                  image: AssetImage(AppImageStrings.appLogo),
                 ),
-                height: height * 0.80,
-                width: width * 0.9,
-                padding: EdgeInsets.symmetric(horizontal: 18),
-                child: Column(
-                  spacing: 24,
-                  children: [
-                    AuthHeadingWidget(),
-                    LoginFormWidget(),
-                    Row(
-                      children: [
-                        Expanded(child: Divider()),
-                        Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            child: Text("or")),
-                        Expanded(child: Divider()),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        ContinueWithWidget(
-                          company: 'Google',
-                          image: AppImageStrings.googleLogo,
-                        ),
-                        ContinueWithWidget(
-                          company: 'Facebook',
-                          image: AppImageStrings.facebookLogo,
-                        ),
-                        ContinueWithWidget(
-                          company: 'Apple',
-                          image: AppImageStrings.appleLogo,
-                        ),
-                      ],
-                    ),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                  ),
+                  height: height * 0.80,
+                  width: width * 0.9,
+                  padding: EdgeInsets.symmetric(horizontal: 18),
+                  child: Column(
+                    spacing: 24,
+                    children: [
+                      AuthHeadingWidget(
+                        wantedScreen: Routes.signUpPage,
+                        actionText: 'Sign Up',
+                        infoText: 'Don\'t have an account? ',
+                        title: "Login",
+                      ),
+                      LoginFormWidget(),
+                      Row(
+                        children: [
+                          Expanded(child: Divider()),
+                          Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              child: Text("or")),
+                          Expanded(child: Divider()),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          ContinueWithWidget(
+                            company: 'Google',
+                            image: AppImageStrings.googleLogo,
+                          ),
+                          ContinueWithWidget(
+                            company: 'Facebook',
+                            image: AppImageStrings.facebookLogo,
+                          ),
+                          ContinueWithWidget(
+                            company: 'Apple',
+                            image: AppImageStrings.appleLogo,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

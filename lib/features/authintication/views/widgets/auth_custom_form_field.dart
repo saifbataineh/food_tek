@@ -6,11 +6,15 @@ class AuthCustomFormField extends StatelessWidget {
     required this.label,
     this.isPassword = false,
     this.hintText,
+    this.suffixIcon,
+    this.prefixIcon,
   });
 
   final String label;
   final bool isPassword;
   final String? hintText;
+  final Widget? suffixIcon;
+  final Widget? prefixIcon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,15 +26,15 @@ class AuthCustomFormField extends StatelessWidget {
         ),
         TextFormField(
           obscureText: isPassword,
+          obscuringCharacter: '*',
           style: TextStyle(),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
               horizontal: 14,
               vertical: 12.5,
             ),
-            suffixIcon: isPassword
-                ? IconButton(onPressed: () {}, icon: Icon(Icons.visibility_off))
-                : null,
+            suffixIcon: suffixIcon,
+            prefixIcon: prefixIcon,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             hintText: hintText,
           ),
