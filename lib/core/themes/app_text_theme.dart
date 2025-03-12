@@ -6,6 +6,7 @@ class AppTheme {
     style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.mainColor,
         foregroundColor: Colors.white,
+        textStyle: TextStyle(fontSize: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
   );
 
@@ -13,6 +14,10 @@ class AppTheme {
     headlineLarge: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.w700,
+        color: AppColors.headLineBlack),
+    headlineMedium: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.w400,
         color: AppColors.headLineBlack),
     headlineSmall: TextStyle(
       fontSize: 12,

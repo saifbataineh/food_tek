@@ -5,4 +5,12 @@ class AppNavigatorService {
     Navigator.pushReplacementNamed(context,routeName );
 
   }
+  static  pushNamed(BuildContext context,{required String routeName}){
+    Navigator.pushNamed(context,routeName );
+
+  }
+  static  pop(BuildContext context){
+    Navigator.pop(context);
+
+  }
 }

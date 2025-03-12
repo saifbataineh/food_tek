@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppImageStrings.splashBackground)),
+                image: AssetImage(AppImageStrings.splashBackground),),
           ),
           child: SingleChildScrollView(
             child: Column(

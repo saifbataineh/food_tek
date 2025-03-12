@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/themes/app_text_theme.dart';
+import 'package:food_tek/features/authintication/views/confirm_reset_password.dart';
 import 'package:food_tek/features/authintication/views/login_page.dart';
+import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
 class App extends StatelessWidget {
   const App({super.key});
@@ -15,7 +17,9 @@ class App extends StatelessWidget {
         initialRoute: Routes.loginPage,
         routes: {
           Routes.loginPage: (context) => LoginPage()
-          ,Routes.signUpPage: (context) => SignUpPage()
+          ,Routes.signUpPage: (context) => SignUpPage(),
+          Routes.forgetPassPage:(cotenxt)=>ResetPasswordPage(),
+          Routes.confirmForgetPassPage:(cotenxt)=>ConfirmResetPassword(),
           
           });
   }
