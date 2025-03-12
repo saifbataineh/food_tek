@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food_tek/controller/onboarding_controller.dart';
 
 class OnboardingWidget extends StatelessWidget {
-  const OnboardingWidget(
-      {super.key,
-      required this.title,
-      required this.subTitle,
-      required this.image});
+  const OnboardingWidget({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.image,
+  });
   final String title;
   final String subTitle;
   final String image;
@@ -41,15 +44,7 @@ class OnboardingWidget extends StatelessWidget {
                 ])),
             width: 307,
             height: 48,
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(69),
-                    ),
-                    backgroundColor: Colors.transparent),
-                onPressed: () {},
-                child: Text("continue")))
+           )
       ],
     );
   }
