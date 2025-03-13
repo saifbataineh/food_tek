@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405526290982",
+    "project_id": "food-tek-92725",
+    "storage_bucket": "food-tek-92725.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405526290982:android:639b53a171c78edf55bce7",
+        "android_client_info": {
+          "package_name": "com.example.food_tek"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCVc-E_CinIBYO4Lh34CpMgN1hJHbltvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
