@@ -1,26 +1,27 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:food_tek/core/app_image_strings.dart';
-import 'package:food_tek/features/onboarding/onboarding_screen.dart';
+import 'package:food_tek/core/constants/app_image_strings.dart';
+import 'package:food_tek/core/routes/routes.dart';
+import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/features/onboarding/onboarding_page.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({
+class SplashPage extends StatefulWidget {
+  const SplashPage({
     super.key,
   });
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashPageState extends State<SplashPage> {
     @override
   void initState() {
     super.initState();
     Timer(Duration(seconds: 2), () {
-   
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+   AppNavigatorService.pushReplacementNamed(context, routeName: Routes.onboardingPage);
+     
     });
   }
   @override
