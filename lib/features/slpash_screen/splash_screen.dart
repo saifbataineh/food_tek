@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:food_tek/core/app_image_strings.dart';
+import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/features/onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {

@@ -13,12 +13,16 @@ class OnboardingWidget extends StatelessWidget {
   final String title;
   final String subTitle;
   final String image;
-   final Widget? btn;
+  final Widget? btn;
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height;
     return Column(
       children: [
+        SizedBox(
+          height: height * 0.1,
+        ),
         Image.asset(
           image,
         ),
@@ -46,7 +50,7 @@ class OnboardingWidget extends StatelessWidget {
                 Color(0xff0F481F),
               ])),
         ),
-       // ElevatedButton(onPressed: () {}, child: Text('continue'))
+        // ElevatedButton(onPressed: () {}, child: Text('continue'))
       ],
     );
   }
