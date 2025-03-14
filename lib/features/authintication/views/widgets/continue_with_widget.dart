@@ -28,6 +28,7 @@ class ContinueWithWidget extends StatelessWidget {
             ),
             Text(
               'Continue with $company',
+              style: Theme.of(context).textTheme.labelSmall,
             ),
           ],
         ),

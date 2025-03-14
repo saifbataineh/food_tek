@@ -5,7 +5,6 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
-import 'package:food_tek/features/authintication/views/widgets/pin_code_field.dart';
 
 class ConfirmResetPassword extends StatelessWidget {
   const ConfirmResetPassword({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_tek/controller/onboarding_controller.dart';
+import 'package:food_tek/features/onboarding/controller/onboarding_controller.dart';
+import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 
 class OnboardingWidget extends StatelessWidget {
   const OnboardingWidget({
@@ -18,6 +19,7 @@ class OnboardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height;
+    final width = MediaQuery.sizeOf(context).width;
     return Column(
       children: [
         SizedBox(
@@ -26,30 +28,8 @@ class OnboardingWidget extends StatelessWidget {
         Image.asset(
           image,
         ),
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        Text(
-          subTitle,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(69),
-              gradient: LinearGradient(colors: [
-                Color(0xff25AE4B),
-                Color(0xff0F481F),
-              ])),
-        ),
+        DisplayTitleAndSubtitleWidget(title: title, subTitle: subTitle),
+
         // ElevatedButton(onPressed: () {}, child: Text('continue'))
       ],
     );

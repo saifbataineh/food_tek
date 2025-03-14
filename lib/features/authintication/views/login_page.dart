@@ -22,7 +22,8 @@ class LoginPage extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppImageStrings.splashBackground),),
+              image: AssetImage(AppImageStrings.splashBackground),
+            ),
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -54,7 +55,7 @@ class LoginPage extends StatelessWidget {
                           Expanded(child: Divider()),
                           Container(
                               margin: EdgeInsets.symmetric(horizontal: 10),
-                              child: Text("or")),
+                              child: Text("Or")),
                           Expanded(child: Divider()),
                         ],
                       ),

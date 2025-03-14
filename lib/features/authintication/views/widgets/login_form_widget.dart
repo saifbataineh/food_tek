@@ -34,7 +34,8 @@ class LoginFormWidget extends StatelessWidget {
               Spacer(),
               TextButton(
                 onPressed: () {
-                  AppNavigatorService.pushNamed(context, routeName: Routes.forgetPassPage);
+                  AppNavigatorService.pushNamed(context,
+                      routeName: Routes.forgetPassPage);
                 },
                 child: Text(
                   "Forgot Password ?",
@@ -51,7 +52,7 @@ class LoginFormWidget extends StatelessWidget {
             height: 48,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text('Login'),
+              child: Text('Log In'),
             ),
           ),
         ],
