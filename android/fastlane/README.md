@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane android distribute_to_firebase
 ```
 
-Deploy a new version to the Google Play
+Lane for Android Firebase App Distribution
 
 ----
 

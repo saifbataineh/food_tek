@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_tek/features/onboarding/controller/onboarding_controller.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 
