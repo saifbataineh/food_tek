@@ -143,9 +143,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
                       IconButton(
                         onPressed: () {
-                          pageController.animateToPage(pages.length - 1,
-                              duration: Duration(seconds: 3),
-                              curve: Curves.bounceIn);
+                          //pageController.animateToPage(pages.length - 1,
+                            //  duration: Duration(seconds: 3),
+                              //curve: Curves.bounceIn);
+                             if (currentIndex < pages.length - 1) {
+                          pageController.nextPage(
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.easeInOut,
+                          );
+                        } else {
+                          AppNavigatorService.pushReplacementNamed(context,
+                              routeName: Routes.turnOnLocationPage);
+                        }
                         },
                         icon: Icon(Icons.arrow_right_alt_outlined),
                         color: AppColors.mainColor,

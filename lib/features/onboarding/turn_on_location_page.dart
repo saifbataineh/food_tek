@@ -14,80 +14,86 @@ class TurnOnLocationPage extends StatelessWidget {
     final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              height: 0.22 * height,
-              width: width,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [Colors.white, Colors.white.withValues(alpha: 0)]),
-                image: DecorationImage(
-                  image: AssetImage(AppImageStrings.mapsBackground),
-                  fit: BoxFit.cover,
-                  alignment: Alignment.topCenter,
+        
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Container(
+                height: 0.22 * height,
+                width: width,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.white, Colors.white.withValues(alpha: 0)]),
+                  image: DecorationImage(
+                    image: AssetImage(AppImageStrings.mapsBackground),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width / 20),
-              child: Column(
-                spacing: height * 0.05,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImageStrings.onBoadring4),
-                  DisplayTitleAndSubtitleWidget(
-                      title: "turn on your location",
-                      subTitle:
-                          "to continues, let your device turn on location, which uses google’s location service"),
-                  Column(
-                    spacing: height * 0.02,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(69),
-                          gradient: LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color(0xff25AE4B),
-                              Color(0xff0F481F),
-                            ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: width / 20),
+                child: Column(
+                  spacing: height * 0.05,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImageStrings.onBoadring4),
+                    DisplayTitleAndSubtitleWidget(
+                        title: "turn on your location",
+                        subTitle:
+                            "to continues, let your device turn on location, which uses google’s location service"),
+                    Column(
+                      spacing: height * 0.02,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(69),
+                            gradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color(0xff25AE4B),
+                                Color(0xff0F481F),
+                              ],
+                            ),
+                          ),
+                          width: double.infinity,
+                          child: TextButton(
+                            onPressed: () {
+                              AppNavigatorService.pushReplacementNamed(context,
+                                  routeName: Routes.loginPage);
+                            },
+                            child: Text(
+                              'Yes, Turn It On',
+                            ),
                           ),
                         ),
-                        width: double.infinity,
-                        child: TextButton(
-                          onPressed: () {
-                            AppNavigatorService.pushReplacementNamed(context,
-                                routeName: Routes.loginPage);
-                          },
-                          child: Text(
-                            'Yes, Turn It On',
+                        SizedBox(
+                          width: double.infinity,
+                          child: TextButton(
+                            onPressed: () {
+                               AppNavigatorService.pushReplacementNamed(context,
+                                  routeName: Routes.loginPage);
+                            },
+                            style: TextButton.styleFrom(
+                              backgroundColor: AppColors.greyColor,
+                              padding: EdgeInsets.symmetric(vertical: 15),
+                            ),
+                            child: Text(
+                              "Cancel",
+                              style: TextStyle(color: AppColors.blueGrey),
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        width: double.infinity,
-                        child: TextButton(
-                          onPressed: () {},
-                          style: TextButton.styleFrom(
-                            backgroundColor: AppColors.greyColor,
-                            padding: EdgeInsets.symmetric(vertical: 15),
-                          ),
-                          child: Text(
-                            "Cancel",
-                            style: TextStyle(color: AppColors.blueGrey),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
