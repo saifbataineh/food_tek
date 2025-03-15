@@ -24,11 +24,11 @@ platform :android do
   lane :distribute_to_firebase do
      
     sh "flutter clean"
+    sh "flutter build apk --release --no-tree-shake-icons"
     firebase_app_distribution(
-      sh "flutter build apk --release --no-tree-shake-icons"
        firebase_cli_token:"1//09c0d6PVnqsV4CgYIARAAGAkSNwF-L9IrrwgDpuGr5adrUaTVSOrXugAxFUKAs2dAZzWskT3v5gNAm15CSoDVpHN3ekXiDd1BaPs",
       app: "1:405526290982:android:639b53a171c78edf55bce7", # Your Firebase app ID
-      testers: "saifbbataineh@gmail.com,motazyousef1111@gmail.com", # Email addresses of testers
+      testers: "saifbbataineh@gmail.com", # Email addresses of testers
       android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
       )
     end
