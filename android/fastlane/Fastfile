@@ -23,7 +23,8 @@ platform :android do
   desc "Lane for Android Firebase App Distribution"
   lane :distribute_to_firebase do
      
-
+    sh "flutter clean"
+    sh "flutter build apk --release --no-tree-shake-icons"
 
     firebase_app_distribution(
       
