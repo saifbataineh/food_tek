@@ -29,8 +29,9 @@ platform :android do
     firebase_app_distribution(
       
        firebase_cli_token:ENV["FIREBASE_CLI_TOKEN"],
+       
       app: "1:405526290982:android:639b53a171c78edf55bce7", # Your Firebase app ID
-      testers: "saifbbataineh@gmail.com", # Email addresses of testers
+      testers: "saifbbataineh@gmail.com,Zaidabualhija9@gmail.com,Faez.alabadi@gmail.com,sameralnonah1@gamil.com,Somaiaalmasri@gmail.com,aseelsaad513@gmail.com", # Email addresses of testers
       android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
       )
     end
