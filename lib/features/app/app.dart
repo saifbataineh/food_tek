@@ -5,6 +5,7 @@ import 'package:food_tek/features/authintication/views/confirm_reset_password_pa
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
+import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
           Routes.signUpPage: (context) => SignUpPage(),
           Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
           Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
+          Routes.homePage :(cotenxt) => HomePage(),
         });
   }
 }
