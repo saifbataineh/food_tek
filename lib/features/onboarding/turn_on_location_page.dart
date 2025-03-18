@@ -4,6 +4,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class TurnOnLocationPage extends StatelessWidget {
   const TurnOnLocationPage({super.key});
@@ -41,9 +42,9 @@ class TurnOnLocationPage extends StatelessWidget {
                   children: [
                     Image.asset(AppImageStrings.onBoadring4),
                     DisplayTitleAndSubtitleWidget(
-                        title: "turn on your location",
+                        title: S.of(context).turnLoc_title  ,
                         subTitle:
-                            "to continues, let your device turn on location, which uses google’s location service"),
+                            S.of(context).turnLoc_text),
                     Column(
                       spacing: height * 0.02,
                       children: [
@@ -66,7 +67,7 @@ class TurnOnLocationPage extends StatelessWidget {
                                   routeName: Routes.loginPage);
                             },
                             child: Text(
-                              'Yes, Turn It On',
+                              S.of(context).continue2,
                             ),
                           ),
                         ),
@@ -82,7 +83,7 @@ class TurnOnLocationPage extends StatelessWidget {
                               padding: EdgeInsets.symmetric(vertical: 15),
                             ),
                             child: Text(
-                              "Cancel",
+                              S.of(context).Cancel,
                               style: TextStyle(color: AppColors.blueGrey),
                             ),
                           ),

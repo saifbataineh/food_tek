@@ -4,6 +4,7 @@ import 'package:food_tek/core/routes/app_router.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -30,7 +31,7 @@ class LoginFormWidget extends StatelessWidget {
                 width: 15,
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
-              Text("remeber me"),
+              Text(S.of(context).rememberMe),
               Spacer(),
               TextButton(
                 onPressed: () {
@@ -38,7 +39,7 @@ class LoginFormWidget extends StatelessWidget {
                       routeName: Routes.forgetPassPage);
                 },
                 child: Text(
-                  "Forgot Password ?",
+                  S.of(context).forgetPassword,
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall!
@@ -52,7 +53,7 @@ class LoginFormWidget extends StatelessWidget {
             height: 48,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text('Log In'),
+              child: Text(S.of(context).LogIn),
             ),
           ),
         ],

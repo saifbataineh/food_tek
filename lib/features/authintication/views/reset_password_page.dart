@@ -5,6 +5,7 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/pin_code_field.dart';
+import 'package:food_tek/generated/l10n.dart';  
 
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({super.key});
@@ -51,42 +52,32 @@ class ResetPasswordPage extends StatelessWidget {
                         ),
                         Text.rich(TextSpan(children: [
                           TextSpan(
-                              text: 'Back to ',
-                              style: Theme.of(context).textTheme.headlineSmall),
-                          TextSpan(
-                              text: 'Login ',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineSmall!
-                                  .copyWith(color: AppColors.mainColor)),
-                          TextSpan(
-                              text: 'page?',
+                              text: S.of(context).backToLoginPage,
                               style: Theme.of(context).textTheme.headlineSmall),
                         ]))
                       ],
                     ),
                     Text(
-                      "Reset password",
+                      S.of(context).resetPassword,
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     SizedBox(
                       width: width * 0.7,
                       child: Text(
                         textAlign: TextAlign.center,
-                        'Enter your E-mail or phone and well \n send you a link to get back into \nyour account',
+                        S.of(context).enterEmailOrPhone,
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ),
                     AuthCustomFormField(
-                      label: 'Email',
-                      hintText: "example@example.com",
+                      label: S.of(context).email,
+                      hintText: S.of(context).emailHint,
                     ),
                     SizedBox(
                       width: double.infinity,
                       height: 48,
                       child: ElevatedButton(
                         onPressed: () {
-                          //TODO:SERVICE THIS POP UP
                           showDialog(
                               context: context,
                               builder: (context) {
@@ -103,7 +94,7 @@ class ResetPasswordPage extends StatelessWidget {
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                               textAlign: TextAlign.center,
-                                              "A 4-digit code has been sent to your email. Please enter it to verify."),
+                                              S.of(context).verificationMessage),
                                         ),
                                         PinCodeField(),
                                         SizedBox(
@@ -112,9 +103,9 @@ class ResetPasswordPage extends StatelessWidget {
                                           child: ElevatedButton(
                                             onPressed: () {
                                               AppNavigatorService.pop(context);
-                                              AppNavigatorService.pushReplacementNamed(context,routeName: Routes.confirmForgetPassPage);
+                                              AppNavigatorService.pushReplacementNamed(context, routeName: Routes.confirmForgetPassPage);
                                             },
-                                            child: Text('Verify'),
+                                            child: Text(S.of(context).verify),
                                           ),
                                         ),
                                       ],
@@ -123,7 +114,7 @@ class ResetPasswordPage extends StatelessWidget {
                                 );
                               });
                         },
-                        child: Text('Send'),
+                        child: Text(S.of(context).send),
                       ),
                     ),
                   ],
