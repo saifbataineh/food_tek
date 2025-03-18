@@ -7,5 +7,6 @@ static const String signUpPage='/signUp';
 static const String forgetPassPage='/forgetPass';
 static const String confirmForgetPassPage='/confirmForgetPass';
 static const String homePage='/homePage';
+static const String navigationPage='/navigation';
   
 }

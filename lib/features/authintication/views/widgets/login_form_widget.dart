@@ -53,7 +53,7 @@ class LoginFormWidget extends StatelessWidget {
               onPressed: () {
                 //TODO:change to push and remove until
                 AppNavigatorService.pushReplacementNamed(context,
-                    routeName: Routes.homePage);
+                    routeName: Routes.navigationPage);
               },
               child: Text('Log In'),
             ),
