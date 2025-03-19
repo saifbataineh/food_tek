@@ -6,6 +6,7 @@ import 'package:food_tek/features/authintication/views/widgets/auth_heading_widg
 import 'package:food_tek/features/authintication/views/widgets/continue_with_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/login_form_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/sub_head_line_text_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 import '../../../core/constants/app_image_strings.dart';
 
@@ -47,9 +48,9 @@ class LoginPage extends StatelessWidget {
                     children: [
                       AuthHeadingWidget(
                         wantedScreen: Routes.signUpPage,
-                        actionText: 'Sign Up',
-                        infoText: 'Don\'t have an account? ',
-                        title: "Login",
+                        actionText: S.of(context).signup,
+                        infoText: S.of(context).createaccount,
+                        title: S.of(context).login ,
                       ),
                       LoginFormWidget(),
                       Row(
@@ -57,7 +58,7 @@ class LoginPage extends StatelessWidget {
                           Expanded(child: Divider()),
                           Container(
                               margin: EdgeInsets.symmetric(horizontal: 10),
-                              child: Text("Or")),
+                              child: Text(S.of(context).or)),
                           Expanded(child: Divider()),
                         ],
                       ),

@@ -2,6 +2,7 @@ C/C++ Structured Logf
 d
 bD:\development\mobile\flutter\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	áð®ÍÚ2§ —æá«Ò2a
 _
 ]D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\additional_project_files.txt	áð®ÍÚ2 Íž¤Ú2^
@@ -26,3 +27,29 @@ U
 SD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\prefab_config.json	âð®ÍÚ2( ßž¤Ú2\
 Z
 XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\symbol_folder_index.txt	âð®ÍÚ2O ßž¤Ú2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	«ÑéÝÚ2§ —æá«Ò2a
+_
+]D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\additional_project_files.txt	«ÑéÝÚ2 à“ÝÚ2^
+\
+ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build.json	«ÑéÝÚ2² ã“ÝÚ2c
+a
+_D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build_mini.json	«ÑéÝÚ2 é“ÝÚ2P
+N
+LD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja	«ÑéÝÚ2©Ô õ‘ÝÚ2T
+R
+PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja.txt	«ÑéÝÚ2Y
+W
+UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build_file_index.txt	¬ÑéÝÚ2b í“ÝÚ2Z
+X
+VD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json	¬ÑéÝÚ2	^
+\
+ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json.bin	¬ÑéÝÚ2
+d
+b
+`D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\metadata_generation_command.txt	¬ÑéÝÚ2À ë“ÝÚ2W
+U
+SD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\prefab_config.json	¬ÑéÝÚ2( ì“ÝÚ2\
+Z
+XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\symbol_folder_index.txt	¬ÑéÝÚ2O ì“ÝÚ2
+>>>>>>> 67885b9a6bdf9a9dc753fe539cf38d4d8ad8d061

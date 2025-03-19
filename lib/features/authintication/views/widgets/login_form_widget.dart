@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -14,12 +15,12 @@ class LoginFormWidget extends StatelessWidget {
         spacing: 16,
         children: [
           AuthCustomFormField(
-            label: "Email",
+            label: S.of(context).email,
             hintText: 'example@example.com',
           ),
           AuthCustomFormField(
             isPassword: true,
-            label: "pasword",
+            label: S.of(context).password,
           ),
           Row(
             spacing: 5,
@@ -29,7 +30,7 @@ class LoginFormWidget extends StatelessWidget {
                 width: 15,
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
-              Text("remeber me"),
+              Text(S.of(context).rememberme),
               Spacer(),
               TextButton(
                 onPressed: () {
@@ -37,7 +38,7 @@ class LoginFormWidget extends StatelessWidget {
                       routeName: Routes.forgetPassPage);
                 },
                 child: Text(
-                  "Forgot Password ?",
+                  S.of(context).forgetpassword,
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall!

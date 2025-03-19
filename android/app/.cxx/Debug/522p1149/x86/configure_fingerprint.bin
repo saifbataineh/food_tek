@@ -2,6 +2,7 @@ C/C++ Structured Logf
 d
 bD:\development\mobile\flutter\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	‘ñ®ÍÚ2§ —æá«Ò2Y
 W
 UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\additional_project_files.txt	‘ñ®ÍÚ2 û³¤Ú2V
@@ -26,3 +27,29 @@ M
 KD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\prefab_config.json	‘ñ®ÍÚ2( ´¤Ú2T
 R
 PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\symbol_folder_index.txt	‘ñ®ÍÚ2G ‚´¤Ú2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	áÑéÝÚ2§ —æá«Ò2Y
+W
+UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\additional_project_files.txt	áÑéÝÚ2 Œ¬ÝÚ2V
+T
+RD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\android_gradle_build.json	áÑéÝÚ2¢ Ž¬ÝÚ2[
+Y
+WD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\android_gradle_build_mini.json	áÑéÝÚ2ý ¬ÝÚ2H
+F
+DD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\build.ninja	áÑéÝÚ2Ô «ÝÚ2L
+J
+HD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\build.ninja.txt	áÑéÝÚ2Q
+O
+MD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\build_file_index.txt	áÑéÝÚ2b ’¬ÝÚ2R
+P
+ND:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\compile_commands.json	áÑéÝÚ2	V
+T
+RD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\compile_commands.json.bin	áÑéÝÚ2
+\
+Z
+XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\metadata_generation_command.txt	áÑéÝÚ2˜ ‘¬ÝÚ2O
+M
+KD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\prefab_config.json	áÑéÝÚ2( ‘¬ÝÚ2T
+R
+PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\x86\symbol_folder_index.txt	áÑéÝÚ2G ’¬ÝÚ2
+>>>>>>> 67885b9a6bdf9a9dc753fe539cf38d4d8ad8d061

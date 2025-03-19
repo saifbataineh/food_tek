@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/themes/app_theme.dart';
 import 'package:food_tek/features/authintication/views/confirm_reset_password_page.dart';
@@ -10,6 +11,7 @@ import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -17,6 +19,14 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('ar'),
+      localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
         theme: ThemeData(
           elevatedButtonTheme: AppTheme.elevatedButtonTheme,
           textButtonTheme: AppTheme.textButtonTheme,

@@ -4,6 +4,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/onboarding/widgets/onboarding_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -15,24 +16,28 @@ class OnboardingPage extends StatefulWidget {
 class _OnboardingPageState extends State<OnboardingPage> {
   PageController pageController = PageController();
   int currentIndex = 0;
-  final List<Widget> pages = [
-    OnboardingWidget(
-        title: "Welcome to Sahlah",
-        subTitle: "Enjoy a fast and smooth food delivery at your doorstep",
-        image: AppImageStrings.onBoadring1),
-    OnboardingWidget(
-        title: "Get delivery on time",
-        subTitle:
-            "Order your favorite food within the palm of your hand and the zone of your comfort",
-        image: AppImageStrings.onBoarding2),
-    OnboardingWidget(
-        title: "Choose your food",
-        subTitle:
-            "Order your favorite food within the palm of your hand and the zone of your comfort",
-        image: AppImageStrings.onBoarding3),
-  ];
+  
   @override
   Widget build(BuildContext context) {
+
+    final List<Widget> pages = [
+    
+    OnboardingWidget(
+        title: S.of(context).onboarding1_title  ,
+        subTitle: S.of(context).onboarding1_text,
+        image: AppImageStrings.onBoadring1),
+    OnboardingWidget(
+        title:S.of(context).onboarding2_title,
+        subTitle:
+           S.of(context).onboarding2_text,
+        image: AppImageStrings.onBoarding2),
+    OnboardingWidget(
+        title: S.of(context).onboarding3_title,
+        subTitle:
+            S.of(context).onboarding3_text,
+        image: AppImageStrings.onBoarding3),
+  ];
+
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
 
@@ -97,7 +102,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         }
                       },
                       child: Text(
-                        'Continue',
+                        S.of(context).continue1  ,
                       ),
                     ),
                   ),
@@ -114,7 +119,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               routeName: Routes.turnOnLocationPage);
                         },
                         child: Text(
-                          "Skip",
+                         S.of(context).skip_button,
                           style: TextStyle(color: AppColors.blueGrey),
                         ),
                       ),
