@@ -5,6 +5,7 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class ConfirmResetPasswordPage extends StatelessWidget {
   const ConfirmResetPasswordPage({super.key});
@@ -50,16 +51,16 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                     ),
                     AuthHeadingWidget(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        title: 'Reset Password',
-                        actionText: 'Login',
-                        infoText: 'Want to try with my current password?',
+                        title: S.of(context).email,
+                        actionText: S.of(context).login,
+                        infoText: S.of(context).inforeset,
                         wantedScreen: Routes.loginPage),
                     AuthCustomFormField(
-                      label: 'New Password',
+                      label: S.of(context).new_password ,
                       isPassword: true,
                     ),
                     AuthCustomFormField(
-                      label: 'Confirm New Password',
+                      label: S.of(context).confirm_new_password,
                       isPassword: true,
                     ),
                     SizedBox(
@@ -82,14 +83,14 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                                         Image.asset(AppImageStrings
                                             .passwordUpdatedSuccessfullyLogo),
                                         Text(
-                                          "Congratulations",
+                                          S.of(context).congratulations,
                                           style: Theme.of(context)
                                               .textTheme
                                               .headlineLarge!
                                               .copyWith(color: Colors.white),
                                         ),
                                         Text(
-                                          "password reset succesfuly",
+                                          S.of(context).pass_reset_succesfuly,
                                           style: Theme.of(context)
                                               .textTheme
                                               .headlineMedium!
@@ -103,7 +104,7 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                                 );
                               });
                         },
-                        child: Text('Update Password'),
+                        child: Text(S.of(context).update_password),
                       ),
                     ),
                   ],

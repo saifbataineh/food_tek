@@ -7,6 +7,7 @@ import 'package:food_tek/features/app/app.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/sign_up_form_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/sub_head_line_text_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -55,15 +56,15 @@ class SignUpPage extends StatelessWidget {
                           AuthHeadingWidget(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             wantedScreen: Routes.loginPage,
-                            title: "Sign up",
-                            infoText: 'already have an account? ',
-                            actionText: 'login',
+                            title: S.of(context).signtitle,   
+                            infoText: S.of(context).alreadyhaveanaccount,   
+                            actionText: S.of(context).login,  
                           ),
                           SignUpFormWidget()
                         ],
                       ),
                     ),
-                  ]),
-                ))));
+                  ])),
+            )));
   }
 }
