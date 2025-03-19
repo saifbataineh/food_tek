@@ -42,9 +42,9 @@ class TurnOnLocationPage extends StatelessWidget {
                   children: [
                     Image.asset(AppImageStrings.onBoadring4),
                     DisplayTitleAndSubtitleWidget(
-                        title: S.of(context).turnLoc_title  ,
+                        title: S.of(context).turnloc_title  ,
                         subTitle:
-                            S.of(context).turnLoc_text),
+                            S.of(context).turnloc_text),
                     Column(
                       spacing: height * 0.02,
                       children: [
@@ -83,7 +83,7 @@ class TurnOnLocationPage extends StatelessWidget {
                               padding: EdgeInsets.symmetric(vertical: 15),
                             ),
                             child: Text(
-                              S.of(context).Cancel,
+                              S.of(context).cancel,
                               style: TextStyle(color: AppColors.blueGrey),
                             ),
                           ),

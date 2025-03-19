@@ -51,16 +51,16 @@ class ConfirmResetPassword extends StatelessWidget {
                     ),
                     AuthHeadingWidget(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        title: S.of(context).resetPassword,
-                        actionText: S.of(context).LogIn,
-                        infoText: S.of(context).infoReset,
+                        title: S.of(context).email,
+                        actionText: S.of(context).login,
+                        infoText: S.of(context).inforeset,
                         wantedScreen: Routes.loginPage),
                     AuthCustomFormField(
-                      label: 'New Password',
+                      label: S.of(context).new_password ,
                       isPassword: true,
                     ),
                     AuthCustomFormField(
-                      label: 'Confirm New Password',
+                      label: S.of(context).confirm_new_password,
                       isPassword: true,
                     ),
                     SizedBox(
@@ -83,14 +83,14 @@ class ConfirmResetPassword extends StatelessWidget {
                                         Image.asset(AppImageStrings
                                             .passwordUpdatedSuccessfullyLogo),
                                         Text(
-                                          "Congratulations",
+                                          S.of(context).congratulations,
                                           style: Theme.of(context)
                                               .textTheme
                                               .headlineLarge!
                                               .copyWith(color: Colors.white),
                                         ),
                                         Text(
-                                          "password reset succesfuly",
+                                          S.of(context).pass_reset_succesfuly,
                                           style: Theme.of(context)
                                               .textTheme
                                               .headlineMedium!
@@ -104,7 +104,7 @@ class ConfirmResetPassword extends StatelessWidget {
                                 );
                               });
                         },
-                        child: Text('Update Password'),
+                        child: Text(S.of(context).update_password),
                       ),
                     ),
                   ],

@@ -61,80 +61,80 @@ class S {
   }
 
   /// `Welcome to Sahlah`
-  String get onBoarding1_title {
+  String get onboarding1_title {
     return Intl.message(
       'Welcome to Sahlah',
-      name: 'onBoarding1_title',
+      name: 'onboarding1_title',
       desc: '',
       args: [],
     );
   }
 
   /// `Enjoy a fast and smooth food delivery at your doorstep`
-  String get onBoarding1_text {
+  String get onboarding1_text {
     return Intl.message(
       'Enjoy a fast and smooth food delivery at your doorstep',
-      name: 'onBoarding1_text',
+      name: 'onboarding1_text',
       desc: '',
       args: [],
     );
   }
 
   /// `Get delivery on time`
-  String get onBoarding2_title {
+  String get onboarding2_title {
     return Intl.message(
       'Get delivery on time',
-      name: 'onBoarding2_title',
+      name: 'onboarding2_title',
       desc: '',
       args: [],
     );
   }
 
   /// `Order your favorite food within the palm of your hand and the zone of your comfort`
-  String get onBoarding2_text {
+  String get onboarding2_text {
     return Intl.message(
       'Order your favorite food within the palm of your hand and the zone of your comfort',
-      name: 'onBoarding2_text',
+      name: 'onboarding2_text',
       desc: '',
       args: [],
     );
   }
 
   /// `Choose your food`
-  String get onBoarding3_title {
+  String get onboarding3_title {
     return Intl.message(
       'Choose your food',
-      name: 'onBoarding3_title',
+      name: 'onboarding3_title',
       desc: '',
       args: [],
     );
   }
 
   /// `Order your favorite food within the palm of your hand and the zone of your comfort`
-  String get onBoarding3_text {
+  String get onboarding3_text {
     return Intl.message(
       'Order your favorite food within the palm of your hand and the zone of your comfort',
-      name: 'onBoarding3_text',
+      name: 'onboarding3_text',
       desc: '',
       args: [],
     );
   }
 
   /// `Turn on your location`
-  String get turnLoc_title {
+  String get turnloc_title {
     return Intl.message(
       'Turn on your location',
-      name: 'turnLoc_title',
+      name: 'turnloc_title',
       desc: '',
       args: [],
     );
   }
 
   /// `To continue, let your device turn on location, which uses Google’s location service`
-  String get turnLoc_text {
+  String get turnloc_text {
     return Intl.message(
       'To continue, let your device turn on location, which uses Google’s location service',
-      name: 'turnLoc_text',
+      name: 'turnloc_text',
       desc: '',
       args: [],
     );
@@ -161,20 +161,15 @@ class S {
   }
 
   /// `Cancel`
-  String get Cancel {
-    return Intl.message('Cancel', name: 'Cancel', desc: '', args: []);
-  }
-
-  /// `Login`
-  String get Login {
-    return Intl.message('Login', name: 'Login', desc: '', args: []);
+  String get cancel {
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
   }
 
   /// `Don't have an account?`
-  String get createAccount {
+  String get createaccount {
     return Intl.message(
       'Don\'t have an account?',
-      name: 'createAccount',
+      name: 'createaccount',
       desc: '',
       args: [],
     );
@@ -186,55 +181,50 @@ class S {
   }
 
   /// `Sign Up`
-  String get SignUp {
-    return Intl.message('Sign Up', name: 'SignUp', desc: '', args: []);
+  String get signup {
+    return Intl.message('Sign Up', name: 'signup', desc: '', args: []);
   }
 
   /// `remember me`
-  String get rememberMe {
-    return Intl.message('remember me', name: 'rememberMe', desc: '', args: []);
+  String get rememberme {
+    return Intl.message('remember me', name: 'rememberme', desc: '', args: []);
   }
 
   /// `Forgot Password ?`
-  String get forgetPassword {
+  String get forgetpassword {
     return Intl.message(
       'Forgot Password ?',
-      name: 'forgetPassword',
+      name: 'forgetpassword',
       desc: '',
       args: [],
     );
   }
 
-  /// `Log In`
-  String get LogIn {
-    return Intl.message('Log In', name: 'LogIn', desc: '', args: []);
-  }
-
   /// `Back to Login page?`
-  String get backToLoginPage {
+  String get backtologinpage {
     return Intl.message(
       'Back to Login page?',
-      name: 'backToLoginPage',
+      name: 'backtologinpage',
       desc: '',
       args: [],
     );
   }
 
   /// `Reset password`
-  String get resetPassword {
+  String get resetpassword {
     return Intl.message(
       'Reset password',
-      name: 'resetPassword',
+      name: 'resetpassword',
       desc: '',
       args: [],
     );
   }
 
   /// `Enter your E-mail or phone and we'll send you a link to get back into your account`
-  String get enterEmailOrPhone {
+  String get enteremailorphonenumber {
     return Intl.message(
       'Enter your E-mail or phone and we\'ll send you a link to get back into your account',
-      name: 'enterEmailOrPhone',
+      name: 'enteremailorphonenumber',
       desc: '',
       args: [],
     );
@@ -246,10 +236,10 @@ class S {
   }
 
   /// `example@example.com`
-  String get emailHint {
+  String get emailhint {
     return Intl.message(
       'example@example.com',
-      name: 'emailHint',
+      name: 'emailhint',
       desc: '',
       args: [],
     );
@@ -261,10 +251,10 @@ class S {
   }
 
   /// `A 4-digit code has been sent to your email. Please enter it to verify.`
-  String get verificationMessage {
+  String get verificationmessage {
     return Intl.message(
       'A 4-digit code has been sent to your email. Please enter it to verify.',
-      name: 'verificationMessage',
+      name: 'verificationmessage',
       desc: '',
       args: [],
     );
@@ -276,15 +266,15 @@ class S {
   }
 
   /// `Sign up`
-  String get signUpTitle {
-    return Intl.message('Sign up', name: 'signUpTitle', desc: '', args: []);
+  String get signtitle {
+    return Intl.message('Sign up', name: 'signtitle', desc: '', args: []);
   }
 
   /// `already have an account? `
-  String get alreadyHaveAnAccount {
+  String get alreadyhaveanaccount {
     return Intl.message(
       'already have an account? ',
-      name: 'alreadyHaveAnAccount',
+      name: 'alreadyhaveanaccount',
       desc: '',
       args: [],
     );
@@ -296,10 +286,75 @@ class S {
   }
 
   /// `Want to try with my current password?`
-  String get infoReset {
+  String get inforeset {
     return Intl.message(
       'Want to try with my current password?',
-      name: 'infoReset',
+      name: 'inforeset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Confirm Password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get new_password {
+    return Intl.message(
+      'New Password',
+      name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm New Password`
+  String get confirm_new_password {
+    return Intl.message(
+      'Confirm New Password',
+      name: 'confirm_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Passsword`
+  String get update_password {
+    return Intl.message(
+      'Update Passsword',
+      name: 'update_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations`
+  String get congratulations {
+    return Intl.message(
+      'Congratulations',
+      name: 'congratulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `password reset succesfuly`
+  String get pass_reset_succesfuly {
+    return Intl.message(
+      'password reset succesfuly',
+      name: 'pass_reset_succesfuly',
       desc: '',
       args: [],
     );

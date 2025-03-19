@@ -23,18 +23,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
     final List<Widget> pages = [
     
     OnboardingWidget(
-        title: S.of(context).onBoarding1_title  ,
-        subTitle: S.of(context).onBoarding1_text,
+        title: S.of(context).onboarding1_title  ,
+        subTitle: S.of(context).onboarding1_text,
         image: AppImageStrings.onBoadring1),
     OnboardingWidget(
-        title:S.of(context).onBoarding2_title,
+        title:S.of(context).onboarding2_title,
         subTitle:
-           S.of(context).onBoarding2_text,
+           S.of(context).onboarding2_text,
         image: AppImageStrings.onBoarding2),
     OnboardingWidget(
-        title: S.of(context).onBoarding3_title,
+        title: S.of(context).onboarding3_title,
         subTitle:
-            S.of(context).onBoarding3_text,
+            S.of(context).onboarding3_text,
         image: AppImageStrings.onBoarding3),
   ];
 

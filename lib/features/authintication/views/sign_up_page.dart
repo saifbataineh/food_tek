@@ -56,8 +56,8 @@ class SignUpPage extends StatelessWidget {
                           AuthHeadingWidget(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             wantedScreen: Routes.loginPage,
-                            title: S.of(context).signUpTitle,   
-                            infoText: S.of(context).alreadyHaveAnAccount,   
+                            title: S.of(context).signtitle,   
+                            infoText: S.of(context).alreadyhaveanaccount,   
                             actionText: S.of(context).login,  
                           ),
                           SignUpFormWidget()

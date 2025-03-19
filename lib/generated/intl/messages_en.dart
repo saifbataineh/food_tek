@@ -22,63 +22,74 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
-    "LogIn": MessageLookupByLibrary.simpleMessage("Log In"),
-    "Login": MessageLookupByLibrary.simpleMessage("Login"),
-    "SignUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
-    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+    "alreadyhaveanaccount": MessageLookupByLibrary.simpleMessage(
       "already have an account? ",
     ),
-    "backToLoginPage": MessageLookupByLibrary.simpleMessage(
+    "backtologinpage": MessageLookupByLibrary.simpleMessage(
       "Back to Login page?",
     ),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "confirm_new_password": MessageLookupByLibrary.simpleMessage(
+      "Confirm New Password",
+    ),
+    "confirm_password": MessageLookupByLibrary.simpleMessage(
+      "Confirm Password",
+    ),
+    "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations"),
     "continue1": MessageLookupByLibrary.simpleMessage("Continue"),
     "continue2": MessageLookupByLibrary.simpleMessage("Yes, Turn It On"),
-    "createAccount": MessageLookupByLibrary.simpleMessage(
+    "createaccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
-    "emailHint": MessageLookupByLibrary.simpleMessage("example@example.com"),
-    "enterEmailOrPhone": MessageLookupByLibrary.simpleMessage(
+    "emailhint": MessageLookupByLibrary.simpleMessage("example@example.com"),
+    "enteremailorphonenumber": MessageLookupByLibrary.simpleMessage(
       "Enter your E-mail or phone and we\'ll send you a link to get back into your account",
     ),
-    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forgot Password ?"),
-    "infoReset": MessageLookupByLibrary.simpleMessage(
+    "forgetpassword": MessageLookupByLibrary.simpleMessage("Forgot Password ?"),
+    "inforeset": MessageLookupByLibrary.simpleMessage(
       "Want to try with my current password?",
     ),
     "login": MessageLookupByLibrary.simpleMessage("login"),
-    "onBoarding1_text": MessageLookupByLibrary.simpleMessage(
+    "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "onboarding1_text": MessageLookupByLibrary.simpleMessage(
       "Enjoy a fast and smooth food delivery at your doorstep",
     ),
-    "onBoarding1_title": MessageLookupByLibrary.simpleMessage(
+    "onboarding1_title": MessageLookupByLibrary.simpleMessage(
       "Welcome to Sahlah",
     ),
-    "onBoarding2_text": MessageLookupByLibrary.simpleMessage(
+    "onboarding2_text": MessageLookupByLibrary.simpleMessage(
       "Order your favorite food within the palm of your hand and the zone of your comfort",
     ),
-    "onBoarding2_title": MessageLookupByLibrary.simpleMessage(
+    "onboarding2_title": MessageLookupByLibrary.simpleMessage(
       "Get delivery on time",
     ),
-    "onBoarding3_text": MessageLookupByLibrary.simpleMessage(
+    "onboarding3_text": MessageLookupByLibrary.simpleMessage(
       "Order your favorite food within the palm of your hand and the zone of your comfort",
     ),
-    "onBoarding3_title": MessageLookupByLibrary.simpleMessage(
+    "onboarding3_title": MessageLookupByLibrary.simpleMessage(
       "Choose your food",
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
-    "rememberMe": MessageLookupByLibrary.simpleMessage("remember me"),
-    "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+    "pass_reset_succesfuly": MessageLookupByLibrary.simpleMessage(
+      "password reset succesfuly",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "rememberme": MessageLookupByLibrary.simpleMessage("remember me"),
+    "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
     "send": MessageLookupByLibrary.simpleMessage("Send"),
-    "signUpTitle": MessageLookupByLibrary.simpleMessage("Sign up"),
+    "signtitle": MessageLookupByLibrary.simpleMessage("Sign up"),
+    "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip_button": MessageLookupByLibrary.simpleMessage("Skip"),
     "title": MessageLookupByLibrary.simpleMessage("hello world!!!"),
-    "turnLoc_text": MessageLookupByLibrary.simpleMessage(
+    "turnloc_text": MessageLookupByLibrary.simpleMessage(
       "To continue, let your device turn on location, which uses Google’s location service",
     ),
-    "turnLoc_title": MessageLookupByLibrary.simpleMessage(
+    "turnloc_title": MessageLookupByLibrary.simpleMessage(
       "Turn on your location",
     ),
-    "verificationMessage": MessageLookupByLibrary.simpleMessage(
+    "update_password": MessageLookupByLibrary.simpleMessage("Update Passsword"),
+    "verificationmessage": MessageLookupByLibrary.simpleMessage(
       "A 4-digit code has been sent to your email. Please enter it to verify.",
     ),
     "verify": MessageLookupByLibrary.simpleMessage("Verify"),

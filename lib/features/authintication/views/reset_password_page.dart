@@ -52,26 +52,26 @@ class ResetPasswordPage extends StatelessWidget {
                         ),
                         Text.rich(TextSpan(children: [
                           TextSpan(
-                              text: S.of(context).backToLoginPage,
+                              text: S.of(context).resetpassword,
                               style: Theme.of(context).textTheme.headlineSmall),
                         ]))
                       ],
                     ),
                     Text(
-                      S.of(context).resetPassword,
+                      S.of(context).resetpassword,
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     SizedBox(
                       width: width * 0.7,
                       child: Text(
                         textAlign: TextAlign.center,
-                        S.of(context).enterEmailOrPhone,
+                        S.of(context).enteremailorphonenumber,
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ),
                     AuthCustomFormField(
                       label: S.of(context).email,
-                      hintText: S.of(context).emailHint,
+                      hintText: S.of(context).emailhint,
                     ),
                     SizedBox(
                       width: double.infinity,
@@ -94,7 +94,7 @@ class ResetPasswordPage extends StatelessWidget {
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                               textAlign: TextAlign.center,
-                                              S.of(context).verificationMessage),
+                                              S.of(context).verificationmessage),
                                         ),
                                         PinCodeField(),
                                         SizedBox(
@@ -105,7 +105,7 @@ class ResetPasswordPage extends StatelessWidget {
                                               AppNavigatorService.pop(context);
                                               AppNavigatorService.pushReplacementNamed(context, routeName: Routes.confirmForgetPassPage);
                                             },
-                                            child: Text(S.of(context).verify),
+                                            child: Text(S.of(context).confirm_password),
                                           ),
                                         ),
                                       ],

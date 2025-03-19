@@ -16,12 +16,12 @@ class LoginFormWidget extends StatelessWidget {
         spacing: 16,
         children: [
           AuthCustomFormField(
-            label: "Email",
+            label: S.of(context).email,
             hintText: 'example@example.com',
           ),
           AuthCustomFormField(
             isPassword: true,
-            label: "pasword",
+            label: S.of(context).password,
           ),
           Row(
             spacing: 5,
@@ -31,7 +31,7 @@ class LoginFormWidget extends StatelessWidget {
                 width: 15,
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
-              Text(S.of(context).rememberMe),
+              Text(S.of(context).rememberme),
               Spacer(),
               TextButton(
                 onPressed: () {
@@ -39,7 +39,7 @@ class LoginFormWidget extends StatelessWidget {
                       routeName: Routes.forgetPassPage);
                 },
                 child: Text(
-                  S.of(context).forgetPassword,
+                  S.of(context).forgetpassword,
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall!
@@ -53,7 +53,7 @@ class LoginFormWidget extends StatelessWidget {
             height: 48,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text(S.of(context).LogIn),
+              child: Text(S.of(context).login),
             ),
           ),
         ],

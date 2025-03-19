@@ -48,9 +48,9 @@ class LoginPage extends StatelessWidget {
                     children: [
                       AuthHeadingWidget(
                         wantedScreen: Routes.signUpPage,
-                        actionText: S.of(context).SignUp,
-                        infoText: S.of(context).createAccount,
-                        title: S.of(context).Login ,
+                        actionText: S.of(context).signup,
+                        infoText: S.of(context).createaccount,
+                        title: S.of(context).login ,
                       ),
                       LoginFormWidget(),
                       Row(
