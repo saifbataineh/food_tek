@@ -2,54 +2,27 @@ C/C++ Structured Logf
 d
 bD:\development\mobile\flutter\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
-<<<<<<< HEAD
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	áğ®ÍÚ2§ —æá«Ò2a
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	¥üóàÚ2§ —æá«Ò2a
 _
-]D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\additional_project_files.txt	áğ®ÍÚ2 Í¤Ú2^
+]D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\additional_project_files.txt	¥üóàÚ2 „üóàÚ2^
 \
-ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build.json	âğ®ÍÚ2² Ï¤Ú2c
+ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build.json	¥üóàÚ2² üóàÚ2c
 a
-_D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build_mini.json	âğ®ÍÚ2 Ñ¤Ú2P
+_D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build_mini.json	¥üóàÚ2 ›üóàÚ2P
 N
-LD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja	âğ®ÍÚ2©Ô ¤¤Ú2T
+LD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja	¥üóàÚ2©Ô éúóàÚ2T
 R
-PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja.txt	âğ®ÍÚ2Y
+PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja.txt	¥üóàÚ2Y
 W
-UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build_file_index.txt	âğ®ÍÚ2b ß¤Ú2Z
+UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build_file_index.txt	¥üóàÚ2b ¡üóàÚ2Z
 X
-VD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json	âğ®ÍÚ2	^
+VD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json	¥üóàÚ2	^
 \
-ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json.bin	âğ®ÍÚ2
+ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json.bin	¥üóàÚ2
 d
 b
-`D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\metadata_generation_command.txt	âğ®ÍÚ2À Ş¤Ú2W
+`D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\metadata_generation_command.txt	¦üóàÚ2À üóàÚ2W
 U
-SD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\prefab_config.json	âğ®ÍÚ2( ß¤Ú2\
+SD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\prefab_config.json	¦üóàÚ2( üóàÚ2\
 Z
-XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\symbol_folder_index.txt	âğ®ÍÚ2O ß¤Ú2
-=======
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	«ÑéİÚ2§ —æá«Ò2a
-_
-]D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\additional_project_files.txt	«ÑéİÚ2 à“İÚ2^
-\
-ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build.json	«ÑéİÚ2² ã“İÚ2c
-a
-_D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\android_gradle_build_mini.json	«ÑéİÚ2 é“İÚ2P
-N
-LD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja	«ÑéİÚ2©Ô õ‘İÚ2T
-R
-PD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build.ninja.txt	«ÑéİÚ2Y
-W
-UD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\build_file_index.txt	¬ÑéİÚ2b í“İÚ2Z
-X
-VD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json	¬ÑéİÚ2	^
-\
-ZD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\compile_commands.json.bin	¬ÑéİÚ2
-d
-b
-`D:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\metadata_generation_command.txt	¬ÑéİÚ2À ë“İÚ2W
-U
-SD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\prefab_config.json	¬ÑéİÚ2( ì“İÚ2\
-Z
-XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\symbol_folder_index.txt	¬ÑéİÚ2O ì“İÚ2
->>>>>>> 67885b9a6bdf9a9dc753fe539cf38d4d8ad8d061
+XD:\projects\food_tek\android\app\.cxx\Debug\522p1149\armeabi-v7a\symbol_folder_index.txt	¦üóàÚ2O ŸüóàÚ2
