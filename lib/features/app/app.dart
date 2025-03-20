@@ -21,7 +21,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       
-        locale: Locale('ar'),
+        locale: Locale('en'),
         localizationsDelegates: [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
