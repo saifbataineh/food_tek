@@ -40,6 +40,8 @@ dependencies:
   bloc: ^9.0.0
   intl: any
   intl_utils: 
+  flutter_typeahead: ^5.2.0
+  font_awesome_flutter: ^10.8.0
 
 
 dev_dependencies:
@@ -69,6 +71,7 @@ flutter:
     - assets/
     - assets/onboarding/
     - assets/authintication/
+    - assets/food/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

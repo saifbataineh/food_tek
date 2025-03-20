@@ -7,11 +7,19 @@ class AppImageStrings {
   static const String onBoarding3 = 'assets/onboarding/take_away_cuate.png';
   static const String onBoadring4 = 'assets/onboarding/take_away_cuate.png';
   static const String mapsBackground = 'assets/onboarding/maps.png';
-  
+
   //logos
   static const String googleLogo = 'assets/authintication/google.png';
   static const String facebookLogo = 'assets/authintication/facebook.png';
   static const String appleLogo = 'assets/authintication/apple.png';
-  static const String messageSentLogo = 'assets/authintication/message_sent_successfully.png';
-  static const String passwordUpdatedSuccessfullyLogo = 'assets/authintication/password_updated_successfully.png';
+  static const String messageSentLogo =
+      'assets/authintication/message_sent_successfully.png';
+  static const String passwordUpdatedSuccessfullyLogo =
+      'assets/authintication/password_updated_successfully.png';
+
+  //food
+  static const String burger = 'assets/food/burger.png';
+  static const String pizza = 'assets/food/pizza.png';
+  static const String sandwsh = 'assets/food/sandwsh.png';
+  static const String discountPhoto = 'assets/food/withText.png';
 }

@@ -11,10 +11,11 @@ class NavigationPage extends StatefulWidget {
 
 class _NavigationPageState extends State<NavigationPage> {
   int currentIndex = 0;
+  List pages = [HomePage(),Container(child: Text("favorate"),),Container(child: Text("person"),),Container(child: Text("map"),)];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomePage(),
+      body:pages[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
           padding: EdgeInsets.all(8),
