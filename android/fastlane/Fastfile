@@ -33,6 +33,8 @@ platform :android do
       app: "1:405526290982:android:639b53a171c78edf55bce7", # Your Firebase app ID
       testers: "saifbbataineh@gmail.com,Zaidabualhija9@gmail.com,Faez.alabadi@gmail.com,sameralnonah1@gamil.com,Somaiaalmasri@gmail.com,aseelsaad513@gmail.com", # Email addresses of testers
       android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
+      release_notes: "fixed the bugs about buttons and made section 1 and section 2 responseive"
+
       )
     end
   end

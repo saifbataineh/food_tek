@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/themes/app_theme.dart';
 import 'package:food_tek/features/authintication/views/confirm_reset_password_page.dart';
@@ -19,15 +20,19 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: Locale('ar'),
-      localizationsDelegates: [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
+      
+        locale: Locale('ar'),
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
         theme: ThemeData(
+        
+          colorScheme: ColorScheme.light(primary: AppColors.mainColor),
+          datePickerTheme: AppTheme.datePickerTheme,
           elevatedButtonTheme: AppTheme.elevatedButtonTheme,
           textButtonTheme: AppTheme.textButtonTheme,
           textTheme: AppTheme.textStyle,
@@ -41,8 +46,13 @@ class App extends StatelessWidget {
           Routes.signUpPage: (context) => SignUpPage(),
           Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
           Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
-          Routes.navigationPage :(cotenxt) => NavigationPage(),
-          Routes.homePage :(cotenxt) => HomePage(),
-        });
+          Routes.navigationPage: (cotenxt) => NavigationPage(),
+          Routes.homePage: (cotenxt) => HomePage(),
+        },
+        builder: (context, child) {
+          return MediaQuery(data: MediaQuery.of(context).copyWith(
+            textScaler: TextScaler.linear(1),  // Apply global text scale factor (e.g., 1.2 for 120%)
+          ), child: child!);
+        },);
   }
 }

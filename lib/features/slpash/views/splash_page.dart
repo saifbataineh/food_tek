@@ -1,10 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
-import 'package:food_tek/features/onboarding/onboarding_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({
@@ -16,24 +15,27 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-    @override
+  @override
   void initState() {
     super.initState();
     Timer(Duration(seconds: 2), () {
-   AppNavigatorService.pushReplacementNamed(context, routeName: Routes.onboardingPage);
-     
+      AppNavigatorService.pushReplacementNamed(context,
+          routeName: Routes.onboardingPage);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: AppColors.mainColor,
       body: Container(
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppImageStrings.splashBackground,))),
+                image: AssetImage(
+          AppImageStrings.splashBackground,
+        ))),
         child: Center(
           child: Image.asset(
             AppImageStrings.appLogo,

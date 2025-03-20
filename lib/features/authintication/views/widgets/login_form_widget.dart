@@ -2,36 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/features/authintication/views/widgets/check_box_with_text_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class LoginFormWidget extends StatelessWidget {
-  const LoginFormWidget({super.key});
-
+  LoginFormWidget({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Column(
-        spacing: 16,
+        spacing: responsiveHeight(context, 16),
         children: [
           AuthCustomFormField(
+            keyboardType: TextInputType.emailAddress,
+            controller: emailController,
             label: S.of(context).email,
             hintText: 'example@example.com',
           ),
           AuthCustomFormField(
+            controller: passwordController,
             isPassword: true,
             label: S.of(context).password,
           ),
           Row(
-            spacing: 5,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
-                height: 15,
-                width: 15,
-                child: Checkbox(value: true, onChanged: (value) {}),
+              CheckBoxWithTextWidget(
+                text: S.of(context).rememberme,
               ),
-              Text(S.of(context).rememberme),
-              Spacer(),
               TextButton(
                 onPressed: () {
                   AppNavigatorService.pushNamed(context,
@@ -49,11 +51,9 @@ class LoginFormWidget extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            height: 48,
             child: ElevatedButton(
               onPressed: () {
-                //TODO:change to push and remove until
-                AppNavigatorService.pushReplacementNamed(context,
+                AppNavigatorService.pushAndRemoveUntil(context,
                     routeName: Routes.navigationPage);
               },
               child: Text('Log In'),

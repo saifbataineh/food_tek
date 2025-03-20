@@ -2,35 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
+import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/continue_with_widget.dart';
 import 'package:food_tek/features/authintication/views/widgets/login_form_widget.dart';
-import 'package:food_tek/features/authintication/views/widgets/sub_head_line_text_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
-import '../../../core/constants/app_image_strings.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: AppColors.mainColor,
       body: SafeArea(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(AppImageStrings.splashBackground),
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AppImageStrings.splashBackground),
+              ),
             ),
-          ),
-          child: SingleChildScrollView(
             child: Column(
-              spacing: height * 0.03,
+              spacing: responsiveHeight(context, 42),
               children: [
                 Image(
                   image: AssetImage(AppImageStrings.appLogo),
@@ -40,17 +36,18 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                     color: Colors.white,
                   ),
-                  height: height * 0.80,
-                  width: width * 0.9,
-                  padding: EdgeInsets.symmetric(horizontal: 18),
+                  width: responsiveWidth(context, 343),
+                  padding: EdgeInsets.all(
+                    responsiveHeight(context, 24),
+                  ),
                   child: Column(
-                    spacing: 24,
+                    spacing: responsiveHeight(context, 24),
                     children: [
                       AuthHeadingWidget(
                         wantedScreen: Routes.signUpPage,
                         actionText: S.of(context).signup,
                         infoText: S.of(context).createaccount,
-                        title: S.of(context).login ,
+                        title: S.of(context).login,
                       ),
                       LoginFormWidget(),
                       Row(
@@ -63,6 +60,7 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                       Column(
+                        spacing: responsiveHeight(context, 15),
                         children: [
                           ContinueWithWidget(
                             company: 'Google',

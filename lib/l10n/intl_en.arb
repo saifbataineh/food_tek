@@ -36,8 +36,8 @@
     "@rememberme": {},
     "forgetpassword": "Forgot Password ?",
     "@forgetpassword": {},
-    "backtologinpage": "Back to Login page?",
-    "@backtologinpage": {},
+    "back_to": "Back to ",
+    "@back_to": {},
     "resetpassword": "Reset password",
     "@resetpassword": {},
     "enteremailorphonenumber": "Enter your E-mail or phone and we'll send you a link to get back into your account",
@@ -70,12 +70,8 @@
     "@confirm_new_password": {},
     "update_password": "Update Passsword",
     "@update_password": {},
-    "congratulations":"Congratulations",
+    "congratulations": "Congratulations",
     "@congratulations": {},
-    "pass_reset_succesfuly":"password reset succesfuly",
+    "pass_reset_succesfuly": "password reset succesfuly",
     "@pass_reset_succesfuly": {}
-
-    
-    
-    
 }

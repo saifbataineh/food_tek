@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
-import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 
 class SubHeadLineTextWidget extends StatelessWidget {

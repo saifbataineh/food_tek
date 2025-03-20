@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
-import 'package:food_tek/core/constants/app_image_strings.dart';
+import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class ContinueWithWidget extends StatelessWidget {
   const ContinueWithWidget(
@@ -11,10 +11,11 @@ class ContinueWithWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
+      width: responsiveWidth(context, 295),
+      height: responsiveHeight(context, 48),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppColors.borderColor)),
+          border: Border.all(color: AppColors.containerBorderColor)),
       child: TextButton(
         onPressed: () {},
         child: Row(
@@ -23,8 +24,6 @@ class ContinueWithWidget extends StatelessWidget {
           children: [
             Image.asset(
               image,
-              height: 18,
-              width: 18,
             ),
             Text(
               'Continue with $company',

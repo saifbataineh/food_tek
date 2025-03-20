@@ -200,14 +200,9 @@ class S {
     );
   }
 
-  /// `Back to Login page?`
-  String get backtologinpage {
-    return Intl.message(
-      'Back to Login page?',
-      name: 'backtologinpage',
-      desc: '',
-      args: [],
-    );
+  /// `Back to`
+  String get back_to {
+    return Intl.message('Back to', name: 'back_to', desc: '', args: []);
   }
 
   /// `Reset password`

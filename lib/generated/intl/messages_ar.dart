@@ -25,9 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyhaveanaccount": MessageLookupByLibrary.simpleMessage(
       "هل لديك حساب بالفعل؟ ",
     ),
-    "backtologinpage": MessageLookupByLibrary.simpleMessage(
-      "العودة إلى صفحة تسجيل الدخول؟",
-    ),
+    "back_to": MessageLookupByLibrary.simpleMessage("عد إلى"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور الجديدة",

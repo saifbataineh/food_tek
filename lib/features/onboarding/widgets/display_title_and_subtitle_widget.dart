@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class DisplayTitleAndSubtitleWidget extends StatelessWidget {
   const DisplayTitleAndSubtitleWidget({
@@ -15,7 +16,7 @@ class DisplayTitleAndSubtitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 8,
+      spacing: responsiveHeight(context, 8),
       children: [
         Text(title,
             textAlign: TextAlign.center,
