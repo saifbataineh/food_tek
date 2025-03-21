@@ -56,11 +56,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
           Padding(
             padding:
                 EdgeInsets.symmetric(horizontal: responsiveWidth(context, 50)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SingleChildScrollView(
-                  child: SizedBox(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
                     height: responsiveHeight(context, 678),
                     child: PageView(
                       onPageChanged: (value) {
@@ -72,85 +72,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       children: pages,
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: responsiveHeight(context, 36),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(69),
-                    gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
-                        Color(0xff25AE4B),
-                        Color(0xff0F481F),
-                      ],
-                    ),
+                  SizedBox(
+                    height: responsiveHeight(context, 36),
                   ),
-                  width: responsiveWidth(context, 307),
-                  child: TextButton(
-                    onPressed: () {
-                      if (currentIndex < pages.length - 1) {
-                        pageController.nextPage(
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.easeInOut,
-                        );
-                      } else {
-                        AppNavigatorService.pushReplacementNamed(context,
-                            routeName: Routes.turnOnLocationPage);
-                      }
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: responsiveHeight(context, 14.5),
-                        horizontal: responsiveWidth(context, 77.22),
-                      ),
-                      child: Text(
-                        S.of(context).continue1,
-                        style: Theme.of(context).textTheme.labelMedium,
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(69),
+                      gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Color(0xff25AE4B),
+                          Color(0xff0F481F),
+                        ],
                       ),
                     ),
-                  ),
-                ),
-                SizedBox(height: responsiveHeight(context, 81)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    /// زر "Skip"
-                    TextButton(
+                    width: responsiveWidth(context, 307),
+                    child: TextButton(
                       onPressed: () {
-                        AppNavigatorService.pushReplacementNamed(context,
-                            routeName: Routes.turnOnLocationPage);
-                      },
-                      child: Text(
-                        S.of(context).skip_button,
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        pages.length,
-                        (index) => Container(
-                          margin: EdgeInsets.symmetric(horizontal: 4),
-                          decoration: BoxDecoration(
-                            color: index == currentIndex
-                                ? AppColors.mainColor
-                                : AppColors.lightgreyColor,
-                            shape: BoxShape.circle,
-                          ),
-                          height: responsiveHeight(context, 10),
-                          width: responsiveWidth(context, 10),
-                        ),
-                      ),
-                    ),
-
-                    IconButton(
-                      onPressed: () {
-                        //pageController.animateToPage(pages.length - 1,
-                        //  duration: Duration(seconds: 3),
-                        //curve: Curves.bounceIn);
                         if (currentIndex < pages.length - 1) {
                           pageController.nextPage(
                             duration: Duration(milliseconds: 500),
@@ -161,12 +100,73 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               routeName: Routes.turnOnLocationPage);
                         }
                       },
-                      icon: Icon(Icons.arrow_right_alt_outlined),
-                      color: AppColors.mainColor,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: responsiveHeight(context, 14.5),
+                          horizontal: responsiveWidth(context, 77.22),
+                        ),
+                        child: Text(
+                          S.of(context).continue1,
+                          style: Theme.of(context).textTheme.labelMedium,
+                        ),
+                      ),
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  SizedBox(height: responsiveHeight(context, 81)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      /// زر "Skip"
+                      TextButton(
+                        onPressed: () {
+                          AppNavigatorService.pushReplacementNamed(context,
+                              routeName: Routes.turnOnLocationPage);
+                        },
+                        child: Text(
+                          S.of(context).skip_button,
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          pages.length,
+                          (index) => Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            decoration: BoxDecoration(
+                              color: index == currentIndex
+                                  ? AppColors.mainColor
+                                  : AppColors.lightgreyColor,
+                              shape: BoxShape.circle,
+                            ),
+                            height: responsiveHeight(context, 10),
+                            width: responsiveWidth(context, 10),
+                          ),
+                        ),
+                      ),
+
+                      IconButton(
+                        onPressed: () {
+                          //pageController.animateToPage(pages.length - 1,
+                          //  duration: Duration(seconds: 3),
+                          //curve: Curves.bounceIn);
+                          if (currentIndex < pages.length - 1) {
+                            pageController.nextPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.easeInOut,
+                            );
+                          } else {
+                            AppNavigatorService.pushReplacementNamed(context,
+                                routeName: Routes.turnOnLocationPage);
+                          }
+                        },
+                        icon: Icon(Icons.arrow_right_alt_outlined),
+                        color: AppColors.mainColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

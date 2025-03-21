@@ -12,8 +12,6 @@ class TurnOnLocationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
@@ -57,7 +55,6 @@ class TurnOnLocationPage extends StatelessWidget {
                     height: responsiveHeight(context, 45),
                   ),
                   SizedBox(
-                    height: responsiveHeight(context, 158),
                     child: DisplayTitleAndSubtitleWidget(
                         title: S.of(context).turnloc_title,
                         subTitle: S.of(context).turnloc_text),

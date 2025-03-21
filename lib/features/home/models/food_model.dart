@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class Food {
+  
   String img;
   String name;
   String subTitle;

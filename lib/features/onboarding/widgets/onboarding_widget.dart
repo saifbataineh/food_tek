@@ -17,20 +17,22 @@ class OnboardingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: responsiveHeight(context, 150)),
-        Image.asset(
-          image,
-          height: responsiveHeight(context, 328),
-          width: responsiveWidth(context, 328),
-        ),
-        SizedBox(height: responsiveHeight(context, 40)),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: responsiveHeight(context, 150)),
+          Image.asset(
+            image,
+            height: responsiveHeight(context, 328),
+            width: responsiveWidth(context, 328),
+          ),
+          SizedBox(height: responsiveHeight(context, 40)),
 
-        DisplayTitleAndSubtitleWidget(title: title, subTitle: subTitle),
+          DisplayTitleAndSubtitleWidget(title: title, subTitle: subTitle),
 
-        // ElevatedButton(onPressed: () {}, child: Text('continue'))
-      ],
+          // ElevatedButton(onPressed: () {}, child: Text('continue'))
+        ],
+      ),
     );
   }
 }

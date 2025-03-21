@@ -27,6 +27,9 @@ class DisplayTitleAndSubtitleWidget extends StatelessWidget {
         Text(subTitle,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.displaySmall),
+        SizedBox(
+          height: responsiveHeight(context, 52),
+        )
       ],
     );
   }

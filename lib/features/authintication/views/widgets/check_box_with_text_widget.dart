@@ -20,8 +20,8 @@ class _CheckBoxWithTextWidgetState extends State<CheckBoxWithTextWidget> {
     return Row(
       children: [
         SizedBox(
-          height: responsiveHeight(context, 15),
-          width: responsiveWidth(context, 15),
+          height: responsiveHeight(context, 25),
+          width: responsiveWidth(context, 25),
           child: Checkbox(
               activeColor: AppColors.mainColor,
               value: isSelected,
