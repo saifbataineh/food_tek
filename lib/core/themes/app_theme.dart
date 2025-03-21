@@ -55,6 +55,10 @@ class AppTheme {
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: AppColors.labelSmallBlack),
+        labelLarge: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: AppColors.black),
     labelMedium: TextStyle(
         fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
   );

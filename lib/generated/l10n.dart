@@ -200,9 +200,9 @@ class S {
     );
   }
 
-  /// `Back to`
+  /// `Back to `
   String get back_to {
-    return Intl.message('Back to', name: 'back_to', desc: '', args: []);
+    return Intl.message('Back to ', name: 'back_to', desc: '', args: []);
   }
 
   /// `Reset password`

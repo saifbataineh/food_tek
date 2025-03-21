@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
+import 'package:food_tek/features/favorite/views/favorite_page.dart';
 import 'package:food_tek/features/home/views/home_page.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -11,10 +12,20 @@ class NavigationPage extends StatefulWidget {
 
 class _NavigationPageState extends State<NavigationPage> {
   int currentIndex = 0;
+  List pages = [
+    HomePage(),
+    FavoritePage(),
+    Container(
+      child: Text("person"),
+    ),
+    Container(
+      child: Text("map"),
+    )
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomePage(),
+      body: pages[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
           padding: EdgeInsets.all(8),
@@ -37,7 +48,7 @@ class _NavigationPageState extends State<NavigationPage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: "favourite"),
+              icon: Icon(Icons.favorite_border), label: "favourite"),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: "history"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "person"),
         ],
