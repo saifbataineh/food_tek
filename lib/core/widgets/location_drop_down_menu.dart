@@ -18,7 +18,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 18,
+            height: responsiveHeight(context, 25),
             child: DropdownButton(
               underline: SizedBox(),
               hint: Text(
@@ -27,12 +27,18 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
               ),
               items: [
                 DropdownMenuItem(
-                  child: Text("New York"),
+                  child: Text(
+                    "New York",
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
                   value: "New York",
                 ),
                 DropdownMenuItem(
                   value: "wgwrbwrbwrbwrbrwbwrbrbwrbrwbwrbwrbrwb",
-                  child: Text("San Francisco"),
+                  child: Text(
+                    "San Francisco",
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
                 ),
               ],
               onChanged: (value) {

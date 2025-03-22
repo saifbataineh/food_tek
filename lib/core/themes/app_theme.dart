@@ -10,6 +10,9 @@ class AppTheme {
       foregroundColor: WidgetStatePropertyAll(AppColors.mainColor),
     ),
   );
+
+  
+ 
   static ElevatedButtonThemeData elevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.mainColor,
@@ -50,15 +53,17 @@ class AppTheme {
       color: AppColors.headLineGrey,
       fontWeight: FontWeight.w700,
     ),
+    titleMedium: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w500,
+        color: AppColors.midnightShadow),
     bodySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
     labelSmall: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: AppColors.labelSmallBlack),
-        labelLarge: TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w600,
-        color: AppColors.black),
+    labelLarge: TextStyle(
+        fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.black),
     labelMedium: TextStyle(
         fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
   );

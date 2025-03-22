@@ -7,6 +7,7 @@ import 'package:food_tek/features/authintication/views/confirm_reset_password_pa
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
+import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
 import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
@@ -20,39 +21,41 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
-        locale: Locale('en'),
-        localizationsDelegates: [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
-        theme: ThemeData(
-        
-          colorScheme: ColorScheme.light(primary: AppColors.mainColor),
-          datePickerTheme: AppTheme.datePickerTheme,
-          elevatedButtonTheme: AppTheme.elevatedButtonTheme,
-          textButtonTheme: AppTheme.textButtonTheme,
-          textTheme: AppTheme.textStyle,
-        ),
-        initialRoute: Routes.splashPage,
-        routes: {
-          Routes.splashPage: (context) => SplashPage(),
-          Routes.onboardingPage: (context) => OnboardingPage(),
-          Routes.turnOnLocationPage: (context) => TurnOnLocationPage(),
-          Routes.loginPage: (context) => LoginPage(),
-          Routes.signUpPage: (context) => SignUpPage(),
-          Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
-          Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
-          Routes.navigationPage: (cotenxt) => NavigationPage(),
-          Routes.homePage: (cotenxt) => HomePage(),
-        },
-        builder: (context, child) {
-          return MediaQuery(data: MediaQuery.of(context).copyWith(
-            textScaler: TextScaler.linear(1),  // Apply global text scale factor (e.g., 1.2 for 120%)
-          ), child: child!);
-        },);
+      locale: Locale('en'),
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      theme: ThemeData(
+        colorScheme: ColorScheme.light(primary: AppColors.mainColor),
+        datePickerTheme: AppTheme.datePickerTheme,
+        elevatedButtonTheme: AppTheme.elevatedButtonTheme,
+        textButtonTheme: AppTheme.textButtonTheme,
+        textTheme: AppTheme.textStyle,
+      ),
+      initialRoute: Routes.navigationPage,
+      routes: {
+        Routes.splashPage: (context) => SplashPage(),
+        Routes.onboardingPage: (context) => OnboardingPage(),
+        Routes.turnOnLocationPage: (context) => TurnOnLocationPage(),
+        Routes.loginPage: (context) => LoginPage(),
+        Routes.signUpPage: (context) => SignUpPage(),
+        Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
+        Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
+        Routes.navigationPage: (cotenxt) => NavigationPage(),
+        Routes.homePage: (cotenxt) => HomePage(),
+        Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
+      },
+      builder: (context, child) {
+        return MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: TextScaler.linear(1),
+            ),
+            child: child!);
+      },
+    );
   }
 }
