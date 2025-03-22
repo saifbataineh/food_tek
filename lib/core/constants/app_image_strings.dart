@@ -24,4 +24,14 @@ class AppImageStrings {
   static const String discountPhoto = 'assets/food/withText.png';
   static const String plate = 'assets/food/plate.png';
   static const String pepproniPizza = 'assets/food/pepperoni_pizza.png';
+  static const String chickenBurger = 'assets/food/chickenBurger.png';
+  static const String cheseBurger = 'assets/food/cheseBurger.png';
+  static const String recommend1 = 'assets/food/recommend1.png';
+  static const String recommend2 = 'assets/food/recommend2.png';
+  static const String recommend3 = 'assets/food/recommend3.png';
+  static const String recommend4 = 'assets/food/recommend4.png';
+  static const String pizza1 = 'assets/food/pizza1.png';
+  static const String pizza2 = 'assets/food/pizza1.png';
+  static const String pizza3 = 'assets/food/pizza3.png';
+  static const String pizza4 = 'assets/food/pizza4.png';
 }

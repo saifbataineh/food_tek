@@ -7,7 +7,7 @@ import 'package:food_tek/features/authintication/views/confirm_reset_password_pa
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
-import 'package:food_tek/features/home/views/home_page.dart';
+import 'package:food_tek/features/home/views/main_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
@@ -47,7 +47,7 @@ class App extends StatelessWidget {
           Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
           Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
           Routes.navigationPage: (cotenxt) => NavigationPage(),
-          Routes.homePage: (cotenxt) => HomePage(),
+          Routes.MainPage: (cotenxt) => MainPage(),
         },
         builder: (context, child) {
           return MediaQuery(data: MediaQuery.of(context).copyWith(
