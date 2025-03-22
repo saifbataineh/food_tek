@@ -33,6 +33,9 @@ class FoodFavoriteGridViewWidget extends StatelessWidget {
               itemCount: 6,
               itemBuilder: (context, index) => SignleItemGridTileWidget(
                     foodItem: Food(
+                        oldPrice: 9.5,
+                        reviews: 79,
+                        rating: 3.5,
                         img: AppImageStrings.pepproniPizza,
                         name: "Pepperoni pizza",
                         subTitle:

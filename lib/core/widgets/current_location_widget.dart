@@ -32,7 +32,7 @@ class CurrentLocationWidget extends StatelessWidget {
             height: responsiveHeight(context, 34),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
-              color: AppColors.lightergreyColor,
+              color: AppColors.lightgreyColor,
             ),
             child: Badge(
               child: IconButton(

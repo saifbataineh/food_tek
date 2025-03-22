@@ -21,6 +21,8 @@ class _HomePageState extends State<HomePage> {
   String selectedCategory = "All";
   List<Food> foodList = [
     Food(
+      reviews: 79,
+      rating: 3.5,
         img: AppImageStrings.burger,
         name: "Burger",
         subTitle:
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                           Text("Top Rated",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                              )),
+                              ),),
                         ],
                       ),
                       // Add a ListView.builder to display food items

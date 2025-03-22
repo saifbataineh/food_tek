@@ -11,8 +11,12 @@ class AppColors {
   static const Color formFieldBorderColor = Color(0xffEDF1F3);
   static const Color greyColor = Color(0xffC2C2C2);
   static const Color lightgreyColor = Color(0xffE6E6E6);
-  static const Color lightergreyColor = Color(0xffE6E6E6);
+  static const Color mediumlightgreyColor = Color(0xff838383);
+
   static const Color darkgreyColor = Color(0xff484C52);
   static const Color black = Color(0xff101010);
   static const Color redyBlack = Color(0xff391713);
+  static const Color midnightShadow = Color(0xff1B1B1B);
+  static const Color gold = Color(0xffffac33);
+  static const Color hotRed = Color(0xffEF2A39);
 }

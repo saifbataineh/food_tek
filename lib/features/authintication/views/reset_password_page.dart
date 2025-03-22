@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
+import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/services/show_dialog_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/features/authintication/views/widgets/pin_code_field.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class ResetPasswordPage extends StatelessWidget {
@@ -104,6 +106,16 @@ class ResetPasswordPage extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {
                             ShowDialogService.showActionDialog(
+                                extraActioncontent: PinCodeField(),
+                                onPressed: () {
+                                  AppNavigatorService.pushReplacementNamed(
+                                      context,
+                                      routeName: Routes.confirmForgetPassPage);
+                                },
+                                actionButtonText:
+                                    S.of(context).confirm_password,
+                                description: S.of(context).verificationmessage,
+                                image: AppImageStrings.messageSentLogo,
                                 context: context);
                           },
                           child: Text(S.of(context).send),

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
@@ -7,42 +9,43 @@ import 'package:food_tek/features/authintication/views/widgets/pin_code_field.da
 import 'package:food_tek/generated/l10n.dart';
 
 class ShowDialogService {
-  static showActionDialog({
-    required BuildContext context,
-  }) {
-    showDialog(
+  static Future<bool?> showActionDialog(
+      {required BuildContext context,
+      final String? image,
+      required final String description,
+      required final String actionButtonText,
+      final Widget? extraActioncontent,
+      required final VoidCallback onPressed}) async {
+    return await showDialog(
         context: context,
         builder: (context) {
-          return Dialog(
-            backgroundColor: Colors.white,
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: responsiveWidth(context, 24),
-                  vertical: responsiveHeight(context, 24)),
-              child: Column(
-                spacing: responsiveHeight(context, 24),
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset(AppImageStrings.messageSentLogo),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                        textAlign: TextAlign.center,
-                        S.of(context).verificationmessage),
-                  ),
-                  PinCodeField(),
-                  SizedBox(
-                    width: responsiveWidth(context, 295),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        AppNavigatorService.pop(context);
-                        AppNavigatorService.pushReplacementNamed(context,
-                            routeName: Routes.confirmForgetPassPage);
-                      },
-                      child: Text(S.of(context).confirm_password),
+          return BackdropFilter(
+            filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+            child: Dialog(
+              backgroundColor: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: responsiveWidth(context, 24),
+                    vertical: responsiveHeight(context, 24)),
+                child: Column(
+                  spacing: responsiveHeight(context, 24),
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (image != null) Image.asset(image),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(textAlign: TextAlign.center, description),
                     ),
-                  ),
-                ],
+                    if (extraActioncontent != null) extraActioncontent,
+                    SizedBox(
+                      width: responsiveWidth(context, 295),
+                      child: ElevatedButton(
+                        onPressed: onPressed,
+                        child: Text(actionButtonText),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );
