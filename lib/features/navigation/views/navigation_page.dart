@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/features/favorite/views/favorite_page.dart';
-import 'package:food_tek/features/home/views/home_page.dart';
+import 'package:food_tek/features/home/views/main_page.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -13,7 +13,7 @@ class NavigationPage extends StatefulWidget {
 class _NavigationPageState extends State<NavigationPage> {
   int currentIndex = 0;
   List pages = [
-    HomePage(),
+    MainPage(),
     FavoritePage(),
     Container(
       child: Text("person"),
@@ -30,7 +30,9 @@ class _NavigationPageState extends State<NavigationPage> {
       floatingActionButton: Container(
           padding: EdgeInsets.all(8),
           decoration:
-              BoxDecoration(color: Colors.green, shape: BoxShape.circle),
+              BoxDecoration(color: Colors.green, shape: BoxShape.circle,boxShadow: [
+     
+    ],),
           child: Icon(Icons.card_travel)),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
