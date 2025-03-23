@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class LocationDropDownMenu extends StatefulWidget {
@@ -29,7 +30,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
                 DropdownMenuItem(
                   child: Text(
                     "New York",
-                    style: Theme.of(context).textTheme.titleSmall,
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
                   ),
                   value: "New York",
                 ),
@@ -37,7 +38,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
                   value: "wgwrbwrbwrbwrbrwbwrbrbwrbrwbwrbwrbrwb",
                   child: Text(
                     "San Francisco",
-                    style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
                   ),
                 ),
               ],
@@ -51,7 +52,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
           Text(
             location ?? "",
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.labelLarge,
+            style: Theme.of(context).textTheme.labelSmall!.copyWith(color: AppColors.black),
           ),
         ],
       ),

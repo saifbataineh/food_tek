@@ -5,6 +5,7 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/order_now_button_widget.dart';
 import 'package:food_tek/features/favorite/views/widgets/favorite_button_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignleItemGridTileWidget extends StatelessWidget {
   const SignleItemGridTileWidget({
@@ -36,8 +37,10 @@ class SignleItemGridTileWidget extends StatelessWidget {
                     ),
                     Text(
                       foodItem.name,
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      style: GoogleFonts.sora(
+                          letterSpacing: 0,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
                     ),
                     SizedBox(
                       child: Row(
@@ -50,8 +53,10 @@ class SignleItemGridTileWidget extends StatelessWidget {
                           Expanded(
                             child: Text(
                               foodItem.subTitle,
-                              style: TextStyle(
-                                  fontSize: 10, fontWeight: FontWeight.w300),
+                              style: GoogleFonts.sora(
+                                  letterSpacing: 0,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -61,8 +66,10 @@ class SignleItemGridTileWidget extends StatelessWidget {
                     ),
                     Text(
                       '\$${foodItem.price.toString()}',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      style: GoogleFonts.sora(
+                          letterSpacing: 0,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),

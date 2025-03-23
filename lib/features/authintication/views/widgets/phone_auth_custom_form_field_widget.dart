@@ -14,7 +14,7 @@ class PhoneAuthCustomFormFieldWidget extends StatefulWidget {
 
 class _PhoneAuthCustomFormFieldWidgetState
     extends State<PhoneAuthCustomFormFieldWidget> {
-  String? countryCode = "962";
+  String? countryCode;
   TextEditingController phoneController = TextEditingController();
 
   @override
@@ -38,6 +38,12 @@ class _PhoneAuthCustomFormFieldWidgetState
             child: DropdownButton<String>(
               underline: SizedBox.shrink(),
               value: countryCode,
+              style: Theme.of(context).textTheme.headlineSmall,
+              hint: Text(
+                //TODO: localization
+                "select  ",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
               items: [
                 DropdownMenuItem<String>(
                   value: "1",

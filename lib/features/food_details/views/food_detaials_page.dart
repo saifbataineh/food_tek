@@ -29,7 +29,22 @@ class FoodDetaialsPage extends StatelessWidget {
               children: [
                 CurrentLocationWidget(),
                 FoodSearchWidget(),
-                Image.asset(AppImageStrings.foodItemDetailsBackground),
+                Container(
+                    width: responsiveWidth(context, 370),
+                    height: responsiveHeight(context, 203),
+                    padding: EdgeInsets.symmetric(
+                        vertical: responsiveHeight(context, 25)),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                            AppImageStrings.foodItemDetailsBackground),
+                      ),
+                    ),
+                    child: Image.asset(
+                      foodItem.img,
+                      fit: BoxFit.contain,
+                    )),
+
                 Text(
                   foodItem.name,
                   style: Theme.of(context).textTheme.titleMedium,
@@ -118,5 +133,3 @@ class FoodDetaialsPage extends StatelessWidget {
     );
   }
 }
-
-

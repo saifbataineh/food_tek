@@ -103,7 +103,7 @@ class TurnOnLocationPage extends StatelessWidget {
                                 .textTheme
                                 .labelMedium!
                                 .copyWith(
-                                  color: AppColors.blueGrey,
+                                  color: AppColors.greyBlue,
                                 ),
                           ),
                         ),
