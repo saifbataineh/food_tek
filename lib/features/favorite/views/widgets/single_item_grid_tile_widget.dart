@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/core/widgets/order_now_button_widget.dart';
 import 'package:food_tek/features/favorite/views/widgets/favorite_button_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignleItemGridTileWidget extends StatelessWidget {
   const SignleItemGridTileWidget({
@@ -35,22 +37,26 @@ class SignleItemGridTileWidget extends StatelessWidget {
                     ),
                     Text(
                       foodItem.name,
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      style: GoogleFonts.sora(
+                          letterSpacing: 0,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
                     ),
                     SizedBox(
                       child: Row(
                         children: [
                           Icon(
                             Icons.lightbulb,
-                            color: Colors.yellow,
+                            color: AppColors.gold,
                             size: 10,
                           ),
                           Expanded(
                             child: Text(
                               foodItem.subTitle,
-                              style: TextStyle(
-                                  fontSize: 10, fontWeight: FontWeight.w300),
+                              style: GoogleFonts.sora(
+                                  letterSpacing: 0,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -60,8 +66,10 @@ class SignleItemGridTileWidget extends StatelessWidget {
                     ),
                     Text(
                       '\$${foodItem.price.toString()}',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      style: GoogleFonts.sora(
+                          letterSpacing: 0,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -70,12 +78,20 @@ class SignleItemGridTileWidget extends StatelessWidget {
           ),
           Positioned(
             right: responsiveWidth(context, 42),
-            child: Image.asset(AppImageStrings.plate),
+            child: Image.asset(
+              AppImageStrings.plate,
+              width: responsiveWidth(context, 89),
+              height: responsiveHeight(context, 89),
+            ),
           ),
           Positioned(
             right: responsiveWidth(context, 51),
             top: responsiveHeight(context, 7),
-            child: Image.asset(foodItem.img),
+            child: Image.asset(
+              foodItem.img,
+              width: responsiveWidth(context, 74),
+              height: responsiveHeight(context, 74),
+            ),
           ),
           Positioned(
             right: 0,
@@ -93,17 +109,7 @@ class SignleItemGridTileWidget extends StatelessWidget {
             child: SizedBox(
               height: responsiveHeight(context, 27),
               width: responsiveWidth(context, 95),
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(0)),
-                child: Text(
-                  "Order Now",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
+              child: OrderNowButtonWidget(foodItem: foodItem),
             ),
           ),
         ],

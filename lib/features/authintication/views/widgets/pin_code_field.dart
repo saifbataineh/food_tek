@@ -34,6 +34,7 @@ class _PinCodeFieldState extends State<PinCodeField> {
                   obscureText: true, // Hide digits as they are typed
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(5),
                     counterText: "", // Hide the counter text
                     border: OutlineInputBorder(),
                   ),

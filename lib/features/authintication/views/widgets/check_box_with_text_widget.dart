@@ -36,7 +36,7 @@ class _CheckBoxWithTextWidgetState extends State<CheckBoxWithTextWidget> {
         ),
         Text(
           widget.text,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
         ),
       ],
     );

@@ -7,23 +7,26 @@ class SubHeadLineTextWidget extends StatelessWidget {
   const SubHeadLineTextWidget({
     required this.infoText,
     required this.actionText,
-    super.key, required this.wantedScreen,
-   
+    super.key,
+    required this.wantedScreen,
   });
-  
+
   final String infoText;
   final String actionText;
   final String wantedScreen;
 
   @override
   Widget build(BuildContext context) {
-   final GestureRecognizer gestureRecognizer=TapGestureRecognizer()..onTap=(){
-AppNavigatorService.pushReplacementNamed(context, routeName: wantedScreen);
-    };
+    final GestureRecognizer gestureRecognizer = TapGestureRecognizer()
+      ..onTap = () {
+        AppNavigatorService.pushReplacementNamed(context,
+            routeName: wantedScreen);
+      };
     return Text.rich(TextSpan(children: [
-      TextSpan(text: infoText, style: Theme.of(context).textTheme.bodySmall),
       TextSpan(
-        recognizer: gestureRecognizer,
+          text: infoText, style: Theme.of(context).textTheme.headlineSmall!),
+      TextSpan(
+          recognizer: gestureRecognizer,
           text: actionText,
           style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               color: AppColors.mainColor, fontWeight: FontWeight.w600))

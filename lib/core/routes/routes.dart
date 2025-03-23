@@ -8,4 +8,6 @@ class Routes {
   static const String confirmForgetPassPage = '/confirmForgetPass';
   static const String MainPage = '/MainPage';
   static const String navigationPage = '/navigation';
+static const String foodItemDescriptionPage='/foodItemDescription';
+static const String filtersPage='/filters';
 }

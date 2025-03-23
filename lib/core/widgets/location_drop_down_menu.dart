@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class LocationDropDownMenu extends StatefulWidget {
@@ -18,7 +19,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 18,
+            height: responsiveHeight(context, 25),
             child: DropdownButton(
               underline: SizedBox(),
               hint: Text(
@@ -27,12 +28,18 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
               ),
               items: [
                 DropdownMenuItem(
-                  child: Text("New York"),
+                  child: Text(
+                    "New York",
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
+                  ),
                   value: "New York",
                 ),
                 DropdownMenuItem(
                   value: "wgwrbwrbwrbwrbrwbwrbrbwrbrwbwrbwrbrwb",
-                  child: Text("San Francisco"),
+                  child: Text(
+                    "San Francisco",
+                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
+                  ),
                 ),
               ],
               onChanged: (value) {
@@ -45,7 +52,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
           Text(
             location ?? "",
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.labelLarge,
+            style: Theme.of(context).textTheme.labelSmall!.copyWith(color: AppColors.black),
           ),
         ],
       ),
