@@ -6,10 +6,11 @@ import 'package:food_tek/core/widgets/current_location_widget.dart';
 import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:food_tek/features/home/models/recommend_model.dart';
-import 'package:food_tek/features/home/views/widgets/burger_pag.dart';
-import 'package:food_tek/features/home/views/widgets/pizza_page.dart';
-import 'package:food_tek/features/home/views/widgets/sandwesh_page.dart';
-import 'package:food_tek/features/home/views/widgets/home_page.dart';
+import 'package:food_tek/features/home/views/widgets/burger_view_widget.dart';
+import 'package:food_tek/features/home/views/widgets/food_tab_bar_widget.dart';
+import 'package:food_tek/features/home/views/widgets/pizza_view_widget.dart';
+import 'package:food_tek/features/home/views/widgets/sandwish_view_widget.dart';
+import 'package:food_tek/features/home/views/widgets/all_view_widget.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -21,21 +22,25 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   String? location = "";
   String selectedCategory = "All";
-    
 
-  
   List<Food> foodList = [
     Food(
+        reviews: 111,
+        rating: 5,
         img: AppImageStrings.chickenBurger,
         name: "chicken Burger",
         subTitle: "100 gr chicken + tomato + cheese Lettuce",
         price: 20.00),
     Food(
+        reviews: 0,
+        rating: 0,
         img: AppImageStrings.cheseBurger,
         name: "chese Burger",
         subTitle: "100 gr meat + onion + tomato + Lettuce cheese",
         price: 15.00),
     Food(
+        reviews: 200,
+        rating: 4.5,
         img: AppImageStrings.burger,
         name: "chese Burger",
         subTitle: "100 gr meat + onion + tomato + Lettuce cheese",
@@ -52,51 +57,34 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4, 
+      length: 4,
       child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(150),
-          child: AppBar(
-            backgroundColor: Colors.white,
-           
-            elevation: 0,
-            flexibleSpace: Padding(
-              padding: EdgeInsets.symmetric(horizontal: responsiveWidth(context, 30)),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: responsiveWidth(context, 30)),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                spacing: responsiveHeight(context, 25),
+                children: [
                   CurrentLocationWidget(),
-                  SizedBox(height: 5),
                   FoodSearchWidget(),
-                  SizedBox(height: 40)
+                  FoodTabBarWidget(),
+                  SizedBox(
+                    height: responsiveHeight(context, 526),
+                    child: TabBarView(
+                      children: [
+                        const AllViewWidget(),
+                        BurgerViewWidget(),
+                        PizzaViewWidget(),
+                        SandwishViewWidget(),
+                      ],
+                    ),
+                  ),
                 ],
-
               ),
             ),
-            bottom: TabBar(
-              isScrollable: true,
-              indicatorColor: Colors.green,
-              labelColor: Colors.green,
-              unselectedLabelColor: Colors.black,
-              tabs: [
-                  Tab(text: "All"),
-                  Tab(child: Row( children: [Image.asset(AppImageStrings.burger,),Text("Burger")],),),
-               Tab(child: Row(children: [Image.asset(AppImageStrings.pizza,),Text("pizza")],),),
-               Tab(child: Row(children: [Image.asset(AppImageStrings.sandwsh,),Text("sandwesh")],),),
-
-         
-         
-              ],
-            ),
           ),
-        ),
-        body: TabBarView(
-          children: [
-            HomePage(),
-            const BurgerPag(),
-             PizzaPage(),
-            const SandweshPage(),
-          ],
         ),
       ),
     );

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/location_drop_down_menu.dart';
-import 'package:food_tek/features/home/models/notification_model.dart';
-import 'package:food_tek/features/home/views/widgets/notification_widgets.dart';
+import 'package:food_tek/features/notifications/models/notification_model.dart';
+import 'package:food_tek/features/notifications/views/widgets/notification_widgets.dart';
 
 class CurrentLocationWidget extends StatelessWidget {
   const CurrentLocationWidget({super.key});
@@ -53,6 +53,7 @@ class CurrentLocationWidget extends StatelessWidget {
               child: IconButton(
                 padding: EdgeInsets.zero,
                 onPressed: () {
+                  //TOOD:ADD SERVICE
                   showModalBottomSheet(
                     context: context,
                     builder: (BuildContext context) {

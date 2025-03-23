@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/home/models/notification_model.dart';
+import 'package:food_tek/features/notifications/models/notification_model.dart';
 
 class NotificationWidgets extends StatelessWidget {
   final NotificationModel notificationModel;
-  NotificationWidgets({super.key, required this.notificationModel, required List<NotificationModel> notificationList});
+  const NotificationWidgets({super.key, required this.notificationModel, required List<NotificationModel> notificationList});
 
   @override
   Widget build(BuildContext context) {
