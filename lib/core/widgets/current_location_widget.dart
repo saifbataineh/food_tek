@@ -2,12 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/location_drop_down_menu.dart';
+import 'package:food_tek/features/home/models/notification_model.dart';
+import 'package:food_tek/features/home/views/widgets/notification_widgets.dart';
 
 class CurrentLocationWidget extends StatelessWidget {
   const CurrentLocationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<NotificationModel> NotificationList = [
+      NotificationModel(
+          name: "Zaid",
+          message:
+              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
+          date: "Last Wednesday at 9:42 AM"),
+      NotificationModel(
+          name: "Zaid",
+          message:
+              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
+          date: "Last Wednesday at 9:42 AM")
+    ];
     return SizedBox(
       child: Row(
         children: [
@@ -89,6 +103,9 @@ class CurrentLocationWidget extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     const TabBar(
+                                      tabAlignment: TabAlignment.center,
+                                      dividerColor: Colors.transparent,
+                                      padding: EdgeInsets.all(0),
                                       labelColor: Colors.black,
                                       indicatorColor: Colors.green,
                                       tabs: [
@@ -100,9 +117,19 @@ class CurrentLocationWidget extends StatelessWidget {
                                     Expanded(
                                       child: TabBarView(
                                         children: [
-                                         Text("All"),
-                                         Text("unread"),
-                                         Text("archive"),
+                                          ListView.builder(
+                                            itemCount: NotificationList.length,
+                                            itemBuilder: (context, index) {
+                                              return NotificationWidgets(
+                                                notificationModel:
+                                                    NotificationList[index],
+                                                notificationList:
+                                                    NotificationList,
+                                              );
+                                            },
+                                          ),
+                                          Text("unread"),
+                                          Text("archive"),
                                         ],
                                       ),
                                     ),
@@ -116,7 +143,7 @@ class CurrentLocationWidget extends StatelessWidget {
                     },
                   );
                 },
-                icon: const Icon(size: 18, Icons.notifications),
+                icon: Icon(size: 18, Icons.notifications),
               ),
             ),
           ),

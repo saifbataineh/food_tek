@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/features/favorite/views/widgets/food_favorite_grid_view_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:food_tek/features/home/views/widgets/pizza_food_grid_view_widget.dart';
 
 class PizzaPage extends StatelessWidget {
   PizzaPage({super.key});
@@ -34,6 +35,6 @@ class PizzaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: FoodFavoriteGridViewWidget());
+    return SafeArea(child: PizzaFoodGridViewWidget());
   }
 }

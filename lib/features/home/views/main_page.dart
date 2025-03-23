@@ -79,10 +79,13 @@ class _MainPageState extends State<MainPage> {
               labelColor: Colors.green,
               unselectedLabelColor: Colors.black,
               tabs: [
-                _buildTab("All", null),
-                _buildTab("Burger", AppImageStrings.burger),
-                _buildTab("Pizza", AppImageStrings.pizza),
-                _buildTab("Sandwich", AppImageStrings.sandwsh),
+                  Tab(text: "All"),
+                  Tab(child: Row( children: [Image.asset(AppImageStrings.burger,),Text("Burger")],),),
+               Tab(child: Row(children: [Image.asset(AppImageStrings.pizza,),Text("pizza")],),),
+               Tab(child: Row(children: [Image.asset(AppImageStrings.sandwsh,),Text("sandwesh")],),),
+
+         
+         
               ],
             ),
           ),
@@ -94,44 +97,6 @@ class _MainPageState extends State<MainPage> {
              PizzaPage(),
             const SandweshPage(),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTab(String title, String? imageAsset) {
-    bool isSelected = title == selectedCategory;  
-
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedCategory = title;
-        });
-      },
-      child: Container(
-        width: 100,
-        height: 40,
-        decoration: BoxDecoration(
-          color: isSelected ? AppColors.mainColor : Colors.white,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (imageAsset != null)
-                Padding(
-                  padding: const EdgeInsets.only(right: 5),
-                  child: Image.asset(imageAsset, width: 30, height: 30),
-                ),
-              Text(
-                title,
-                style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.black,
-                ),
-              ),
-            ],
-          ),
         ),
       ),
     );

@@ -5,8 +5,8 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/favorite/views/widgets/single_item_grid_tile_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 
-class FoodFavoriteGridViewWidget extends StatelessWidget {
-  const FoodFavoriteGridViewWidget({super.key});
+class PizzaFoodGridViewWidget extends StatelessWidget {
+  const PizzaFoodGridViewWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class FoodFavoriteGridViewWidget extends StatelessWidget {
                   mainAxisSpacing: responsiveHeight(context, 22),
                   crossAxisCount: 2,
                   mainAxisExtent: responsiveHeight(context, 252)),
-              itemCount: 6,
+              itemCount: 4,
               itemBuilder: (context, index) => SignleItemGridTileWidget(
                     foodItem: pizzaList[index],
                   )),
