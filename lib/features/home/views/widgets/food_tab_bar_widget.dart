@@ -42,7 +42,7 @@ class FoodTabBarWidget extends StatelessWidget {
           child: Row(
             children: [
               Image.asset(
-                AppImageStrings.sandwish,
+                AppImageStrings.sandwishLogo,
               ),
               Text("sandwesh")
             ],

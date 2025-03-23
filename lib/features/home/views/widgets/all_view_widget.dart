@@ -51,40 +51,39 @@ class _AllViewWidgetState extends State<AllViewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          width: responsiveWidth(context, 370), // Make responsive
-          height: responsiveHeight(context, 128),
-          child: Image.asset(AppImageStrings.discountPhoto),
-        ),
-        SizedBox(
-          height: responsiveHeight(context, 14),
-        ),
-        Text("Top Rated",
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
-        SizedBox(
-          height: responsiveHeight(context, 13),
-        ),
-        SizedBox(
-          height: responsiveHeight(context, 220),
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: foodList.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TopRatedWidget(foodItem: foodList[index]),
-              );
-            },
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: responsiveWidth(context, 370), // Make responsive
+            height: responsiveHeight(context, 128),
+            child: Image.asset(AppImageStrings.discountPhoto),
           ),
-        ),
-        const SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
+          SizedBox(
+            height: responsiveHeight(context, 5),
+          ),
+          Text("Top Rated",
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
+          SizedBox(
+            height: responsiveHeight(context, 13),
+          ),
+          SizedBox(
+            height: responsiveHeight(context, 220),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: foodList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: TopRatedWidget(foodItem: foodList[index]),
+                );
+              },
+            ),
+          ),
+          SizedBox(height: responsiveHeight(context, 15)),
+          Row(
             children: [
               Text("Recommend",
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
@@ -113,24 +112,24 @@ class _AllViewWidgetState extends State<AllViewWidget> {
               ),
             ],
           ),
-        ),
-        SizedBox(
-          height: responsiveHeight(context, 11),
-        ),
-        SizedBox(
-          height: responsiveHeight(context, 108),
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: recommendList.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: RecommendedFoodScreen(recommend: recommendList[index]),
-              );
-            },
+          SizedBox(
+            height: responsiveHeight(context, 11),
           ),
-        ),
-      ],
+          SizedBox(
+            height: responsiveHeight(context, 108),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: recommendList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: RecommendedFoodScreen(recommend: recommendList[index]),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

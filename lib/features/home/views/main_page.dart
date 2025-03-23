@@ -65,13 +65,13 @@ class _MainPageState extends State<MainPage> {
               padding: EdgeInsets.symmetric(
                   horizontal: responsiveWidth(context, 30)),
               child: Column(
-                spacing: responsiveHeight(context, 25),
+                spacing: responsiveHeight(context, 22),
                 children: [
                   CurrentLocationWidget(),
                   FoodSearchWidget(),
                   FoodTabBarWidget(),
                   SizedBox(
-                    height: responsiveHeight(context, 526),
+                    height: responsiveHeight(context, 580),
                     child: TabBarView(
                       children: [
                         const AllViewWidget(),
