@@ -34,7 +34,11 @@ class ShowDialogService {
                     if (image != null) Image.asset(image),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(textAlign: TextAlign.center, description),
+                      child: Text(
+                        textAlign: TextAlign.center,
+                        description,
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
                     ),
                     if (extraActioncontent != null) extraActioncontent,
                     SizedBox(

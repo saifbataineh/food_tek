@@ -14,13 +14,9 @@ class FoodFavoriteGridViewWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: responsiveHeight(context, 6),
       children: [
-        Text(
-          "favorites",
-          style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-              color: AppColors.redyBlack),
-        ),
+        Text("favorites",
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
         SizedBox(
           height: responsiveHeight(context, 526),
           width: responsiveWidth(context, 372),

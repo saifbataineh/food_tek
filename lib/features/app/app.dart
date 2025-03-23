@@ -7,6 +7,7 @@ import 'package:food_tek/features/authintication/views/confirm_reset_password_pa
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
+import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
 import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
@@ -36,7 +37,7 @@ class App extends StatelessWidget {
         textButtonTheme: AppTheme.textButtonTheme,
         textTheme: AppTheme.textStyle,
       ),
-      initialRoute: Routes.navigationPage,
+      initialRoute: Routes.splashPage,
       routes: {
         Routes.splashPage: (context) => SplashPage(),
         Routes.onboardingPage: (context) => OnboardingPage(),
@@ -48,6 +49,7 @@ class App extends StatelessWidget {
         Routes.navigationPage: (cotenxt) => NavigationPage(),
         Routes.homePage: (cotenxt) => HomePage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
+        Routes.filtersPage: (cotenxt) => FiltersPage(),
       },
       builder: (context, child) {
         return MediaQuery(

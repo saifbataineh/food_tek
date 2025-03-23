@@ -85,7 +85,7 @@ class ResetPasswordPage extends StatelessWidget {
                       ),
                       Text(
                         S.of(context).resetpassword,
-                        style: Theme.of(context).textTheme.headlineLarge,
+                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(letterSpacing: -2),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(

@@ -25,7 +25,7 @@ class _HotSliderBarWidgetState extends State<HotSliderBarWidget> {
           ),
           Slider(
               padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
-              inactiveColor: AppColors.darkgreyColor,
+              inactiveColor: AppColors.whiteGrey,
               activeColor: AppColors.hotRed,
               value: sliderValue,
               onChanged: (value) {
