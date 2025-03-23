@@ -10,7 +10,7 @@ import 'package:food_tek/features/authintication/views/sign_up_page.dart';
 import 'package:food_tek/features/cart/views/cart_page.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
-import 'package:food_tek/features/home/views/home_page.dart';
+import 'package:food_tek/features/home/views/main_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
@@ -48,7 +48,7 @@ class App extends StatelessWidget {
         Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
         Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
         Routes.navigationPage: (cotenxt) => NavigationPage(),
-        Routes.homePage: (cotenxt) => HomePage(),
+        Routes.MainPage: (cotenxt) => MainPage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),

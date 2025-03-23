@@ -20,10 +20,21 @@ class AppImageStrings {
   //food
   static const String burger = 'assets/food/burger.png';
   static const String pizza = 'assets/food/pizza.png';
-  static const String sandwsh = 'assets/food/sandwsh.png';
+  static const String sandwishLogo = 'assets/food/sandwsh.png';
   static const String discountPhoto = 'assets/food/withText.png';
   static const String plate = 'assets/food/plate.png';
   static const String pepproniPizza = 'assets/food/pepperoni_pizza.png';
 
   static const String foodItemDetailsBackground = 'assets/food/food_item_background.png';
+  static const String chickenBurger = 'assets/food/ChickenBurger.png';
+  static const String cheseBurger = 'assets/food/CheseBurger.png';
+  static const String recommend1 = 'assets/food/recommend1.png';
+  static const String recommend2 = 'assets/food/recommend2.png';
+  static const String recommend3 = 'assets/food/recommend3.png';
+  static const String recommend4 = 'assets/food/recommend4.png';
+  static const String pizza1 = 'assets/food/pizza1.png';
+  static const String pizza2 = 'assets/food/pizza1.png';
+  static const String pizza3 = 'assets/food/pizza3.png';
+  static const String pizza4 = 'assets/food/pizza4.png';
+  static const String sandwish = 'assets/food/simple_sandwish.png';
 }

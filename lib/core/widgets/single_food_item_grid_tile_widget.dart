@@ -7,8 +7,8 @@ import 'package:food_tek/features/favorite/views/widgets/favorite_button_widget.
 import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SignleItemGridTileWidget extends StatelessWidget {
-  const SignleItemGridTileWidget({
+class SingleFoodItemGridTileWidget extends StatelessWidget {
+  const SingleFoodItemGridTileWidget({
     required this.foodItem,
     super.key,
   });
@@ -36,6 +36,7 @@ class SignleItemGridTileWidget extends StatelessWidget {
                       height: responsiveHeight(context, 58),
                     ),
                     Text(
+                      maxLines: 1,
                       foodItem.name,
                       style: GoogleFonts.sora(
                           letterSpacing: 0,
