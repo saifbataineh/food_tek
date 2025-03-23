@@ -27,6 +27,7 @@ class _NavigationPageState extends State<NavigationPage> {
     return Scaffold(
       body: pages[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      
       floatingActionButton: Container(
           padding: EdgeInsets.all(8),
           decoration:
