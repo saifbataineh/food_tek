@@ -95,12 +95,16 @@ class FoodDetaialsPage extends StatelessWidget {
                           .titleMedium!
                           .copyWith(color: AppColors.mainColor),
                     ),
-                    Text(
-                      "\$ ${foodItem.oldPrice} ",
-                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                          color: AppColors.mediumlightgreyColor,
-                          decoration: TextDecoration.lineThrough),
-                    ),
+                    if (foodItem.oldPrice != null)
+                      Text(
+                        "\$ ${foodItem.oldPrice} ",
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .copyWith(
+                                color: AppColors.mediumlightgreyColor,
+                                decoration: TextDecoration.lineThrough),
+                      ),
                   ],
                 ),
                 Text(

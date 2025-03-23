@@ -7,6 +7,7 @@ import 'package:food_tek/features/authintication/views/confirm_reset_password_pa
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
+import 'package:food_tek/features/cart/views/cart_page.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
 import 'package:food_tek/features/home/views/main_page.dart';
@@ -50,6 +51,7 @@ class App extends StatelessWidget {
         Routes.MainPage: (cotenxt) => MainPage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
+        Routes.cartPage: (cotenxt) => CartPage(),
       },
       builder: (context, child) {
         return MediaQuery(

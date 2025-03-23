@@ -21,65 +21,67 @@ class TopRatedWidget extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: responsiveWidth(context, 12)),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Icon(Icons.star, color: AppColors.gold),
-                Text("${foodItem.rating}")
-              ],
-            ),
-            Image.asset(
-              foodItem.img,
-              width: responsiveWidth(context, 87),
-              height: responsiveHeight(context, 70),
-            ),
-            SizedBox(height: responsiveHeight(context, 8)),
-            Text(
-                textAlign: TextAlign.justify,
-                foodItem.name,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium!
-                    .copyWith(fontSize: 16, letterSpacing: -1)),
-            SizedBox(height: responsiveHeight(context, 8)),
-            Text(foodItem.subTitle,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(color: AppColors.greyColor)),
-            SizedBox(height: 4),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "\$${foodItem.price}",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColors.mainColor,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                SizedBox(
-                  width: responsiveWidth(context, 30),
-                  height: responsiveHeight(context, 30),
-                  child: IconButton(
-                    style: IconButton.styleFrom(
-                        backgroundColor: AppColors.mainColor,
-                        padding: EdgeInsets.only()),
-                    onPressed: () {},
-                    icon: Icon(
-                      color: Colors.white,
-                      Icons.add,
-                      size: 24,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.star, color: AppColors.gold),
+                  Text("${foodItem.rating}")
+                ],
+              ),
+              Image.asset(
+                foodItem.img,
+                width: responsiveWidth(context, 87),
+                height: responsiveHeight(context, 70),
+              ),
+              SizedBox(height: responsiveHeight(context, 8)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(foodItem.name,
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                          fontSize: 18,
+                        )),
+              ),
+              SizedBox(height: responsiveHeight(context, 8)),
+              Text(foodItem.subTitle,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .copyWith(color: AppColors.greyColor)),
+              SizedBox(height: 4),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "\$${foodItem.price}",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: AppColors.mainColor,
+                      fontWeight: FontWeight.normal,
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  SizedBox(
+                    width: responsiveWidth(context, 30),
+                    height: responsiveHeight(context, 30),
+                    child: IconButton(
+                      style: IconButton.styleFrom(
+                          backgroundColor: AppColors.mainColor,
+                          padding: EdgeInsets.only()),
+                      onPressed: () {},
+                      icon: Icon(
+                        color: Colors.white,
+                        Icons.add,
+                        size: 24,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
