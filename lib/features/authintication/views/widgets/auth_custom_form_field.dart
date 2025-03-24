@@ -46,8 +46,8 @@ class _AuthCustomFormFieldState extends State<AuthCustomFormField> {
           obscuringCharacter: '*',
           style: Theme.of(context)
               .textTheme
-              .bodySmall!
-              .copyWith(fontWeight: FontWeight.w700),
+              .bodySmall!,
+              
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
               horizontal: responsiveWidth(context, 14),

@@ -30,7 +30,10 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
                 DropdownMenuItem(
                   child: Text(
                     "New York",
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontWeight: FontWeight.w700),
                   ),
                   value: "New York",
                 ),
@@ -38,7 +41,10 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
                   value: "wgwrbwrbwrbwrbrwbwrbrbwrbrwbwrbwrbrwb",
                   child: Text(
                     "San Francisco",
-                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(fontWeight: FontWeight.w700),
                   ),
                 ),
               ],
@@ -52,7 +58,10 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
           Text(
             location ?? "",
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.labelSmall!.copyWith(color: AppColors.black),
+            style: Theme.of(context)
+                .textTheme
+                .labelSmall!
+                .copyWith(color: AppColors.black),
           ),
         ],
       ),

@@ -9,6 +9,7 @@ class Food {
   double? oldPrice;
   double rating;
   int reviews;
+  int quantity;
 
   Food({
     required this.img,
@@ -17,6 +18,9 @@ class Food {
     required this.price,
     required this.rating,
     required this.reviews,
+    this.quantity=0,
     this.oldPrice
   });
+  //TODO:IMPLEMENT BLOC next
+
 }

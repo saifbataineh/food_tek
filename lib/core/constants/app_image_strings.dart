@@ -37,4 +37,14 @@ class AppImageStrings {
   static const String pizza3 = 'assets/food/pizza3.png';
   static const String pizza4 = 'assets/food/pizza4.png';
   static const String sandwish = 'assets/food/simple_sandwish.png';
+//cart
+  static const String emptyCart = 'assets/cart/empty_container.png';
+
+//navigation
+  static const String home = 'assets/navigation_icons/home_icon.png';
+  static const String favorite = 'assets/navigation_icons/favorite_icon.png';
+  static const String cart = 'assets/navigation_icons/cart_icon.png';
+  static const String profile = 'assets/navigation_icons/profile_icon.png';
+  static const String track = 'assets/navigation_icons/trach_icon.png';
+
 }
