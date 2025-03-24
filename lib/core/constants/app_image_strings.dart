@@ -37,4 +37,6 @@ class AppImageStrings {
   static const String pizza3 = 'assets/food/pizza3.png';
   static const String pizza4 = 'assets/food/pizza4.png';
   static const String sandwish = 'assets/food/simple_sandwish.png';
+  static const String person = 'assets/food/person.png';
+
 }
