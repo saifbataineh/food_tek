@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/core/widgets/add_remove_to_cart_widget.dart';
 import 'package:food_tek/core/widgets/current_location_widget.dart';
 import 'package:food_tek/core/widgets/food_search_widget.dart';
-import 'package:food_tek/features/app/app.dart';
-import 'package:food_tek/features/food_details/views/widgets/add_quantity_widget.dart';
 import 'package:food_tek/features/food_details/views/widgets/hot_slider_bar_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 
@@ -95,16 +94,12 @@ class FoodDetaialsPage extends StatelessWidget {
                           .titleMedium!
                           .copyWith(color: AppColors.mainColor),
                     ),
-                    if (foodItem.oldPrice != null)
-                      Text(
-                        "\$ ${foodItem.oldPrice} ",
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelMedium!
-                            .copyWith(
-                                color: AppColors.mediumlightgreyColor,
-                                decoration: TextDecoration.lineThrough),
-                      ),
+                    Text(
+                      "\$ ${foodItem.oldPrice} ",
+                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                          color: AppColors.mediumlightgreyColor,
+                          decoration: TextDecoration.lineThrough),
+                    ),
                   ],
                 ),
                 Text(
@@ -118,7 +113,22 @@ class FoodDetaialsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     HotSliderBarWidget(),
-                    AddQuantityWidget(),
+                    SizedBox(
+                      width: responsiveWidth(context, 115),
+                      child: Column(
+                        spacing: responsiveHeight(context, 12),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Quantity",
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                          AddRemoveToCartWidget(
+                            iconSize: 32,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
                 Container(

@@ -8,10 +8,6 @@ class NotificationWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List <NotificationModel> NotificationList=[
-      NotificationModel(name: "Zaid", message: "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!", date: "Last Wednesday at 9:42 AM"),
-            NotificationModel(name: "Zaid", message: "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!", date: "Last Wednesday at 9:42 AM")
-    ];
     return SafeArea(
        child: SingleChildScrollView(
          child: Container(

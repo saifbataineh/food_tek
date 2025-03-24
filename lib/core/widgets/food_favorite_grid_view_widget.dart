@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_tek/core/constants/app_colors.dart';
-import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/single_food_item_grid_tile_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';

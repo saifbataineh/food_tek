@@ -2,10 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
+// ignore: unused_import
 import 'package:food_tek/core/routes/routes.dart';
-import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/authintication/views/widgets/pin_code_field.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class ShowDialogService {
