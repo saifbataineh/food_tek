@@ -3,48 +3,14 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/services/location_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:location/location.dart';
 
 class TurnOnLocationPage extends StatelessWidget {
   const TurnOnLocationPage({super.key});
-
-  Future<Position> _determinePosition() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      return Future.error('Location services are disabled.');
-    }
-
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return Future.error('Location permissions are denied');
-      }
-    }
-
-    if (permission == LocationPermission.deniedForever) {
-    
-      return Future.error(
-          'Location permissions are permanently denied, we cannot request permissions.');
-    }
-
-    return await Geolocator.getCurrentPosition();
-  }
-
-  Future<void> _determinePositionAndNavigate(BuildContext context) async {
-    try {
-      Position position = await _determinePosition();
-      Navigator.pushReplacementNamed(context, Routes.loginPage);
-    } catch (e) {
-     Navigator.pushReplacementNamed(context, Routes.loginPage);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +79,9 @@ class TurnOnLocationPage extends StatelessWidget {
                         width: responsiveWidth(context, 307),
                         child: TextButton(
                           onPressed: () {
-                            _determinePositionAndNavigate(context);
+                            LocationService.checkEnabledAndPermission();
+                            AppNavigatorService.pushNamed(context,
+                                routeName: Routes.loginPage);
                           },
                           child: Text(
                             S.of(context).continue2,

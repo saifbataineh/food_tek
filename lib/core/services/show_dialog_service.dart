@@ -56,13 +56,19 @@ class ShowDialogService {
         });
   }
 
-  static showCongratsDialog({required BuildContext context,required String congrats,required String congratsDescription}) {
+  static showCongratsDialog(
+      {required BuildContext context,
+      required String congrats,
+      required String congratsDescription}) {
     showDialog(
         context: context,
         builder: (context) {
-          return CongratsDialodWidget(congrats: congrats,congratsDescription: congratsDescription,);
+          return BackdropFilter(
+              filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+              child: CongratsDialodWidget(
+                congrats: congrats,
+                congratsDescription: congratsDescription,
+              ),);
         });
   }
 }
-
-

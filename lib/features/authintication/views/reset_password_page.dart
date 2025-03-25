@@ -98,7 +98,7 @@ class ResetPasswordPage extends StatelessWidget {
                       CustomFormField(
                         controller: TextEditingController(),
                         label: S.of(context).email,
-                        hintText: S.of(context).emailhint,
+                        hintText: "example@example.com",
                       ),
                       SizedBox(
                         width: double.infinity,

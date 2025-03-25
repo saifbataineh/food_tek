@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/widgets/custom_form_field.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class PhoneAuthCustomFormFieldWidget extends StatefulWidget {
   const PhoneAuthCustomFormFieldWidget({
@@ -22,7 +23,7 @@ class _PhoneAuthCustomFormFieldWidgetState
     return CustomFormField(
       keyboardType: TextInputType.phone,
       controller: phoneController,
-      label: "Phone Number",
+      label: S.of(context).phone_number,
       prefixIcon: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -40,8 +41,7 @@ class _PhoneAuthCustomFormFieldWidgetState
               value: countryCode,
               style: Theme.of(context).textTheme.headlineSmall,
               hint: Text(
-                //TODO: localization
-                "select  ",
+                S.of(context).select,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
               items: [

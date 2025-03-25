@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class NotificationSwitch extends StatefulWidget {
   const NotificationSwitch({super.key});
@@ -13,7 +14,7 @@ class _NotificationSwitchState extends State<NotificationSwitch> {
   Widget build(BuildContext context) {
     return Transform.scale(
       scale: 0.6,
-      child: CupertinoSwitch(
+      child: Switch.adaptive(
         value: isOnPushNotification,
         onChanged: (value) {
           setState(() {

@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "already have an account? ",
     ),
     "back_to": MessageLookupByLibrary.simpleMessage("Back to "),
+    "birth_of_date": MessageLookupByLibrary.simpleMessage("Birth Of Date "),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "Confirm New Password",
@@ -40,11 +41,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t have an account?",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
-    "emailhint": MessageLookupByLibrary.simpleMessage("example@example.com"),
     "enteremailorphonenumber": MessageLookupByLibrary.simpleMessage(
       "Enter your E-mail or phone and we\'ll send you a link to get back into your account",
     ),
     "forgetpassword": MessageLookupByLibrary.simpleMessage("Forgot Password ?"),
+    "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
     "inforeset": MessageLookupByLibrary.simpleMessage(
       "Want to try with my current password?",
     ),
@@ -73,13 +74,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "password reset succesfuly",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "phone_number": MessageLookupByLibrary.simpleMessage("Phone Number "),
+    "register": MessageLookupByLibrary.simpleMessage("Register"),
     "rememberme": MessageLookupByLibrary.simpleMessage("remember me"),
     "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+    "select": MessageLookupByLibrary.simpleMessage("select "),
     "send": MessageLookupByLibrary.simpleMessage("Send"),
+    "set_password": MessageLookupByLibrary.simpleMessage("Set Password"),
     "signtitle": MessageLookupByLibrary.simpleMessage("Sign up"),
     "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip_button": MessageLookupByLibrary.simpleMessage("Skip"),
-    "title": MessageLookupByLibrary.simpleMessage("hello world!!!"),
     "turnloc_text": MessageLookupByLibrary.simpleMessage(
       "To continue, let your device turn on location, which uses Google’s location service",
     ),
