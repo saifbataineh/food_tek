@@ -3,18 +3,21 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class CheckBoxWithTextWidget extends StatefulWidget {
-  const CheckBoxWithTextWidget({
+   const CheckBoxWithTextWidget({
     super.key,
     required this.text,
+    
   });
   final String text;
+    
+  
 
   @override
   State<CheckBoxWithTextWidget> createState() => _CheckBoxWithTextWidgetState();
 }
 
 class _CheckBoxWithTextWidgetState extends State<CheckBoxWithTextWidget> {
-  bool isSelected = false;
+ bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,7 +30,7 @@ class _CheckBoxWithTextWidgetState extends State<CheckBoxWithTextWidget> {
               value: isSelected,
               onChanged: (value) {
                 setState(() {
-                  isSelected = !isSelected;
+                  isSelected = value ?? false;
                 });
               }),
         ),
@@ -36,7 +39,10 @@ class _CheckBoxWithTextWidgetState extends State<CheckBoxWithTextWidget> {
         ),
         Text(
           widget.text,
-          style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall!
+              .copyWith(fontWeight: FontWeight.w700),
         ),
       ],
     );

@@ -8,7 +8,6 @@ import 'package:food_tek/features/authintication/views/widgets/continue_with_wid
 import 'package:food_tek/features/authintication/views/widgets/login_form_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
