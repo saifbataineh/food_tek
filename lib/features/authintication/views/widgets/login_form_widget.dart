@@ -6,9 +6,11 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/check_box_with_text_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
+import 'package:food_tek/shared_preferance.dart';
 
 class LoginFormWidget extends StatelessWidget {
-  LoginFormWidget({super.key});
+ 
+  LoginFormWidget({super.key });
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   @override
@@ -52,7 +54,8 @@ class LoginFormWidget extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
+               // await SharedPrefHelper.setRememberMe();
                 AppNavigatorService.pushAndRemoveUntil(context,
                     routeName: Routes.navigationPage);
               },
