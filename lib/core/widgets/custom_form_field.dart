@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
-class AuthCustomFormField extends StatefulWidget {
-  const AuthCustomFormField({
+class CustomFormField extends StatefulWidget {
+  const CustomFormField({
     super.key,
     required this.label,
     this.isPassword = false,
@@ -24,10 +24,10 @@ class AuthCustomFormField extends StatefulWidget {
   final bool enabled;
   final TextInputType? keyboardType;
   @override
-  State<AuthCustomFormField> createState() => _AuthCustomFormFieldState();
+  State<CustomFormField> createState() => _CustomFormFieldState();
 }
 
-class _AuthCustomFormFieldState extends State<AuthCustomFormField> {
+class _CustomFormFieldState extends State<CustomFormField> {
   bool isObsecure = true;
   @override
   Widget build(BuildContext context) {
@@ -44,10 +44,7 @@ class _AuthCustomFormFieldState extends State<AuthCustomFormField> {
           controller: widget.controller,
           obscureText: widget.isPassword ? isObsecure : false,
           obscuringCharacter: '*',
-          style: Theme.of(context)
-              .textTheme
-              .bodySmall!,
-              
+          style: Theme.of(context).textTheme.bodySmall!,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
               horizontal: responsiveWidth(context, 14),
@@ -70,7 +67,6 @@ class _AuthCustomFormFieldState extends State<AuthCustomFormField> {
               borderRadius: BorderRadius.circular(10),
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.formFieldBorderColor),
               borderRadius: BorderRadius.circular(10),
             ),
             hintText: widget.hintText,

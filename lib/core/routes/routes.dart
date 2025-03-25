@@ -11,4 +11,5 @@ class Routes {
 static const String foodItemDescriptionPage='/foodItemDescription';
 static const String filtersPage='/filters';
 static const String cartPage='/cart';
+static const String updateProfilePage='/updateProfile';
 }

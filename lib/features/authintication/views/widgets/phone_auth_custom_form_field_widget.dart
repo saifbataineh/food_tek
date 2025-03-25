@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/core/widgets/custom_form_field.dart';
 
 class PhoneAuthCustomFormFieldWidget extends StatefulWidget {
   const PhoneAuthCustomFormFieldWidget({
@@ -19,7 +19,7 @@ class _PhoneAuthCustomFormFieldWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return AuthCustomFormField(
+    return CustomFormField(
       keyboardType: TextInputType.phone,
       controller: phoneController,
       label: "Phone Number",

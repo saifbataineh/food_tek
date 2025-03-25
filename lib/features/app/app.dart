@@ -14,6 +14,7 @@ import 'package:food_tek/features/home/views/main_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
+import 'package:food_tek/features/person/views/update_proile_screen.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
 import 'package:food_tek/generated/l10n.dart';
 
@@ -52,6 +53,7 @@ class App extends StatelessWidget {
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
+        Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
       },
       builder: (context, child) {
         return MediaQuery(

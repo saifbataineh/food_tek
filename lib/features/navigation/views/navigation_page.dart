@@ -5,7 +5,7 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/favorite/views/favorite_page.dart';
 import 'package:food_tek/features/home/views/main_page.dart';
-import 'package:food_tek/features/person/screen/person_screen.dart';
+import 'package:food_tek/features/person/views/profile_page.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -22,7 +22,7 @@ class _NavigationPageState extends State<NavigationPage> {
     Container(
       child: Text("person"),
     ),
-    PersonScreen()
+    ProfilePage()
   ];
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class _NavigationPageState extends State<NavigationPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.location_on), label: "history"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: "Person"),
+              icon: Icon(Icons.person_outline), label: "Profile"),
         ],
       ),
     );

@@ -5,7 +5,7 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/services/show_dialog_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/core/widgets/custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
@@ -70,12 +70,12 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                             actionText: S.of(context).login,
                             infoText: S.of(context).inforeset,
                             wantedScreen: Routes.loginPage),
-                        AuthCustomFormField(
+                        CustomFormField(
                           controller: TextEditingController(),
                           label: S.of(context).new_password,
                           isPassword: true,
                         ),
-                        AuthCustomFormField(
+                        CustomFormField(
                           controller: TextEditingController(),
                           label: S.of(context).confirm_new_password,
                           isPassword: true,
@@ -85,6 +85,9 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               ShowDialogService.showCongratsDialog(
+                                  congrats: S.of(context).congratulations,
+                                  congratsDescription:
+                                      S.of(context).pass_reset_succesfuly,
                                   context: context);
                             },
                             child: Text(S.of(context).update_password),

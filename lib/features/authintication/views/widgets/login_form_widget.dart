@@ -3,7 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/core/widgets/custom_form_field.dart';
 import 'package:food_tek/features/authintication/views/widgets/check_box_with_text_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
@@ -17,13 +17,13 @@ class LoginFormWidget extends StatelessWidget {
       child: Column(
         spacing: responsiveHeight(context, 16),
         children: [
-          AuthCustomFormField(
+          CustomFormField(
             keyboardType: TextInputType.emailAddress,
             controller: emailController,
             label: S.of(context).email,
             hintText: 'example@example.com',
           ),
-          AuthCustomFormField(
+          CustomFormField(
             controller: passwordController,
             isPassword: true,
             label: S.of(context).password,
