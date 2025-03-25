@@ -5,6 +5,7 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/favorite/views/favorite_page.dart';
 import 'package:food_tek/features/home/views/main_page.dart';
+import 'package:food_tek/features/person/screen/person_screen.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -21,9 +22,7 @@ class _NavigationPageState extends State<NavigationPage> {
     Container(
       child: Text("person"),
     ),
-    Container(
-      child: Text("map"),
-    )
+    PersonScreen()
   ];
   @override
   Widget build(BuildContext context) {

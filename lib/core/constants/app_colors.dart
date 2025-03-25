@@ -22,4 +22,5 @@ class AppColors {
   static const Color hotRed = Color(0xffEF2A39);
   static const Color blueGrey = Color(0xff98A0B4);
   static const Color whiteGrey = Color(0xffEAFAEB);
+  static const Color borderColor = Color(0xffF5F5F5);
 }

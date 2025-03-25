@@ -47,4 +47,6 @@ class AppImageStrings {
   static const String profile = 'assets/navigation_icons/profile_icon.png';
   static const String track = 'assets/navigation_icons/trach_icon.png';
 
+  static const String person = 'assets/food/person.png';
+
 }
