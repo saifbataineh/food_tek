@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+<string>نحتاج إلى موقعك لعرض البيانات المناسبة.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>يتم استخدام موقعك لتحسين التجربة.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>يتم استخدام موقعك أثناء تشغيل التطبيق.</string>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

@@ -6,7 +6,9 @@ class AppColors {
   static const Color headLineGrey = Color(0xff6C7278);
   static const Color headLineBlack = Color(0xff111827);
   static const Color labelSmallBlack = Color(0xff1A1C1E);
+  static const Color iconBlackColor = Color(0xff1D1D1D);
   static const Color greyBlue = Color(0xff455a64);
+
   static const Color containerBorderColor = Color(0xffEFF0F6);
   static const Color formFieldBorderColor = Color(0xffEDF1F3);
   static const Color greyColor = Color(0xffC2C2C2);
@@ -22,4 +24,5 @@ class AppColors {
   static const Color hotRed = Color(0xffEF2A39);
   static const Color blueGrey = Color(0xff98A0B4);
   static const Color whiteGrey = Color(0xffEAFAEB);
+  static const Color borderColor = Color(0xffF5F5F5);
 }

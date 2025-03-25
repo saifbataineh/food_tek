@@ -3,9 +3,11 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/services/location_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
+import 'package:location/location.dart';
 
 class TurnOnLocationPage extends StatelessWidget {
   const TurnOnLocationPage({super.key});
@@ -77,7 +79,8 @@ class TurnOnLocationPage extends StatelessWidget {
                         width: responsiveWidth(context, 307),
                         child: TextButton(
                           onPressed: () {
-                            AppNavigatorService.pushReplacementNamed(context,
+                            LocationService.checkEnabledAndPermission();
+                            AppNavigatorService.pushNamed(context,
                                 routeName: Routes.loginPage);
                           },
                           child: Text(

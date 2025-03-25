@@ -5,6 +5,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 // ignore: unused_import
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/core/widgets/congrats_dialog_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class ShowDialogService {
@@ -55,36 +56,19 @@ class ShowDialogService {
         });
   }
 
-  static showCongratsDialog({required BuildContext context}) {
+  static showCongratsDialog(
+      {required BuildContext context,
+      required String congrats,
+      required String congratsDescription}) {
     showDialog(
         context: context,
         builder: (context) {
-          return Dialog(
-            backgroundColor: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset(AppImageStrings.passwordUpdatedSuccessfullyLogo),
-                  Text(
-                    S.of(context).congratulations,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineLarge!
-                        .copyWith(color: Colors.white),
-                  ),
-                  Text(
-                    S.of(context).pass_reset_succesfuly,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineMedium!
-                        .copyWith(color: Colors.white, fontSize: 22),
-                  ),
-                ],
-              ),
-            ),
-          );
+          return BackdropFilter(
+              filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+              child: CongratsDialodWidget(
+                congrats: congrats,
+                congratsDescription: congratsDescription,
+              ),);
         });
   }
 }

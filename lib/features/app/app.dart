@@ -14,8 +14,11 @@ import 'package:food_tek/features/home/views/main_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
+import 'package:food_tek/features/person/views/update_proile_screen.dart';
+import 'package:food_tek/features/slpash/controllers/cubit/app_cubit.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
 import 'package:food_tek/generated/l10n.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -23,7 +26,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: Locale('en'),
+      locale: Locale('ar'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -40,7 +43,10 @@ class App extends StatelessWidget {
       ),
       initialRoute: Routes.splashPage,
       routes: {
-        Routes.splashPage: (context) => SplashPage(),
+        Routes.splashPage: (context) => BlocProvider(
+              create: (context) => AppCubit(),
+              child: SplashPage(),
+            ),
         Routes.onboardingPage: (context) => OnboardingPage(),
         Routes.turnOnLocationPage: (context) => TurnOnLocationPage(),
         Routes.loginPage: (context) => LoginPage(),
@@ -52,6 +58,7 @@ class App extends StatelessWidget {
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
+        Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
       },
       builder: (context, child) {
         return MediaQuery(

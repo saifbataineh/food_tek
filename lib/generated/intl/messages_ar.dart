@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "هل لديك حساب بالفعل؟ ",
     ),
     "back_to": MessageLookupByLibrary.simpleMessage(" عد إلى"),
+    "birth_of_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور الجديدة",
@@ -38,13 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "continue2": MessageLookupByLibrary.simpleMessage("نعم، شغّله"),
     "createaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
-    "emailhint": MessageLookupByLibrary.simpleMessage("example@example.com"),
     "enteremailorphonenumber": MessageLookupByLibrary.simpleMessage(
       "أدخل بريدك الإلكتروني أو رقم هاتفك وسنرسل لك رابطاً لتستعيد الوصول إلى حسابك",
     ),
     "forgetpassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
     ),
+    "full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "inforeset": MessageLookupByLibrary.simpleMessage(
       "هل ترغب في المحاولة بكلمة المرور الحالية؟",
     ),
@@ -68,18 +69,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboarding3_title": MessageLookupByLibrary.simpleMessage("اختر طعامك"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "pass_reset_succesfuly": MessageLookupByLibrary.simpleMessage(
-      "تم إعادة تعيين كلمة السر بنجاح",
+      "تم إعادة تعيين كلمة المرور بنجاح",
     ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف "),
+    "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
     "rememberme": MessageLookupByLibrary.simpleMessage("تذكرني"),
     "resetpassword": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين كلمة المرور",
     ),
+    "select": MessageLookupByLibrary.simpleMessage("اختر "),
     "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+    "set_password": MessageLookupByLibrary.simpleMessage("تعيين كلمة المرور"),
     "signtitle": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "skip_button": MessageLookupByLibrary.simpleMessage("تخطي"),
-    "title": MessageLookupByLibrary.simpleMessage("مرحباً بالعالم!!!"),
     "turnloc_text": MessageLookupByLibrary.simpleMessage(
       "للإستمرار، يرجى تمكين الموقع في جهازك، والذي يستخدم خدمة الموقع من جوجل",
     ),

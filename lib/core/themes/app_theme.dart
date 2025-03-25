@@ -35,6 +35,7 @@ class AppTheme {
         fontSize: 32,
         color: AppColors.greyBlue,
         fontWeight: FontWeight.w500),
+        
     displaySmall: GoogleFonts.inter(
        letterSpacing: -1,
         fontSize: 16, color: AppColors.greyBlue, fontWeight: FontWeight.w400),

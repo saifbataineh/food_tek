@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/services/get_date_from_user_service.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_custom_form_field.dart';
+import 'package:food_tek/core/widgets/custom_form_field.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class BirthAuthCustomFormFieldWidget extends StatefulWidget {
   const BirthAuthCustomFormFieldWidget({
@@ -18,12 +19,11 @@ class _BirthAuthCustomFormFieldWidgetState
   TextEditingController dateController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return AuthCustomFormField(
+    return CustomFormField(
       controller: dateController,
       enabled: false,
-      label: "Birth of date",
+      label: S.of(context).birth_of_date,
       suffixIcon: IconButton(
-        
         onPressed: () async {
           dateTime = await GetDateFromUserService.showPicker(context: context);
           setState(() {

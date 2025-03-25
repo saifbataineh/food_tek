@@ -55,9 +55,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `hello world!!!`
-  String get title {
-    return Intl.message('hello world!!!', name: 'title', desc: '', args: []);
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
   }
 
   /// `Welcome to Sahlah`
@@ -225,21 +225,6 @@ class S {
     );
   }
 
-  /// `Email`
-  String get email {
-    return Intl.message('Email', name: 'email', desc: '', args: []);
-  }
-
-  /// `example@example.com`
-  String get emailhint {
-    return Intl.message(
-      'example@example.com',
-      name: 'emailhint',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Send`
   String get send {
     return Intl.message('Send', name: 'send', desc: '', args: []);
@@ -353,6 +338,51 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Full Name`
+  String get full_name {
+    return Intl.message('Full Name', name: 'full_name', desc: '', args: []);
+  }
+
+  /// `Birth Of Date `
+  String get birth_of_date {
+    return Intl.message(
+      'Birth Of Date ',
+      name: 'birth_of_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number `
+  String get phone_number {
+    return Intl.message(
+      'Phone Number ',
+      name: 'phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `select `
+  String get select {
+    return Intl.message('select ', name: 'select', desc: '', args: []);
+  }
+
+  /// `Set Password`
+  String get set_password {
+    return Intl.message(
+      'Set Password',
+      name: 'set_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message('Register', name: 'register', desc: '', args: []);
   }
 }
 
