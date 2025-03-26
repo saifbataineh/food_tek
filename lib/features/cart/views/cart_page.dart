@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
+import 'package:food_tek/core/routes/routes.dart';
+import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/current_location_widget.dart';
-import 'package:food_tek/features/cart/views/widgets/cart_details_container_widget.dart';
+import 'package:food_tek/core/widgets/cart_details_container_widget.dart';
 import 'package:food_tek/features/cart/views/widgets/cart_item_widget.dart';
 import 'package:food_tek/features/cart/views/widgets/empty_page_widget.dart';
 import 'package:food_tek/features/history/views/widgets/history_grid_view_with_show_more_widget.dart';
@@ -112,7 +114,12 @@ class CartPage extends StatelessWidget {
                                     return CartItemWidget(
                                         cartItem: cartItems[index]);
                                   }),
-                              CartDetailsContainerWidget(),
+                              CartDetailsContainerWidget(
+                                onPressed: () {
+                                  AppNavigatorService.pushNamed(context,
+                                      routeName: Routes.checkoutPage);
+                                },
+                              ),
                             ],
                           ),
                     cartItems.isEmpty

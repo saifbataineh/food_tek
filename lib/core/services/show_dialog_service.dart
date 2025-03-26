@@ -5,7 +5,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 // ignore: unused_import
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/core/widgets/congrats_dialog_widget.dart';
+import 'package:food_tek/core/widgets/congrats_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class ShowDialogService {
@@ -64,11 +64,17 @@ class ShowDialogService {
         context: context,
         builder: (context) {
           return BackdropFilter(
-              filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
-              child: CongratsDialodWidget(
+            filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+            child: Dialog(
+              backgroundColor: Colors.transparent,
+              child: CongratsWidget(
+                congratsDescriptionfontSize: 22,
+                textColor: Colors.white,
                 congrats: congrats,
                 congratsDescription: congratsDescription,
-              ),);
+              ),
+            ),
+          );
         });
   }
 }

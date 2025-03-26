@@ -30,6 +30,12 @@ class AppTheme {
   );
 
   static TextTheme textStyle = TextTheme(
+    bodyMedium: GoogleFonts.inter(
+       letterSpacing: 0,
+        fontSize: 18,
+        color: AppColors.black,
+        fontWeight: FontWeight.w600
+    ),
     displayLarge: GoogleFonts.inter(
         letterSpacing: 0,
         fontSize: 32,
@@ -48,6 +54,7 @@ class AppTheme {
         fontSize: 24,
         fontWeight: FontWeight.w400,
         color: AppColors.headLineBlack),
+        
     headlineSmall: GoogleFonts.inter(
        letterSpacing: -1,
       fontSize: 12,
@@ -65,6 +72,11 @@ class AppTheme {
         fontSize: 20,
         fontWeight: FontWeight.w500,
         color: AppColors.midnightShadow),
+    displayMedium: GoogleFonts.inter(
+       letterSpacing: -1,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: AppColors.redyBlack),
     bodySmall: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w700),
     labelSmall: GoogleFonts.inter(
        letterSpacing: -1,

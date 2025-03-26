@@ -39,9 +39,7 @@ class TopRatedWidget extends StatelessWidget {
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(foodItem.name,
-                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                          fontSize: 18,
-                        )),
+                    style: Theme.of(context).textTheme.bodyMedium),
               ),
               SizedBox(height: responsiveHeight(context, 8)),
               Text(foodItem.subTitle,

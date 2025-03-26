@@ -29,11 +29,14 @@ class _FoodSearchWidgetState extends State<FoodSearchWidget> {
           hintStyle: TextStyle(fontSize: 12),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
           prefixIcon: Icon(Icons.search),
+          fillColor: Colors.white,
+          filled: true,
           suffixIcon: IconButton(
-            onPressed: () {
-              AppNavigatorService.pushNamed(context, routeName: Routes.filtersPage);
-            },
-            icon: Icon(Icons.filter_list)),
+              onPressed: () {
+                AppNavigatorService.pushNamed(context,
+                    routeName: Routes.filtersPage);
+              },
+              icon: Icon(Icons.filter_list)),
         ),
         onChanged: (value) {
           print(value);

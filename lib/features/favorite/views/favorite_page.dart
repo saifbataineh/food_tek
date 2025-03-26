@@ -53,9 +53,7 @@ class FavoritePage extends StatelessWidget {
           children: [
             CurrentLocationWidget(),
             FoodSearchWidget(),
-            Text("favorites",
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
+            Text("favorites", style: Theme.of(context).textTheme.displayMedium),
             FoodFavoriteGridViewWidget(
               foodItems: favoriteList,
             )
