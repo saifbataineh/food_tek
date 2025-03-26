@@ -8,6 +8,10 @@ import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/sign_up_page.dart';
 import 'package:food_tek/features/cart/views/cart_page.dart';
+import 'package:food_tek/features/checkout/views/congrats_check_out_page.dart';
+import 'package:food_tek/features/checkout/views/check_out_page.dart';
+import 'package:food_tek/features/checkout/views/pay_order_page.dart';
+import 'package:food_tek/features/checkout/views/set_location_page.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
 import 'package:food_tek/features/home/views/main_page.dart';
@@ -26,6 +30,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       locale: Locale('ar'),
       localizationsDelegates: [
         S.delegate,
@@ -53,12 +58,18 @@ class App extends StatelessWidget {
         Routes.signUpPage: (context) => SignUpPage(),
         Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
         Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
-        Routes.navigationPage: (cotenxt) => NavigationPage(),
+        Routes.navigationPage: (cotenxt) {
+          return NavigationPage();
+        },
         Routes.MainPage: (cotenxt) => MainPage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
         Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
+        Routes.checkoutPage: (cotenxt) => CheckOutPage(),
+        Routes.payOrderPage: (cotenxt) => PayOrderPage(),
+        Routes.congratsCheckOutPage: (cotenxt) => CongratsCheckOutPage(),
+        Routes.setLocationPage: (cotenxt) => SetLocationPage(),
       },
       builder: (context, child) {
         return MediaQuery(

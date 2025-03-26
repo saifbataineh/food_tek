@@ -8,7 +8,9 @@ import 'package:food_tek/features/home/views/main_page.dart';
 import 'package:food_tek/features/person/views/profile_page.dart';
 
 class NavigationPage extends StatefulWidget {
-  const NavigationPage({super.key});
+  const NavigationPage({
+    super.key,
+  });
 
   @override
   State<NavigationPage> createState() => _NavigationPageState();
@@ -24,6 +26,16 @@ class _NavigationPageState extends State<NavigationPage> {
     ),
     ProfilePage()
   ];
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {
+        currentIndex = ModalRoute.of(context)!.settings.arguments as int;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +79,7 @@ class _NavigationPageState extends State<NavigationPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite_border), label: "Favorites"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_on), label: "history"),
+              icon: Icon(Icons.location_on), label: "track"),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_outline), label: "Profile"),
         ],

@@ -29,6 +29,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
               items: [
                 
                 DropdownMenuItem(
+                  value: "New York",
                   child: Text(
                     "New York",
                     style: Theme.of(context)
@@ -36,7 +37,6 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
                         .headlineSmall!
                         .copyWith(fontWeight: FontWeight.w700),
                   ),
-                  value: "New York",
                 ),
                 DropdownMenuItem(
                   value: "wgwrbwrbwrbwrbrwbwrbrbwrbrwbwrbwrbrwb",

@@ -6,10 +6,11 @@ class AppNavigatorService {
     Navigator.pushReplacementNamed(context, routeName);
   }
 
-  static pushAndRemoveUntil(BuildContext context, {required String routeName}) {
+  static pushAndRemoveUntil(BuildContext context, {required String routeName,int? arguments}) {
     Navigator.pushNamedAndRemoveUntil(
       context,
       routeName,
+      arguments: arguments,
       (route) => false,
     );
   }

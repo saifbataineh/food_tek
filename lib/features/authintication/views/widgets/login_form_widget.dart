@@ -56,7 +56,7 @@ class LoginFormWidget extends StatelessWidget {
               onPressed: () async {
                 // await SharedPrefHelper.setRememberMe();
                 AppNavigatorService.pushAndRemoveUntil(context,
-                    routeName: Routes.navigationPage);
+                    routeName: Routes.navigationPage, arguments: 0);
               },
               child: Text(S.of(context).login),
             ),

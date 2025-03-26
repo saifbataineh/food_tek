@@ -63,9 +63,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           SizedBox(
             height: responsiveHeight(context, 5),
           ),
-          Text("Top Rated",
-              style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
+          Text("Top Rated", style: Theme.of(context).textTheme.displayMedium),
           SizedBox(
             height: responsiveHeight(context, 13),
           ),
@@ -86,8 +84,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           Row(
             children: [
               Text("Recommend",
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
+                  style: Theme.of(context).textTheme.displayMedium),
               const Spacer(),
               GestureDetector(
                 onTap: () {

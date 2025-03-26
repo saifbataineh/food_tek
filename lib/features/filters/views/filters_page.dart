@@ -28,11 +28,7 @@ class FiltersPage extends StatelessWidget {
               SizedBox(
                 height: responsiveHeight(context, 22),
               ),
-              Text(
-                "Filter",
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    fontWeight: FontWeight.w600, color: AppColors.redyBlack),
-              ),
+              Text("Filter", style: Theme.of(context).textTheme.displayMedium),
               SizedBox(
                 height: responsiveHeight(context, 8),
               ),

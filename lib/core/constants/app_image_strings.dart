@@ -25,7 +25,8 @@ class AppImageStrings {
   static const String plate = 'assets/food/plate.png';
   static const String pepproniPizza = 'assets/food/pepperoni_pizza.png';
 
-  static const String foodItemDetailsBackground = 'assets/food/food_item_background.png';
+  static const String foodItemDetailsBackground =
+      'assets/food/food_item_background.png';
   static const String chickenBurger = 'assets/food/ChickenBurger.png';
   static const String cheseBurger = 'assets/food/CheseBurger.png';
   static const String recommend1 = 'assets/food/recommend1.png';
@@ -48,5 +49,13 @@ class AppImageStrings {
   static const String track = 'assets/navigation_icons/trach_icon.png';
 
   static const String person = 'assets/food/person.png';
-
+  //checkout
+  static const String locationSelectedIcon =
+      'assets/checkout/location_selected_icon.png';
+  static const String locationUnSelectedIcon =
+      'assets/checkout/location_unselected_icon.png';
+  static const String visaIcon = 'assets/checkout/visa.png';
+  static const String visaCard = 'assets/checkout/visa_card.png';
+  static const String cardIcon = 'assets/checkout/card_icon.png';
+  static const String lockIcon = 'assets/checkout/lock.png';
 }
