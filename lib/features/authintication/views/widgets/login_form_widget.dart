@@ -15,53 +15,59 @@ class LoginFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Column(
-        spacing: responsiveHeight(context, 16),
-        children: [
-          CustomFormField(
-            keyboardType: TextInputType.emailAddress,
-            controller: emailController,
-            label: S.of(context).email,
-            hintText: 'example@example.com',
-          ),
-          CustomFormField(
-            controller: passwordController,
-            isPassword: true,
-            label: S.of(context).password,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CheckBoxWithTextWidget(
-                text: S.of(context).rememberme,
-              ),
-              TextButton(
-                onPressed: () {
-                  AppNavigatorService.pushNamed(context,
-                      routeName: Routes.forgetPassPage);
-                },
-                child: Text(
-                  S.of(context).forgetpassword,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineSmall!
-                      .copyWith(color: AppColors.mainColor),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () async {
-                // await SharedPrefHelper.setRememberMe();
-                AppNavigatorService.pushAndRemoveUntil(context,
-                    routeName: Routes.navigationPage, arguments: 0);
-              },
-              child: Text(S.of(context).login),
+      child: AutofillGroup(
+        child: Column(
+          spacing: responsiveHeight(context, 16),
+          children: [
+            CustomFormField(
+              keyboardType: TextInputType.emailAddress,
+              controller: emailController,
+              label: S.of(context).email,
+              autofillHints: [AutofillHints.email],
+              hintText: 'example@example.com',
             ),
-          ),
-        ],
+            CustomFormField(
+              autofillHints: [AutofillHints.password],
+              controller: passwordController,
+              isPassword: true,
+              label: S.of(context).password,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CheckBoxWithTextWidget(
+                  text: S.of(context).rememberme,
+                ),
+                TextButton(
+                  onPressed: () {
+                    AppNavigatorService.pushNamed(context,
+                        routeName: Routes.forgetPassPage);
+                  },
+                  child: Text(
+                    S.of(context).forgetpassword,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineSmall!
+                        .copyWith(color: AppColors.mainColor),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+
+                onPressed: () async {
+                  
+                  // await SharedPrefHelper.setRememberMe();
+                  AppNavigatorService.pushAndRemoveUntil(context,
+                      routeName: Routes.navigationPage, arguments: 0);
+                },
+                child: Text(S.of(context).login),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

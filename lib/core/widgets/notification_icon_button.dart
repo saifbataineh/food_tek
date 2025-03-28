@@ -4,28 +4,31 @@ import 'package:food_tek/features/notifications/models/notification_model.dart';
 import 'package:food_tek/features/notifications/views/widgets/notification_widgets.dart';
 
 class NotificationIconButton extends StatelessWidget {
-   NotificationIconButton({
+  NotificationIconButton({
     super.key,
   });
 
-
-    final List<NotificationModel> NotificationList = [
-      NotificationModel(
-          name: "Zaid",
-          message:
-              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
-          date: "Last Wednesday at 9:42 AM"),
-      NotificationModel(
-          name: "Zaid",
-          message:
-              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
-          date: "Last Wednesday at 9:42 AM")
-    ];
+  final List<NotificationModel> NotificationList = [
+    NotificationModel(
+        name: "Delayed Order:",
+        message:
+            "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience! We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
+        date: "Last Wednesday at 9:42 AM"),
+    NotificationModel(
+        name: "Promotional Offer:",
+        message:
+            " Craving something delicious? 🍔 Get 20% off on your next order. Use code: YUMMY20.",
+        date: "Last Wednesday at 9:42 AM"),
+    NotificationModel(
+        name: "Promotional Offer:",
+        message:
+            " Craving something delicious? 🍔 Get 20% off on your next order. Use code: YUMMY20.",
+        date: "Last Wednesday at 9:42 AM")
+  ];
   @override
   Widget build(BuildContext context) {
     //TODO:add serivce to modalbottom sheet
     return Badge(
-      
       label: Container(),
       child: IconButton(
         padding: EdgeInsets.zero,
@@ -101,8 +104,7 @@ class NotificationIconButton extends StatelessWidget {
                                       return NotificationWidgets(
                                         notificationModel:
                                             NotificationList[index],
-                                        notificationList:
-                                            NotificationList,
+                                        notificationList: NotificationList,
                                       );
                                     },
                                   ),

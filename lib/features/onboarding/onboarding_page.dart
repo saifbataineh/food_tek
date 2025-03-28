@@ -117,7 +117,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      /// زر "Skip"
+                      
                       TextButton(
                         onPressed: () {
                           AppNavigatorService.pushReplacementNamed(context,
@@ -125,7 +125,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           S.of(context).skip_button,
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: (Theme.of(context).textTheme.displaySmall),
+                          
+                          
                         ),
                       ),
                       Row(

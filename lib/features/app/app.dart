@@ -12,6 +12,7 @@ import 'package:food_tek/features/checkout/views/congrats_check_out_page.dart';
 import 'package:food_tek/features/checkout/views/check_out_page.dart';
 import 'package:food_tek/features/checkout/views/pay_order_page.dart';
 import 'package:food_tek/features/checkout/views/set_location_page.dart';
+import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
 import 'package:food_tek/features/home/views/main_page.dart';
@@ -23,6 +24,7 @@ import 'package:food_tek/features/slpash/controllers/cubit/app_cubit.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
 import 'package:food_tek/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food_tek/order_details.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -31,7 +33,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: Locale('ar'),
+      locale: Locale('en'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -59,12 +61,16 @@ class App extends StatelessWidget {
         Routes.forgetPassPage: (cotenxt) => ResetPasswordPage(),
         Routes.confirmForgetPassPage: (cotenxt) => ConfirmResetPasswordPage(),
         Routes.navigationPage: (cotenxt) {
-          return NavigationPage();
+          return BlocProvider(
+            create: (context) => FavoriteCubit(),
+            child: NavigationPage(),
+          );
         },
         Routes.MainPage: (cotenxt) => MainPage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
+        Routes.OrderDetails: (context) => OrderDetails(),
         Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
         Routes.checkoutPage: (cotenxt) => CheckOutPage(),
         Routes.payOrderPage: (cotenxt) => PayOrderPage(),

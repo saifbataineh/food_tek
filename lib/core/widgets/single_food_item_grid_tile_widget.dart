@@ -101,7 +101,7 @@ class SingleFoodItemGridTileWidget extends StatelessWidget {
               width: responsiveWidth(context, 35),
               decoration: BoxDecoration(
                   shape: BoxShape.circle, color: AppColors.seconadryColor),
-              child: FavoriteButtonWidget(),
+              child: FavoriteButtonWidget(foodItem: foodItem),
             ),
           ),
           Positioned(

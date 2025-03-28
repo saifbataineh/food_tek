@@ -17,6 +17,7 @@ class AllViewWidget extends StatefulWidget {
 class _AllViewWidgetState extends State<AllViewWidget> {
   String? location = "";
   String selectedCategory = "All";
+  int currentIndex = 0;
 
   List<Food> foodList = [
     Food(
@@ -49,6 +50,11 @@ class _AllViewWidgetState extends State<AllViewWidget> {
     RecommendModel(image: AppImageStrings.recommend4, price: 14)
   ];
 
+  List pageViewDiscount = [
+    Image.asset(AppImageStrings.discountPhoto),
+    Image.asset(AppImageStrings.discountPhoto),
+    Image.asset(AppImageStrings.discountPhoto),
+  ];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -56,9 +62,38 @@ class _AllViewWidgetState extends State<AllViewWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: responsiveWidth(context, 370), // Make responsive
-            height: responsiveHeight(context, 128),
-            child: Image.asset(AppImageStrings.discountPhoto),
+              width: responsiveWidth(context, 370), // Make responsive
+              height: responsiveHeight(context, 128),
+              child: PageView.builder(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: responsiveWidth(context, 370),
+                    height: responsiveHeight(context, 137),
+                    color: Colors.transparent,
+                    child: pageViewDiscount[index],
+                  );
+                },
+                itemCount: pageViewDiscount.length,
+              )),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(
+                pageViewDiscount.length,
+                (index) => Container(
+                      margin: EdgeInsets.symmetric(horizontal: 4),
+                      decoration: BoxDecoration(
+                        color: index == currentIndex
+                            ? AppColors.mainColor
+                            : AppColors.lightgreyColor,
+                        shape: BoxShape.circle,
+                      ),
+                      height: responsiveHeight(context, 10),
+                      width: responsiveWidth(context, 10),
+                    )),
           ),
           SizedBox(
             height: responsiveHeight(context, 5),
@@ -121,6 +156,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: RecommendedFoodScreen(recommend: recommendList[index]),
+                  
                 );
               },
             ),

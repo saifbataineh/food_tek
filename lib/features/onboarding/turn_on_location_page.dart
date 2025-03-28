@@ -78,8 +78,9 @@ class TurnOnLocationPage extends StatelessWidget {
                         ),
                         width: responsiveWidth(context, 307),
                         child: TextButton(
-                          onPressed: () {
-                            LocationService.checkEnabledAndPermission();
+                          onPressed: () async{
+                            await LocationService.checkEnabledAndPermission();
+                            if(!context.mounted)return;
                             AppNavigatorService.pushNamed(context,
                                 routeName: Routes.loginPage);
                           },

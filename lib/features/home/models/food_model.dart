@@ -2,14 +2,15 @@ import 'package:flutter/widgets.dart';
 
 class Food {
   
-  String img;
-  String name;
-  String subTitle;
-  double price;
-  double? oldPrice;
-  double rating;
-  int reviews;
-  int quantity;
+  final String img;
+  final String name;
+  final String subTitle;
+  final double price;
+  final double? oldPrice;
+  final double rating;
+  final int reviews;
+  final int quantity;
+  bool isFavorite;
 
   Food({
     required this.img,
@@ -19,7 +20,8 @@ class Food {
     required this.rating,
     required this.reviews,
     this.quantity=0,
-    this.oldPrice
+    this.oldPrice,
+    this.isFavorite=false
   });
   //TODO:IMPLEMENT BLOC next
 
