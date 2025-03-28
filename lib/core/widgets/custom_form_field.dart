@@ -13,6 +13,7 @@ class CustomFormField extends StatefulWidget {
     required this.controller,
     this.enabled = true,
     this.keyboardType,
+    this.autofillHints,
   });
 
   final String label;
@@ -23,6 +24,7 @@ class CustomFormField extends StatefulWidget {
   final TextEditingController controller;
   final bool enabled;
   final TextInputType? keyboardType;
+  final Iterable<String>? autofillHints;
   @override
   State<CustomFormField> createState() => _CustomFormFieldState();
 }
@@ -39,6 +41,8 @@ class _CustomFormFieldState extends State<CustomFormField> {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         TextFormField(
+          
+          autofillHints:widget.autofillHints,
           keyboardType: widget.keyboardType,
           readOnly: !widget.enabled,
           controller: widget.controller,

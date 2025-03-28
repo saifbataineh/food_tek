@@ -72,6 +72,7 @@ class _MainPageState extends State<MainPage> {
                   SizedBox(
                     height: responsiveHeight(context, 580),
                     child: TabBarView(
+                      physics: NeverScrollableScrollPhysics(),
                       children: [
                         const AllViewWidget(),
                         BurgerViewWidget(),
