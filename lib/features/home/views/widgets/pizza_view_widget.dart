@@ -47,7 +47,7 @@ class PizzaViewWidget extends StatelessWidget {
         child: SizedBox(
       height: responsiveHeight(context, 526),
       width: responsiveWidth(context, 372),
-      child: FoodFavoriteGridViewWidget(foodItems: pizzaList),
+      child: FoodFavoriteGridViewWidget(foodItems: pizzaList, onFavoriteChanged: (int index, bool isLiked) {  },),
     ));
   }
 }

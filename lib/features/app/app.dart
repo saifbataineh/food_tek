@@ -39,7 +39,7 @@ class App extends StatelessWidget {
         textButtonTheme: AppTheme.textButtonTheme,
         textTheme: AppTheme.textStyle,
       ),
-      initialRoute: Routes.OrderDetails,
+      initialRoute: Routes.splashPage,
       routes: {
         Routes.splashPage: (context) => SplashPage(),
         Routes.onboardingPage: (context) => OnboardingPage(),

@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/themes/app_theme.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
@@ -29,7 +30,6 @@ class TurnOnLocationPage extends StatelessWidget {
     }
 
     if (permission == LocationPermission.deniedForever) {
-    
       return Future.error(
           'Location permissions are permanently denied, we cannot request permissions.');
     }
@@ -42,7 +42,7 @@ class TurnOnLocationPage extends StatelessWidget {
       Position position = await _determinePosition();
       Navigator.pushReplacementNamed(context, Routes.loginPage);
     } catch (e) {
-     Navigator.pushReplacementNamed(context, Routes.loginPage);
+      Navigator.pushReplacementNamed(context, Routes.loginPage);
     }
   }
 
@@ -92,8 +92,10 @@ class TurnOnLocationPage extends StatelessWidget {
                   ),
                   SizedBox(
                     child: DisplayTitleAndSubtitleWidget(
-                        title: S.of(context).turnloc_title,
-                        subTitle: S.of(context).turnloc_text),
+                      title: S.of(context).turnloc_title,
+                      subTitle: S.of(context).turnloc_text,
+                      textStyle: AppTheme.textStyle.titleLarge,
+                    ),
                   ),
                   Column(
                     spacing: responsiveHeight(context, 12),

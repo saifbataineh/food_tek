@@ -6,7 +6,7 @@ import 'package:food_tek/core/widgets/single_food_item_grid_tile_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 
 class FoodFavoriteGridViewWidget extends StatelessWidget {
-  const FoodFavoriteGridViewWidget({super.key, required this.foodItems});
+  const FoodFavoriteGridViewWidget({super.key, required this.foodItems, required void Function(int index, bool isLiked) onFavoriteChanged});
   final List<Food> foodItems;
   @override
   Widget build(BuildContext context) {

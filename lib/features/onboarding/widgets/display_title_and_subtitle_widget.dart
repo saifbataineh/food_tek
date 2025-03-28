@@ -6,7 +6,7 @@ class DisplayTitleAndSubtitleWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.subTitle,
-    this.titleFontWeight,
+    this.titleFontWeight, required textStyle,
   });
 
   final String title;

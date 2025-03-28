@@ -61,7 +61,7 @@ final List<Food> sandwichList = [
     return SafeArea(child:  SizedBox(
       height: responsiveHeight(context, 526),
       width: responsiveWidth(context, 372),
-      child: FoodFavoriteGridViewWidget(foodItems: sandwichList),
+      child: FoodFavoriteGridViewWidget(foodItems: sandwichList, onFavoriteChanged: (int index, bool isLiked) {  },),
     ));
   }
 }

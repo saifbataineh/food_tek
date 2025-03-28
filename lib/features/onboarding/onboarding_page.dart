@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/themes/app_theme.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/onboarding/widgets/onboarding_widget.dart';
@@ -29,11 +30,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
       OnboardingWidget(
           title: S.of(context).onboarding2_title,
           subTitle: S.of(context).onboarding2_text,
-          image: AppImageStrings.onBoarding2),
+          image: AppImageStrings.onBoarding2,
+          textStyle: AppTheme.textStyle.titleLarge,
+      ),
       OnboardingWidget(
-          title: S.of(context).onboarding3_title,
+          title: S.of(context).onboarding3_title, 
           subTitle: S.of(context).onboarding3_text,
-          image: AppImageStrings.onBoarding3),
+          image: AppImageStrings.onBoarding3,
+          textStyle: AppTheme.textStyle.titleLarge,),
     ];
 
     return Scaffold(
@@ -125,7 +129,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           S.of(context).skip_button,
-                          style: (Theme.of(context).textTheme.displaySmall),
+                          style: (Theme.of(context).textTheme.titleLarge),
                           
                           
                         ),

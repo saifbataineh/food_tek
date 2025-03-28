@@ -11,6 +11,7 @@ class FavoriteButtonWidget extends StatefulWidget {
 }
 
 class _FavoriteButtonWidgetState extends State<FavoriteButtonWidget> {
+  
   bool isLiked = true;
   @override
   Widget build(BuildContext context) {
@@ -26,13 +27,14 @@ class _FavoriteButtonWidgetState extends State<FavoriteButtonWidget> {
               actionButtonText: "Yes",
               description:
                   "Are you sure you want to remove it from favorites?");
-          print("object2 ${result}");
+         // print("object2 ${result}");
           if(result==null){
 return;
           }
           isLiked=result;
         } else {
           isLiked = !isLiked;
+          
         }
         setState(() {});
       },

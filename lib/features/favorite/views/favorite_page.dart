@@ -7,8 +7,14 @@ import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:food_tek/core/widgets/food_favorite_grid_view_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 
-class FavoritePage extends StatelessWidget {
+class FavoritePage extends StatefulWidget {
   FavoritePage({super.key});
+
+  @override
+  State<FavoritePage> createState() => _FavoritePageState();
+}
+
+class _FavoritePageState extends State<FavoritePage> {
   final List<Food> favoriteList = [
     Food(
         reviews: 79,
@@ -42,8 +48,17 @@ class FavoritePage extends StatelessWidget {
             " A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes",
         price: 23),
   ];
+
   @override
   Widget build(BuildContext context) {
+    
+      void updateFavoriteStatus(int index, bool isLiked) {
+    if (!isLiked) {
+      setState(() {
+        favoriteList.removeAt(index); // ✅ حذف العنصر من القائمة
+      });
+    }
+  }
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: responsiveWidth(context, 30)),
@@ -57,11 +72,15 @@ class FavoritePage extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontWeight: FontWeight.w600, color: AppColors.redyBlack)),
             FoodFavoriteGridViewWidget(
-              foodItems: favoriteList,
-            )
+              foodItems: favoriteList, onFavoriteChanged: (int index, bool isLiked) {  },
+            ),
+            
           ],
         ),
       ),
     );
   }
 }
+
+
+
