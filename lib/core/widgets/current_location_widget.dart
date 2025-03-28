@@ -11,16 +11,12 @@ class CurrentLocationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<NotificationModel> NotificationList = [
-      NotificationModel(
-          name: "Zaid",
-          message:
-              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
-          date: "Last Wednesday at 9:42 AM"),
-      NotificationModel(
-          name: "Zaid",
-          message:
-              "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!",
-          date: "Last Wednesday at 9:42 AM")
+         NotificationModel(name: "Zaid", message: "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!", date: "Last Wednesday at 9:42 AM"),
+      NotificationModel(name: "Zaid", message: "We’re sorry! Your order is running late. New ETA: 10:30 PM. Thanks for your patience!", date: "Last Wednesday at 9:42 AM")
+      , NotificationModel(name: "Promotional Offer:", message: "Craving something delicious?🍔 Get 20% off on your next order. Use code: YUMMY20." , date: "Last Wednesday at 9:42 AM"),
+      NotificationModel(name: "Out for Delivery:", message: "Your order is on the way!🚗 Estimated arrival: 15 mins. Stay hungry!", date: "Last Wednesday at 9:42 AM"),
+      NotificationModel(name: "Order Confirmation:", message:"Your order has been placed! 🍔 We're preparing it now.Track your order live!" , date: "Last Wednesday at 9:42 AM"),
+   
     ];
     return SizedBox(
       child: Row(
@@ -55,6 +51,7 @@ class CurrentLocationWidget extends StatelessWidget {
                 onPressed: () {
                   //TOOD:ADD SERVICE
                   showModalBottomSheet(
+                    
                     context: context,
                     builder: (BuildContext context) {
                       return Container(
@@ -68,6 +65,7 @@ class CurrentLocationWidget extends StatelessWidget {
                           ),
                         ),
                         child: Column(
+                          
                           children: [
                             const SizedBox(height: 20),
                             Row(
@@ -116,22 +114,27 @@ class CurrentLocationWidget extends StatelessWidget {
                                       ],
                                     ),
                                     Expanded(
-                                      child: TabBarView(
-                                        children: [
-                                          ListView.builder(
-                                            itemCount: NotificationList.length,
-                                            itemBuilder: (context, index) {
-                                              return NotificationWidgets(
-                                                notificationModel:
-                                                    NotificationList[index],
-                                                notificationList:
-                                                    NotificationList,
-                                              );
-                                            },
-                                          ),
-                                          Text("unread"),
-                                          Text("archive"),
-                                        ],
+                                      child: Container(
+                                        height: responsiveHeight(context, 800),
+                                        child: TabBarView(
+                                          
+                                          children: [
+                                            ListView.builder(
+                                        
+                                              itemCount: NotificationList.length,
+                                              itemBuilder: (context, index) {
+                                                return NotificationWidgets(
+                                                  notificationModel:
+                                                      NotificationList[index],
+                                                  notificationList:
+                                                      NotificationList,
+                                                );
+                                              },
+                                            ),
+                                            Text("unread"),
+                                            Text("archive"),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],

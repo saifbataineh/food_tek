@@ -16,6 +16,7 @@ import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
 import 'package:food_tek/generated/l10n.dart';
+import 'package:food_tek/order_details.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -38,7 +39,7 @@ class App extends StatelessWidget {
         textButtonTheme: AppTheme.textButtonTheme,
         textTheme: AppTheme.textStyle,
       ),
-      initialRoute: Routes.splashPage,
+      initialRoute: Routes.OrderDetails,
       routes: {
         Routes.splashPage: (context) => SplashPage(),
         Routes.onboardingPage: (context) => OnboardingPage(),
@@ -52,6 +53,7 @@ class App extends StatelessWidget {
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
+        Routes.OrderDetails: (context) => OrderDetails(),
       },
       builder: (context, child) {
         return MediaQuery(
