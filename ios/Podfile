@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+# CocoaPods master repo will be used
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Define the Flutter configuration
+flutter_application_path = 'D:\\projects\\food_tek'  # This should point to your Flutter project path
+
+load File.join(flutter_application_path, '.flutter-plugins')
+
+target 'Runner' do
+  # Add Flutter-related Pods
+  use_frameworks!
+  use_modular_headers!
+
+  pod 'Flutter', :path => File.join(flutter_application_path, 'bin/cache/artifacts/engine/ios')
+
+  # Add the google_maps_flutter_ios pod
+  pod 'google_maps_flutter_ios', :path => File.join(flutter_application_path, '.symlinks/plugins/google_maps_flutter_ios/ios')
+
+  # Pods for your application
+  # You can add other pods here
+end
+ 
