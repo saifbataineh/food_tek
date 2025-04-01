@@ -51,9 +51,11 @@ class _AllViewWidgetState extends State<AllViewWidget> {
   ];
 
   List pageViewDiscount = [
-    Image.asset(AppImageStrings.discountPhoto),
-    Image.asset(AppImageStrings.discountPhoto),
-    Image.asset(AppImageStrings.discountPhoto),
+    //  Image.asset(AppImageStrings.discountPhoto),
+    // Image.asset(AppImageStrings.discountPhoto),
+    //Image.asset(AppImageStrings.discountPhoto),
+    const stckDiscount(),
+    const stckDiscount()
   ];
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-              width: responsiveWidth(context, 370), // Make responsive
+              width: responsiveWidth(context, 370),
               height: responsiveHeight(context, 128),
               child: PageView.builder(
                 scrollDirection: Axis.horizontal,
@@ -75,6 +77,11 @@ class _AllViewWidgetState extends State<AllViewWidget> {
                   );
                 },
                 itemCount: pageViewDiscount.length,
+                onPageChanged: (value) {
+                  setState(() {
+                    currentIndex = value;
+                  });
+                },
               )),
           SizedBox(
             height: 10,
@@ -82,18 +89,19 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
-                pageViewDiscount.length,
-                (index) => Container(
-                      margin: EdgeInsets.symmetric(horizontal: 4),
-                      decoration: BoxDecoration(
-                        color: index == currentIndex
-                            ? AppColors.mainColor
-                            : AppColors.lightgreyColor,
-                        shape: BoxShape.circle,
-                      ),
-                      height: responsiveHeight(context, 10),
-                      width: responsiveWidth(context, 10),
-                    )),
+              pageViewDiscount.length,
+              (index) => Container(
+                margin: EdgeInsets.symmetric(horizontal: 4),
+                decoration: BoxDecoration(
+                  color: index == currentIndex
+                      ? AppColors.mainColor
+                      : AppColors.lightgreyColor,
+                  shape: BoxShape.circle,
+                ),
+                height: responsiveHeight(context, 10),
+                width: responsiveWidth(context, 10),
+              ),
+            ),
           ),
           SizedBox(
             height: responsiveHeight(context, 5),
@@ -156,13 +164,48 @@ class _AllViewWidgetState extends State<AllViewWidget> {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: RecommendedFoodScreen(recommend: recommendList[index]),
-                  
                 );
               },
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class stckDiscount extends StatelessWidget {
+  const stckDiscount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(children: [
+        Stack(
+          children: [
+            Image.asset(AppImageStrings.discountPhoto),
+            Padding(
+                padding: EdgeInsets.only(left: 26, top: 18),
+                child: Column(children: [
+                  Text(
+                    "Experience our",
+                    style: TextStyle(fontSize: 10, color: Colors.white),
+                  ),
+                  Text(
+                    "delicious new dish",
+                    style: TextStyle(fontSize: 10, color: Colors.white),
+                  ),
+                  Text(
+                    "30% OFF",
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ]))
+          ],
+        )
+      ]),
     );
   }
 }

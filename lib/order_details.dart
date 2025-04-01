@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/chat/chat_screen_widget.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
@@ -102,7 +103,12 @@ class OrderDetails extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: AppColors.containerBorderColor),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ChatScreenWidget()));
+                        },
                         icon: Icon(Icons.sms_rounded, color: Colors.blue),
                       ),
                     ),
