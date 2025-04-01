@@ -6,7 +6,7 @@ class Routes {
   static const String signUpPage = '/signUp';
   static const String forgetPassPage = '/forgetPass';
   static const String confirmForgetPassPage = '/confirmForgetPass';
-  static const String MainPage = '/MainPage';
+  static const String homePage = '/home';
   static const String navigationPage = '/navigation';
 static const String foodItemDescriptionPage='/foodItemDescription';
 static const String filtersPage='/filters';
@@ -18,6 +18,8 @@ static const String checkoutPage='/checkout';
 static const String payOrderPage='/payOrder';
 static const String congratsCheckOutPage='/congratsCheckOut';
 static const String setLocationPage='/setLocation';
-static const String OrderDetails='/setLocation';
+static const String orderDetails='/orderDetails';
+static const String chatPage='/chat';
+
 
 }

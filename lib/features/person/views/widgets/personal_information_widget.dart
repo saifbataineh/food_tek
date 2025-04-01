@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/features/home/models/person_model.dart';
-import 'package:food_tek/features/person/views/update_proile_screen.dart';
 
 class PersonalInformationWidget extends StatelessWidget {
   final PersonModel personalModel;

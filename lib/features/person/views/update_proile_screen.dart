@@ -11,7 +11,7 @@ class UpdateProileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<PersonModel> PersonList = [
+    List<PersonModel> personList = [
       PersonModel(
           image: AppImageStrings.person,
           name: "Zaid Abu Alhija",
@@ -29,7 +29,7 @@ class UpdateProileScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               PersonalInformationWidget(
-                personalModel: PersonList[0],
+                personalModel: personList[0],
               ),
               Container(
                 decoration: BoxDecoration(

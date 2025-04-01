@@ -23,7 +23,7 @@ class AppImageStrings {
   static const String burger = 'assets/food/burger.png';
   static const String pizza = 'assets/food/pizza.png';
   static const String sandwishLogo = 'assets/food/sandwsh.png';
-  static const String discountPhoto = 'assets/food/withText.png';
+  static const String discountPhoto = 'assets/food/discount_frame.png';
   static const String plate = 'assets/food/plate.png';
   static const String pepproniPizza = 'assets/food/pepperoni_pizza.png';
 
@@ -60,4 +60,8 @@ class AppImageStrings {
   static const String visaCard = 'assets/checkout/visa_card.png';
   static const String cardIcon = 'assets/checkout/card_icon.png';
   static const String lockIcon = 'assets/checkout/lock.png';
+  //track
+  static const String trackedCar = 'assets/track/tracked_car.png';
+  static const String resturantLogo = 'assets/track/resturant.png';
+  static const String homeLogo = 'assets/track/home.png';
 }

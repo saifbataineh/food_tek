@@ -15,16 +15,17 @@ import 'package:food_tek/features/checkout/views/set_location_page.dart';
 import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
-import 'package:food_tek/features/home/views/main_page.dart';
+import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
 import 'package:food_tek/features/person/views/update_proile_screen.dart';
 import 'package:food_tek/features/slpash/controllers/cubit/app_cubit.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
+import 'package:food_tek/features/track/views/chat_page.dart';
 import 'package:food_tek/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_tek/order_details.dart';
+import 'package:food_tek/features/track/views/order_details.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -66,16 +67,17 @@ class App extends StatelessWidget {
             child: NavigationPage(),
           );
         },
-        Routes.MainPage: (cotenxt) => MainPage(),
+        Routes.homePage: (cotenxt) => HomePage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
-        Routes.OrderDetails: (context) => OrderDetails(),
+        Routes.orderDetails: (context) => OrderDetails(),
         Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
         Routes.checkoutPage: (cotenxt) => CheckOutPage(),
         Routes.payOrderPage: (cotenxt) => PayOrderPage(),
         Routes.congratsCheckOutPage: (cotenxt) => CongratsCheckOutPage(),
         Routes.setLocationPage: (cotenxt) => SetLocationPage(),
+        Routes.chatPage: (cotenxt) => ChatPage(),
       },
       builder: (context, child) {
         return MediaQuery(
