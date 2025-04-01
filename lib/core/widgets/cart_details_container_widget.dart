@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
-import 'package:food_tek/core/routes/routes.dart';
-import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/cart/views/widgets/cart_details_row_widget.dart';
 
@@ -64,10 +62,10 @@ class CartDetailsContainerWidget extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: onPressed,
-                    child: Text("Place My Order"),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.whiteGrey,
                         foregroundColor: AppColors.mainColor),
+                    child: Text("Place My Order"),
                   ),
                 )
               ],

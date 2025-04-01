@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
-import 'package:food_tek/core/routes/routes.dart';
-import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/home/models/person_model.dart';
-import 'package:food_tek/features/person/views/update_proile_screen.dart';
 import 'package:food_tek/features/person/views/widgets/my_account_profile_column_widget.dart';
 import 'package:food_tek/features/person/views/widgets/notifications_profile_coulmn_widget.dart';
 import 'package:food_tek/features/person/views/widgets/personal_information_widget.dart';
@@ -23,7 +20,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    List<PersonModel> PersonList = [
+    List<PersonModel> personList = [
       PersonModel(
           image: AppImageStrings.person,
           name: "Zaid Abu Alhija",
@@ -37,7 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               PersonalInformationWidget(
-                personalModel: PersonList[0],
+                personalModel: personList[0],
               ),
               SizedBox(
                 height: responsiveHeight(context, 24),

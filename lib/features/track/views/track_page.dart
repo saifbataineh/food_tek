@@ -1,12 +1,8 @@
-import 'dart:async';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_constants.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
-import 'package:food_tek/core/extensions/widgets_extenstions.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
@@ -25,8 +21,6 @@ class TrackPage extends StatefulWidget {
 }
 
 class _TrackPageState extends State<TrackPage> {
-  final Completer<GoogleMapController> _controller =
-      Completer<GoogleMapController>();
   LatLng sourceDes = LatLng(37.33500926, -122.03272188);
   LatLng destination = LatLng(37.33429383, -122.06600055);
   LatLng carPosition = LatLng(37.33382, -122.0498);
@@ -36,17 +30,17 @@ class _TrackPageState extends State<TrackPage> {
   void getPolyPointsFromResturant() async {
     PolylinePoints polylinePoints = PolylinePoints();
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-        googleApiKey: google_api_key,
+        googleApiKey: googleApiKey,
         request: PolylineRequest(
             origin: PointLatLng(sourceDes.latitude, sourceDes.longitude),
             destination:
                 PointLatLng(carPosition.latitude, carPosition.longitude),
             mode: TravelMode.driving));
     if (result.points.isNotEmpty) {
-      result.points.forEach((point) {
+      for (var point in result.points) {
         polyLineCoordinatesFromResturant
             .add(LatLng(point.latitude, point.longitude));
-      });
+      }
     } else {
       print('No points found in polyline result');
     }
@@ -56,16 +50,16 @@ class _TrackPageState extends State<TrackPage> {
   void getPolyPointsToHome() async {
     PolylinePoints polylinePoints = PolylinePoints();
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-        googleApiKey: google_api_key,
+        googleApiKey: googleApiKey,
         request: PolylineRequest(
             origin: PointLatLng(carPosition.latitude, carPosition.longitude),
             destination:
                 PointLatLng(destination.latitude, destination.longitude),
             mode: TravelMode.driving));
     if (result.points.isNotEmpty) {
-      result.points.forEach((point) {
+      for (var point in result.points) {
         polyLineCoordinatesToHome.add(LatLng(point.latitude, point.longitude));
-      });
+      }
     } else {
       print('No points found in polyline result');
     }

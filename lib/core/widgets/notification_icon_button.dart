@@ -8,7 +8,7 @@ class NotificationIconButton extends StatelessWidget {
     super.key,
   });
 
-  final List<NotificationModel> NotificationList = [
+  final List<NotificationModel> notificationList = [
     NotificationModel(
         name: "Delayed Order:",
         message:
@@ -99,12 +99,12 @@ class NotificationIconButton extends StatelessWidget {
                               child: TabBarView(
                                 children: [
                                   ListView.builder(
-                                    itemCount: NotificationList.length,
+                                    itemCount: notificationList.length,
                                     itemBuilder: (context, index) {
                                       return NotificationWidgets(
                                         notificationModel:
-                                            NotificationList[index],
-                                        notificationList: NotificationList,
+                                            notificationList[index],
+                                        notificationList: notificationList,
                                       );
                                     },
                                   ),

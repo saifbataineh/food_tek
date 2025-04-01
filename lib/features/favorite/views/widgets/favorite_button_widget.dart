@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/services/show_dialog_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';

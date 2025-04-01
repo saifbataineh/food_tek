@@ -3,12 +3,10 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
-import 'package:food_tek/features/checkout/views/pay_order_page.dart';
 import 'package:food_tek/features/favorite/views/favorite_page.dart';
-import 'package:food_tek/features/home/views/main_page.dart';
+import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/person/views/profile_page.dart';
 import 'package:food_tek/features/track/views/track_page.dart';
-import 'package:food_tek/features/track/views/order_details.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({
@@ -21,7 +19,7 @@ class NavigationPage extends StatefulWidget {
 
 class _NavigationPageState extends State<NavigationPage> {
   int currentIndex = 0;
-  List pages = [MainPage(), FavoritePage(), TrackPage(), ProfilePage()];
+  List pages = [HomePage(), FavoritePage(), TrackPage(), ProfilePage()];
   @override
   void initState() {
     super.initState();

@@ -25,18 +25,18 @@ class OrderDetailsWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 12),
               child: Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
                 child: Icon(
                   Icons.done,
                   color: Colors.white,
                     size: 15,
                 ),
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.green,
-                  border: Border.all(color: Colors.white, width: 2),
-                ),
               ),
             ),
             Container(
@@ -48,18 +48,18 @@ class OrderDetailsWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 12),
               child: Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
                 child: Icon(
                   Icons.home_work_outlined,
                   color: Colors.white,
                   size: 15,
                 ),
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.green,
-                  border: Border.all(color: Colors.white, width: 2),
-                ),
               ),
             ),
             Container(
@@ -71,17 +71,17 @@ class OrderDetailsWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 12),
               child: Container(
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                    size: 15,
-                ),
                 width: 24,
                 height: 24,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.green,
                   border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                    size: 15,
                 ),
               ),
             ),
@@ -94,17 +94,17 @@ class OrderDetailsWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 12),
               child: Container(
-                child: Icon(
-                  Icons.home,
-                  color: Colors.white,
-                    size: 15,
-                ),
                 width: 24,
                 height: 24,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.grey,
                   border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                    size: 15,
                 ),
               ),
             ),

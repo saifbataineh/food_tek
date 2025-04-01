@@ -11,15 +11,15 @@ import 'package:food_tek/features/home/views/widgets/pizza_view_widget.dart';
 import 'package:food_tek/features/home/views/widgets/sandwish_view_widget.dart';
 import 'package:food_tek/features/home/views/widgets/all_view_widget.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  _MainPageState createState() => _MainPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MainPageState extends State<MainPage> {
-  String? location = "";
+class _HomePageState extends State<HomePage> {
+String? location = "";
   String selectedCategory = "All";
 
   List<Food> foodList = [

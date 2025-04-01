@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/core/widgets/custom_form_field.dart';
-import 'package:food_tek/features/app/app.dart';
 import 'package:food_tek/features/track/views/widgets/chat_view_widget.dart';
 
 class ChatPage extends StatelessWidget {

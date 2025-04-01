@@ -23,7 +23,7 @@ class AppImageStrings {
   static const String burger = 'assets/food/burger.png';
   static const String pizza = 'assets/food/pizza.png';
   static const String sandwishLogo = 'assets/food/sandwsh.png';
-  static const String discountPhoto = 'assets/food/withText.png';
+  static const String discountPhoto = 'assets/food/discount_frame.png';
   static const String plate = 'assets/food/plate.png';
   static const String pepproniPizza = 'assets/food/pepperoni_pizza.png';
 

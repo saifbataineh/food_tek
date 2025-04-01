@@ -6,7 +6,7 @@ class Routes {
   static const String signUpPage = '/signUp';
   static const String forgetPassPage = '/forgetPass';
   static const String confirmForgetPassPage = '/confirmForgetPass';
-  static const String MainPage = '/MainPage';
+  static const String homePage = '/home';
   static const String navigationPage = '/navigation';
 static const String foodItemDescriptionPage='/foodItemDescription';
 static const String filtersPage='/filters';

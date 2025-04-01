@@ -15,7 +15,7 @@ import 'package:food_tek/features/checkout/views/set_location_page.dart';
 import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';
 import 'package:food_tek/features/filters/views/filters_page.dart';
 import 'package:food_tek/features/food_details/views/food_detaials_page.dart';
-import 'package:food_tek/features/home/views/main_page.dart';
+import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/navigation/views/navigation_page.dart';
 import 'package:food_tek/features/onboarding/onboarding_page.dart';
 import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
@@ -67,7 +67,7 @@ class App extends StatelessWidget {
             child: NavigationPage(),
           );
         },
-        Routes.MainPage: (cotenxt) => MainPage(),
+        Routes.homePage: (cotenxt) => HomePage(),
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
