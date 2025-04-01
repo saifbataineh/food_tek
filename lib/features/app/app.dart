@@ -22,9 +22,10 @@ import 'package:food_tek/features/onboarding/turn_on_location_page.dart';
 import 'package:food_tek/features/person/views/update_proile_screen.dart';
 import 'package:food_tek/features/slpash/controllers/cubit/app_cubit.dart';
 import 'package:food_tek/features/slpash/views/splash_page.dart';
+import 'package:food_tek/features/track/views/chat_page.dart';
 import 'package:food_tek/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_tek/order_details.dart';
+import 'package:food_tek/features/track/views/order_details.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -70,12 +71,13 @@ class App extends StatelessWidget {
         Routes.foodItemDescriptionPage: (cotenxt) => FoodDetaialsPage(),
         Routes.filtersPage: (cotenxt) => FiltersPage(),
         Routes.cartPage: (cotenxt) => CartPage(),
-        Routes.OrderDetails: (context) => OrderDetails(),
+        Routes.orderDetails: (context) => OrderDetails(),
         Routes.updateProfilePage: (cotenxt) => UpdateProileScreen(),
         Routes.checkoutPage: (cotenxt) => CheckOutPage(),
         Routes.payOrderPage: (cotenxt) => PayOrderPage(),
         Routes.congratsCheckOutPage: (cotenxt) => CongratsCheckOutPage(),
         Routes.setLocationPage: (cotenxt) => SetLocationPage(),
+        Routes.chatPage: (cotenxt) => ChatPage(),
       },
       builder: (context, child) {
         return MediaQuery(

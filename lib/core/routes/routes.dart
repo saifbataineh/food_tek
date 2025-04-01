@@ -18,6 +18,8 @@ static const String checkoutPage='/checkout';
 static const String payOrderPage='/payOrder';
 static const String congratsCheckOutPage='/congratsCheckOut';
 static const String setLocationPage='/setLocation';
-static const String OrderDetails='/setLocation';
+static const String orderDetails='/orderDetails';
+static const String chatPage='/chat';
+
 
 }

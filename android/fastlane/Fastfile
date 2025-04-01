@@ -33,7 +33,7 @@ platform :android do
       app: "1:405526290982:android:639b53a171c78edf55bce7", # Your Firebase app ID
       testers: "saifbbataineh@gmail.com, zaidabualhija9@gmail.com, sameralnonah1@gamil.com, somaiaalmasri@gmail.com, aseelsaad513@gmail.com, faez.alabadi@gmail.com,", # Email addresses of testers
       android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
-      release_notes: "fixed some bugs and added order details in track button to test kindly check it to give your feedback"
+      release_notes: "added chat page and track order page "
 
       )
     end

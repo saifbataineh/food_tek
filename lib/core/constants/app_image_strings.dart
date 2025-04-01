@@ -60,4 +60,8 @@ class AppImageStrings {
   static const String visaCard = 'assets/checkout/visa_card.png';
   static const String cardIcon = 'assets/checkout/card_icon.png';
   static const String lockIcon = 'assets/checkout/lock.png';
+  //track
+  static const String trackedCar = 'assets/track/tracked_car.png';
+  static const String resturantLogo = 'assets/track/resturant.png';
+  static const String homeLogo = 'assets/track/home.png';
 }
