@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/food_favorite_grid_view_widget.dart';
-import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:food_tek/food_list.dart';
 
 class PizzaViewWidget extends StatelessWidget {

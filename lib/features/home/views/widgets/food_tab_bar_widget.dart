@@ -4,7 +4,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class FoodTabBarWidget extends StatefulWidget {
-  FoodTabBarWidget({
+  const FoodTabBarWidget({
     super.key,
   });
 

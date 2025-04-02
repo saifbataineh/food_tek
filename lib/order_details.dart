@@ -3,8 +3,8 @@ import 'package:food_tek/chat/chat_screen_widget.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/order_details_widget.dart';
-
+import 'package:food_tek/features/track/views/widgets/order_details_widget.dart';
+ 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key});
 

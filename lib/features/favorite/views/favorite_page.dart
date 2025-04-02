@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_tek/core/constants/app_colors.dart';
-import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/current_location_widget.dart';
 import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:food_tek/core/widgets/food_favorite_grid_view_widget.dart';
 import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';
-import 'package:food_tek/features/home/models/food_model.dart';
 
 class FavoritePage extends StatefulWidget {
   const FavoritePage({super.key});

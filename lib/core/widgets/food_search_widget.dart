@@ -4,8 +4,8 @@ import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 
 class FoodSearchWidget extends StatefulWidget {
-  const FoodSearchWidget({super.key});
-
+  const FoodSearchWidget({super.key,  this.showFilterButton=true});
+final bool showFilterButton;
   @override
   State<FoodSearchWidget> createState() => _FoodSearchWidgetState();
 }
@@ -31,12 +31,12 @@ class _FoodSearchWidgetState extends State<FoodSearchWidget> {
           prefixIcon: Icon(Icons.search),
           fillColor: Colors.white,
           filled: true,
-          suffixIcon: IconButton(
+          suffixIcon:widget.showFilterButton? IconButton(
               onPressed: () {
                 AppNavigatorService.pushNamed(context,
                     routeName: Routes.filtersPage);
               },
-              icon: Icon(Icons.filter_list)),
+              icon: Icon(Icons.filter_list)):null,
         ),
         onChanged: (value) {
           print(value);

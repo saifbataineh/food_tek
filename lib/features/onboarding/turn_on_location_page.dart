@@ -7,7 +7,6 @@ import 'package:food_tek/core/services/location_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/onboarding/widgets/display_title_and_subtitle_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
-import 'package:location/location.dart';
 
 class TurnOnLocationPage extends StatelessWidget {
   const TurnOnLocationPage({super.key});

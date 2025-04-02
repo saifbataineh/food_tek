@@ -17,7 +17,6 @@ class AllViewWidget extends StatefulWidget {
 class _AllViewWidgetState extends State<AllViewWidget> {
   String? location = "";
   String selectedCategory = "All";
-  int currentIndex = 0;
 
   List<Food> foodList = [
     Food(
@@ -50,59 +49,13 @@ class _AllViewWidgetState extends State<AllViewWidget> {
     RecommendModel(image: AppImageStrings.recommend4, price: 14)
   ];
 
-  List pageViewDiscount = [
-    //  Image.asset(AppImageStrings.discountPhoto),
-    // Image.asset(AppImageStrings.discountPhoto),
-    //Image.asset(AppImageStrings.discountPhoto),
-    const stckDiscount(),
-    const stckDiscount()
-  ];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-              width: responsiveWidth(context, 370),
-              height: responsiveHeight(context, 128),
-              child: PageView.builder(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Container(
-                    width: responsiveWidth(context, 370),
-                    height: responsiveHeight(context, 137),
-                    color: Colors.transparent,
-                    child: pageViewDiscount[index],
-                  );
-                },
-                itemCount: pageViewDiscount.length,
-                onPageChanged: (value) {
-                  setState(() {
-                    currentIndex = value;
-                  });
-                },
-              )),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              pageViewDiscount.length,
-              (index) => Container(
-                margin: EdgeInsets.symmetric(horizontal: 4),
-                decoration: BoxDecoration(
-                  color: index == currentIndex
-                      ? AppColors.mainColor
-                      : AppColors.lightgreyColor,
-                  shape: BoxShape.circle,
-                ),
-                height: responsiveHeight(context, 10),
-                width: responsiveWidth(context, 10),
-              ),
-            ),
-          ),
+          DisocuntScrollView(),
           SizedBox(
             height: responsiveHeight(context, 5),
           ),
@@ -110,17 +63,25 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           SizedBox(
             height: responsiveHeight(context, 13),
           ),
-          SizedBox(
-            height: responsiveHeight(context, 220),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: foodList.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: TopRatedWidget(foodItem: foodList[index]),
-                );
-              },
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: foodList
+                  .map((food) => Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: TopRatedWidget(foodItem: food),
+                      ))
+                  .toList(),
+              /* ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: foodList.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: TopRatedWidget(foodItem: foodList[index]),
+                  );
+                },
+              ), */
             ),
           ),
           SizedBox(height: responsiveHeight(context, 15)),
@@ -174,38 +135,67 @@ class _AllViewWidgetState extends State<AllViewWidget> {
   }
 }
 
-class stckDiscount extends StatelessWidget {
-  const stckDiscount({super.key});
+class DisocuntScrollView extends StatefulWidget {
+  const DisocuntScrollView({
+    super.key,
+  });
+
+  @override
+  State<DisocuntScrollView> createState() => _DisocuntScrollViewState();
+}
+
+class _DisocuntScrollViewState extends State<DisocuntScrollView> {
+  final List pageViewDiscount = [
+    Image.asset(AppImageStrings.discountPhoto),
+    Image.asset(AppImageStrings.discountPhoto),
+    Image.asset(AppImageStrings.discountPhoto),
+  ];
+
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(children: [
-        Stack(
-          children: [
-            Image.asset(AppImageStrings.discountPhoto),
-            Padding(
-                padding: EdgeInsets.only(left: 26, top: 18),
-                child: Column(children: [
-                  Text(
-                    "Experience our",
-                    style: TextStyle(fontSize: 10, color: Colors.white),
-                  ),
-                  Text(
-                    "delicious new dish",
-                    style: TextStyle(fontSize: 10, color: Colors.white),
-                  ),
-                  Text(
-                    "30% OFF",
-                    style: TextStyle(
-                        fontSize: 26,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ]))
-          ],
-        )
-      ]),
+    return Column(
+      children: [
+        SizedBox(
+            width: responsiveWidth(context, 370),
+            height: responsiveHeight(context, 128),
+            child: PageView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return Container(
+                  width: responsiveWidth(context, 370),
+                  height: responsiveHeight(context, 137),
+                  color: Colors.transparent,
+                  child: pageViewDiscount[index],
+                );
+              },
+              itemCount: pageViewDiscount.length,
+              onPageChanged: (pageIndex) {
+                setState(() {
+                  currentIndex = pageIndex;
+                });
+              },
+            )),
+        SizedBox(
+          height: responsiveHeight(context, 10),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(
+              pageViewDiscount.length,
+              (index) => Container(
+                    margin: EdgeInsets.symmetric(horizontal: 4),
+                    decoration: BoxDecoration(
+                      color: index == currentIndex
+                          ? AppColors.mainColor
+                          : AppColors.seconadryColor,
+                    ),
+                    height: responsiveHeight(context, 4),
+                    width: responsiveWidth(context, 20),
+                  )),
+        ),
+      ],
     );
   }
 }
