@@ -56,7 +56,8 @@ class _SetLocationListTileState extends State<SetLocationListTile> {
         contentPadding: EdgeInsets.all(0),
         trailing: TextButton(
           onPressed: () async {
-            await LocationService.checkEnabledAndPermission();
+              final bool isEnabled =await LocationService.checkEnabledAndPermission();
+              if(!isEnabled)return;
             if (!context.mounted) return;
             AppNavigatorService.pushNamed(context,
                 routeName: Routes.setLocationPage);

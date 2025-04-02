@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/core/services/location_service.dart';
 import 'package:food_tek/features/favorite/views/favorite_page.dart';
 import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/person/views/profile_page.dart';
@@ -56,7 +57,11 @@ class _NavigationPageState extends State<NavigationPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: (value) {
+        onTap: (value) async{
+            if(value==2){
+              final bool isEnabled =await LocationService.checkEnabledAndPermission();
+              if(!isEnabled)return;
+            }
           setState(() {
             currentIndex = value;
           });
