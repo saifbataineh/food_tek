@@ -79,6 +79,7 @@ class CheckOutPage extends StatelessWidget {
                   height: responsiveHeight(context, 16),
                 ),
                 PaymentRadioGroup(
+                  secondChild: Text("card"),
                   child: Text("cash"),
                 ),
                 SizedBox(
@@ -89,6 +90,7 @@ class CheckOutPage extends StatelessWidget {
                   height: responsiveHeight(context, 16),
                 ),
                 PaymentRadioGroup(
+                  secondChild:Image.asset(AppImageStrings.masterCard) ,
                   child: Image.asset(AppImageStrings.visaIcon),
                 ),
                 SizedBox(
@@ -112,9 +114,11 @@ class CheckOutPage extends StatelessWidget {
 class PaymentRadioGroup extends StatefulWidget {
   const PaymentRadioGroup({
     super.key,
-    required this.child,
+    required this.child, required this.secondChild,
   });
   final Widget child;
+  final Widget secondChild;
+
   @override
   State<PaymentRadioGroup> createState() => _PaymentRadioGroupState();
 }
@@ -154,7 +158,7 @@ class _PaymentRadioGroupState extends State<PaymentRadioGroup> {
                     });
                   }),
             ),
-            widget.child,
+            widget.secondChild,
           ],
         ),
       ],

@@ -116,7 +116,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      
                       TextButton(
                         onPressed: () {
                           AppNavigatorService.pushReplacementNamed(context,
@@ -125,8 +124,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         child: Text(
                           S.of(context).skip_button,
                           style: (Theme.of(context).textTheme.displaySmall),
-                          
-                          
                         ),
                       ),
                       Row(
@@ -146,7 +143,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           ),
                         ),
                       ),
-
                       IconButton(
                         onPressed: () {
                           //pageController.animateToPage(pages.length - 1,
@@ -176,3 +172,5 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 }
+
+

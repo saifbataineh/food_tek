@@ -1,2 +1,0 @@
-D:/projects/food_tek/android/app/.cxx/Debug/522p1149/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/projects/food_tek/android/app/.cxx/Debug/522p1149/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>NSCameraUsageDescription</key>
+<string>نحتاج لاستخدام الكاميرا لالتقاط الصور</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>نحتاج للوصول إلى معرض الصور لاختيار صورة</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>نحتاج الإذن لحفظ الصور في المعرض</string>
+
     <key>NSLocationWhenInUseUsageDescription</key>
 <string>نحتاج إلى موقعك لعرض البيانات المناسبة.</string>
 <key>NSLocationAlwaysUsageDescription</key>

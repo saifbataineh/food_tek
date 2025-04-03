@@ -114,11 +114,14 @@ class CartPage extends StatelessWidget {
                                     return CartItemWidget(
                                         cartItem: cartItems[index]);
                                   }),
-                              CartDetailsContainerWidget(
-                                onPressed: () {
-                                  AppNavigatorService.pushNamed(context,
-                                      routeName: Routes.checkoutPage);
-                                },
+                              Positioned(
+                                 bottom: 0,
+                                child: CartDetailsContainerWidget(
+                                  onPressed: () {
+                                    AppNavigatorService.pushNamed(context,
+                                        routeName: Routes.checkoutPage);
+                                  },
+                                ),
                               ),
                             ],
                           ),

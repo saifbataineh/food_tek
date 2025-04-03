@@ -58,6 +58,7 @@ class AppImageStrings {
       'assets/checkout/location_unselected_icon.png';
   static const String visaIcon = 'assets/checkout/visa.png';
   static const String visaCard = 'assets/checkout/visa_card.png';
+  static const String masterCard = 'assets/checkout/MasterCard.png';
   static const String cardIcon = 'assets/checkout/card_icon.png';
   static const String lockIcon = 'assets/checkout/lock.png';
   //track
