@@ -18,7 +18,7 @@ class CurrentLocationWidget extends StatelessWidget {
             height: responsiveHeight(context, 34),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
             ),
             child: Icon(
               size: 18,
@@ -34,7 +34,7 @@ class CurrentLocationWidget extends StatelessWidget {
             height: responsiveHeight(context, 34),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
-              color: AppColors.lightgreyColor,
+              color: Theme.of(context).brightness== Brightness.dark?AppColors.black: AppColors.borderColor,
             ),
             child: NotificationIconButton(),
           ),

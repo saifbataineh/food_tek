@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
+                    color: Theme.of(context).cardColor,
                   ),
                   width: responsiveWidth(context, 343),
                   padding: EdgeInsets.all(
@@ -71,6 +71,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           ContinueWithWidget(
                             company: 'Apple',
+                           
                             image: AppImageStrings.appleLogo,
                           ),
                         ],

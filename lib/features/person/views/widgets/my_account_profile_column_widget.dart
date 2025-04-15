@@ -14,7 +14,7 @@ class MyAccountProfileColumnWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: AppColors.borderColor,
+        color:Theme.of(context).brightness== Brightness.dark?AppColors.black: AppColors.borderColor,
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -28,7 +28,7 @@ class MyAccountProfileColumnWidget extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
-                  .copyWith(color: AppColors.midnightShadow),
+                  .copyWith(color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor:AppColors.midnightShadow),
             ),
             ListTile(
               onTap: () {
@@ -36,26 +36,27 @@ class MyAccountProfileColumnWidget extends StatelessWidget {
                     routeName: Routes.updateProfilePage);
               },
               leading: Icon(
+                
                 Icons.person_search_outlined,
-                color: AppColors.iconBlackColor,
+                color:  Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor,
               ),
               title: Text("Personal Information",
                   style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
-              leading: Icon(Icons.language, color: AppColors.iconBlackColor),
+              leading: Icon(Icons.language, color:Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
               title: Text("Language",
                   style: Theme.of(context).textTheme.labelSmall),
               trailing:
                   Text("عربية", style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
-              leading: Icon(Icons.privacy_tip, color: AppColors.iconBlackColor),
+              leading: Icon(Icons.privacy_tip, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
               title: Text("Privacy Policity",
                   style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: AppColors.iconBlackColor),
+              leading: Icon(Icons.settings, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
               title: Text("Settings",
                   style: Theme.of(context).textTheme.labelSmall),
             ),

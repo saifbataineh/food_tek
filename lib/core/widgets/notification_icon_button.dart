@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/notifications/models/notification_model.dart';
 import 'package:food_tek/features/notifications/views/widgets/notification_widgets.dart';
@@ -31,6 +32,7 @@ class NotificationIconButton extends StatelessWidget {
     return Badge(
       label: Container(),
       child: IconButton(
+        color:Theme.of(context).brightness==Brightness.dark?AppColors.black:AppColors.whiteGrey,
         padding: EdgeInsets.zero,
         onPressed: () {
           //TOOD:ADD SERVICE
@@ -123,7 +125,9 @@ class NotificationIconButton extends StatelessWidget {
             },
           );
         },
-        icon: Icon(size: 18, Icons.notifications),
+        icon: Icon(size: 18,
+        color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor
+        ,Icons.notifications),
       ),
     );
   }

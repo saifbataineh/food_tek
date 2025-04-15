@@ -58,7 +58,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
             padding: EdgeInsets.all(5),
             margin: EdgeInsets.only(right: responsiveWidth(context, 12)),
             decoration: BoxDecoration(
-              color: 1 == selectedIndex ? AppColors.mainColor : Colors.white,
+              color: 1 == selectedIndex ? AppColors.mainColor : Theme.of(context).cardColor ,
               border: Border.all(
                 color: AppColors.seconadryColor,
               ),
@@ -76,7 +76,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
                   "Burger",
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color:
-                          1 == selectedIndex ? Colors.white : AppColors.black),
+                          1 == selectedIndex ?  Colors.white :Theme.of(context).brightness==Brightness.dark?AppColors.whiteGrey: AppColors.black),
                 ),
               )
             ])),

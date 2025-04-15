@@ -37,6 +37,8 @@ class _PinCodeFieldState extends State<PinCodeField> {
                     contentPadding: EdgeInsets.all(5),
                     counterText: "", // Hide the counter text
                     border: OutlineInputBorder(),
+                    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
+                    
                   ),
                   onChanged: (value) {
                     if (value.isNotEmpty) {

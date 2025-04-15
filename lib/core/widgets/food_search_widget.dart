@@ -29,7 +29,7 @@ class _FoodSearchWidgetState extends State<FoodSearchWidget> {
           hintStyle: TextStyle(fontSize: 12),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
           prefixIcon: Icon(Icons.search),
-          fillColor: Colors.white,
+          fillColor: Theme.of(context).cardColor,
           filled: true,
           suffixIcon:widget.showFilterButton? IconButton(
               onPressed: () {

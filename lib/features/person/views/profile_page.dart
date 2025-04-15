@@ -65,7 +65,7 @@ class MoreProfileColumnWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColors.borderColor,
+          color: Theme.of(context).brightness== Brightness.dark? AppColors.black:AppColors.borderColor,
           borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
@@ -77,7 +77,7 @@ class MoreProfileColumnWidget extends StatelessWidget {
                 .copyWith(color: AppColors.midnightShadow),
           ),
           ListTile(
-            leading: Icon(Icons.help_outline, color: Colors.black),
+            leading: Icon(Icons.help_outline, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
             title: Text(
               "Help Center",
               style: Theme.of(context).textTheme.labelSmall,

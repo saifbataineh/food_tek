@@ -152,7 +152,7 @@ class _TrackPageState extends State<TrackPage> {
                   vertical: responsiveHeight(context, 28)),
               height: responsiveHeight(context, 300),
               width: responsiveWidth(context, 432),
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
               child: Column(
                 children: [
                   Row(

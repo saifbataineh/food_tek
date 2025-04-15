@@ -48,7 +48,7 @@ class ConfirmResetPasswordPage extends StatelessWidget {
                         horizontal: responsiveWidth(context, 24)),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.white,
+                      color: Theme.of(context).cardColor,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

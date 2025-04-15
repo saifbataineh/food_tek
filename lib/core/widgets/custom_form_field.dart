@@ -64,6 +64,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
                       });
                     },
                     icon: Icon(
+                      color:  Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.black,
                         isObsecure ? Icons.visibility : Icons.visibility_off),
                   )
                 : widget.suffixIcon,
@@ -75,6 +76,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             ),
+            hintStyle: Theme.of(context).textTheme.bodySmall,
             hintText: widget.hintText,
           ),
         ),

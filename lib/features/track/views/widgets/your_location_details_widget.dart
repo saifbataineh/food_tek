@@ -27,7 +27,7 @@ class YourLocationDetailsWidget extends StatelessWidget {
           ),
           Text(
             "123 Al-Madina Street, Abdali, Amman, Jordan",
-            style: TextStyle(color: Colors.black, fontSize: 10),
+            style: TextStyle(color: Theme.of(context).brightness==Brightness.dark?Colors.white: Colors.black, fontSize: 10),
           ),
         ]),
       ],

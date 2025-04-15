@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/themes/app_theme.dart';
+import 'package:food_tek/core/themes/dark_app_theme.dart';
 import 'package:food_tek/features/authintication/views/confirm_reset_password_page.dart';
 import 'package:food_tek/features/authintication/views/login_page.dart';
 import 'package:food_tek/features/authintication/views/reset_password_page.dart';
@@ -33,6 +34,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       locale: Locale('en'),
       localizationsDelegates: [
@@ -42,13 +44,29 @@ class App extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      theme: ThemeData(
+   theme: ThemeData(
+
+    checkboxTheme: AppTheme.checkboxTheme,
+        cardColor: AppColors.black,
+        scaffoldBackgroundColor: AppColors.whiteGrey,
         colorScheme: ColorScheme.light(primary: AppColors.mainColor),
         datePickerTheme: AppTheme.datePickerTheme,
         elevatedButtonTheme: AppTheme.elevatedButtonTheme,
         textButtonTheme: AppTheme.textButtonTheme,
         textTheme: AppTheme.textStyle,
       ),
+      darkTheme:ThemeData(
+       
+        checkboxTheme: AppDarkTheme.checkboxTheme,
+        cardColor: AppColors.black,
+        scaffoldBackgroundColor: AppColors.black,
+colorScheme: ColorScheme.dark(primary: AppColors.mainColor),
+datePickerTheme: AppDarkTheme.datePickerTheme,
+elevatedButtonTheme: AppDarkTheme.elevatedButtonTheme,
+ textButtonTheme: AppDarkTheme.textButtonTheme,
+  textTheme: AppDarkTheme.textStyle,
+      ),
+
       initialRoute: Routes.splashPage,
       routes: {
         Routes.splashPage: (context) => BlocProvider(

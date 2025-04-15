@@ -20,7 +20,7 @@ class ShowDialogService {
           return BackdropFilter(
             filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
             child: Dialog(
-              backgroundColor: Colors.white,
+              backgroundColor: Theme.of(context).cardColor,
               child: Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: responsiveWidth(context, 24),

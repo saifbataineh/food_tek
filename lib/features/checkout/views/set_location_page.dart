@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -63,7 +64,7 @@ class _SetLocationPageState extends State<SetLocationPage>
               bottom: responsiveHeight(context, 86),
               left: responsiveWidth(context, 48),
               child: Container(
-                decoration: BoxDecoration(color: Colors.white),
+                decoration: BoxDecoration(color: Theme.of(context).brightness== Brightness.dark?AppColors.black: AppColors.whiteGrey),
                 width: responsiveWidth(context, 343),
                 height: responsiveHeight(context, 154),
                 padding: EdgeInsetsDirectional.symmetric(

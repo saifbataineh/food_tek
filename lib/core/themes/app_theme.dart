@@ -3,6 +3,9 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
+  static CheckboxThemeData checkboxTheme=CheckboxThemeData(
+    side: BorderSide(color: AppColors.whiteGrey)
+  );
   static DatePickerThemeData datePickerTheme = DatePickerThemeData(
     confirmButtonStyle: ButtonStyle(
       foregroundColor: WidgetStatePropertyAll(AppColors.mainColor),

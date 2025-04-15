@@ -38,6 +38,7 @@ class ResetPasswordPage extends StatelessWidget {
                   height: responsiveHeight(context, 150),
                 ),
                 Container(
+                  
                   padding: EdgeInsets.symmetric(
                     horizontal: responsiveWidth(context, 24),
                     vertical: responsiveHeight(context, 24),
@@ -45,7 +46,7 @@ class ResetPasswordPage extends StatelessWidget {
                   width: responsiveWidth(context, 343),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
+                    color: Theme.of(context).cardColor,
                   ),
                   child: Column(
                     spacing: responsiveHeight(context, 24),
