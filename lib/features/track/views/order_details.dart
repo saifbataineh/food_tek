@@ -4,7 +4,7 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/track/views/widgets/delivery_guy_deatils_widget.dart';
 import 'package:food_tek/features/track/views/widgets/order_details_widget.dart';
 import 'package:food_tek/features/track/views/widgets/your_location_details_widget.dart';
-
+import 'package:food_tek/generated/l10n.dart';
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key});
 
@@ -16,7 +16,7 @@ class OrderDetails extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
           ),
-          title: const Text("Order Details"),
+          title: Text(S.of(context).order_details),
         ),
         body: SingleChildScrollView(
             child: Padding(
@@ -28,10 +28,10 @@ class OrderDetails extends StatelessWidget {
               children: [
                 Image.asset(AppImageStrings.order, width: 60, height: 60),
                 const SizedBox(width: 16),
-                const Column(
+                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Order ID",
+                    Text(S.of(context).order_id,
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     Text("#6579-6432", style: TextStyle(color: Colors.grey)),
                     Text("25m", style: TextStyle(color: Colors.grey)),
@@ -61,7 +61,7 @@ class OrderDetails extends StatelessWidget {
                       child: SizedBox(
                           width: 350,
                           child: ElevatedButton(
-                              onPressed: () {}, child: Text("Live Track"))))
+                              onPressed: () {}, child: Text(S.of(context).live_track))))
                 ],
               ),
             ),
