@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class MyAccountProfileColumnWidget extends StatelessWidget {
   const MyAccountProfileColumnWidget({
@@ -24,7 +25,7 @@ class MyAccountProfileColumnWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "My Account",
+              S.of(context).my_account,
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
@@ -40,24 +41,25 @@ class MyAccountProfileColumnWidget extends StatelessWidget {
                 Icons.person_search_outlined,
                 color:  Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor,
               ),
-              title: Text("Personal Information",
+              title: Text(S.of(context).personal_information,
                   style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
               leading: Icon(Icons.language, color:Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
-              title: Text("Language",
+              title: Text(S.of(context).language,
                   style: Theme.of(context).textTheme.labelSmall),
               trailing:
+              //TODO: CHANGE WHEN CHANGE LAGNUAGE
                   Text("عربية", style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
               leading: Icon(Icons.privacy_tip, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
-              title: Text("Privacy Policity",
+              title: Text(S.of(context).privacy_policy,
                   style: Theme.of(context).textTheme.labelSmall),
             ),
             ListTile(
               leading: Icon(Icons.settings, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
-              title: Text("Settings",
+              title: Text(S.of(context).setting,
                   style: Theme.of(context).textTheme.labelSmall),
             ),
           ],

@@ -6,6 +6,7 @@ import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:food_tek/features/home/models/recommend_model.dart';
 import 'package:food_tek/features/home/views/widgets/top_rated_widget.dart';
 import 'package:food_tek/features/home/views/widgets/recommended_food_screen.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class AllViewWidget extends StatefulWidget {
   const AllViewWidget({super.key});
@@ -59,7 +60,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           SizedBox(
             height: responsiveHeight(context, 5),
           ),
-          Text("Top Rated", style: Theme.of(context).textTheme.displayMedium),
+          Text(S.of(context).top_rated, style: Theme.of(context).textTheme.displayMedium),
           SizedBox(
             height: responsiveHeight(context, 13),
           ),
@@ -87,7 +88,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
           SizedBox(height: responsiveHeight(context, 15)),
           Row(
             children: [
-              Text("Recommend",
+              Text(S.of(context).recommend,
                   style: Theme.of(context).textTheme.displayMedium),
               const Spacer(),
               GestureDetector(
@@ -97,7 +98,7 @@ class _AllViewWidgetState extends State<AllViewWidget> {
                 child: Row(
                   children: [
                     Text(
-                      "View all",
+                      S.of(context).view_all,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
                     SizedBox(

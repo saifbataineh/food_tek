@@ -4,6 +4,7 @@ import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/congrats_widget.dart';
 import 'package:food_tek/core/widgets/notification_icon_button.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class CongratsCheckOutPage extends StatelessWidget {
   const CongratsCheckOutPage({super.key});
@@ -24,7 +25,7 @@ class CongratsCheckOutPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Checkout",
+              S.of(context).checkout,
               style: Theme.of(context).textTheme.displayMedium,
             ),
             SizedBox(
@@ -33,9 +34,9 @@ class CongratsCheckOutPage extends StatelessWidget {
             CongratsWidget(
                 congratsfontSize: 24,
                 congratsDescriptionfontSize: 20,
-                congrats: "Your Order Done Successfully",
+                congrats: S.of(context).your_order_done_successfully,
                 congratsDescription:
-                    "you will get your order within 12min.thanks for using our services"),
+                    S.of(context).you_will_get_your_order_within_12_min_thanks_for_using_our_services),
             SizedBox(
               height: responsiveHeight(context, 50),
             ),
@@ -53,7 +54,7 @@ class CongratsCheckOutPage extends StatelessWidget {
                         
                             routeName: Routes.navigationPage, arguments: 2);
                       },
-                      child: Text("track Your Order")),
+                      child: Text(S.of(context).track_your_order)),
                 ),
               ],
             )

@@ -8,6 +8,7 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/cart_details_container_widget.dart';
 import 'package:food_tek/core/widgets/notification_icon_button.dart';
 import 'package:food_tek/features/checkout/views/widgets/set_location_list_tile.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class CheckOutPage extends StatelessWidget {
   const CheckOutPage({super.key});
@@ -28,7 +29,7 @@ class CheckOutPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Checkout",
+              S.of(context).checkout,
               style: Theme.of(context).textTheme.displayMedium,
             ),
             SizedBox(
@@ -38,14 +39,14 @@ class CheckOutPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "current location :",
+                  "${S.of(context).current_location} :",
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 SetLocationListTile(),
                 SizedBox(
                   height: responsiveHeight(context, 27),
                 ),
-                Text("Promo code ?"),
+                Text(S.of(context).promo_code),
                 SizedBox(
                   height: responsiveHeight(context, 16),
                 ),
@@ -65,26 +66,26 @@ class CheckOutPage extends StatelessWidget {
                         color: AppColors.mainColor,
                       ),
                       child: Text(
-                        "Add",
+                        S.of(context).add,
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    hintText: "Enter your promo",
+                    hintText: S.of(context).enter_your_promo,
                   ),
                 ),
-                Text("Pay With"),
+                Text(S.of(context).pay_with),
                 SizedBox(
                   height: responsiveHeight(context, 16),
                 ),
                 PaymentRadioGroup(
-                  child: Text("cash"),
+                  child: Text(S.of(context).cash),
                 ),
                 SizedBox(
                   height: responsiveHeight(context, 16),
                 ),
-                Text("Card Type"),
+                Text(S.of(context).card_type),
                 SizedBox(
                   height: responsiveHeight(context, 16),
                 ),

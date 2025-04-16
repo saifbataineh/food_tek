@@ -15,7 +15,7 @@ class NotificationWidgets extends StatelessWidget {
     return SafeArea(
        child: SingleChildScrollView(
          child: Container(
-          color: AppColors.containerBorderColor,
+          color: Theme.of(context).cardColor,
                               height: responsiveHeight(context,170),
           child: Padding(
             padding: const EdgeInsets.all(8.0),

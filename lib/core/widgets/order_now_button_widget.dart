@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class OrderNowButtonWidget extends StatelessWidget {
   const OrderNowButtonWidget({
@@ -21,7 +22,7 @@ class OrderNowButtonWidget extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(padding: EdgeInsets.all(0)),
       child: Text(
-        "Order Now",
+        S.of(context).order_now,
         style: TextStyle(
           fontSize: 10,
           fontWeight: FontWeight.w400,

@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class DeliveryGuyDetailsWidget extends StatelessWidget {
   const DeliveryGuyDetailsWidget({
@@ -18,7 +19,7 @@ class DeliveryGuyDetailsWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Your Delivery Hero",
+          Text(S.of(context).your_delivery_hero,
               style: Theme.of(context).textTheme.headlineSmall),
           Text("Aleksandr V.", style: Theme.of(context).textTheme.labelSmall),
         ],

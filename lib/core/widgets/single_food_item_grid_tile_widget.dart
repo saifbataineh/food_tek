@@ -80,6 +80,7 @@ class SingleFoodItemGridTileWidget extends StatelessWidget {
           Positioned(
             right: responsiveWidth(context, 42),
             child: Image.asset(
+              
               AppImageStrings.plate,
               width: responsiveWidth(context, 89),
               height: responsiveHeight(context, 89),

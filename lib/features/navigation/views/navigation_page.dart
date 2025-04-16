@@ -8,6 +8,7 @@ import 'package:food_tek/features/favorite/views/favorite_page.dart';
 import 'package:food_tek/features/home/views/home_page.dart';
 import 'package:food_tek/features/person/views/profile_page.dart';
 import 'package:food_tek/features/track/views/track_page.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({
@@ -74,13 +75,13 @@ class _NavigationPageState extends State<NavigationPage> {
         selectedLabelStyle: TextStyle(color: AppColors.mainColor),
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: "Home"),
+              icon: Icon(Icons.home_outlined), label: S.of(context).home),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border), label: "Favorites"),
+              icon: Icon(Icons.favorite_border), label: S.of(context).favorites),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_on), label: "track"),
+              icon: Icon(Icons.location_on), label: S.of(context).track),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: "Profile"),
+              icon: Icon(Icons.person_outline), label: S.of(context).profile),
         ],
       ),
     );
