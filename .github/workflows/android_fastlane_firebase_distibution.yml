@@ -27,10 +27,10 @@ jobs:
         run: flutter --version
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: actions/setup-ruby@v1
         with:
-          ruby-version: '3.3.4'
-          bundler-cache: true
+          ruby-version: '3.4.3'
+         
           working-directory: android
 
       - name: Install Ruby dependencies
