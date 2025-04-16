@@ -40,5 +40,179 @@
     "phone_number": "رقم الهاتف ",
     "select": "اختر ",
     "set_password": "تعيين كلمة المرور",
-    "register":"تسجيل الحساب"
+    "register":"تسجيل الحساب",
+
+
+
+
+
+
+    
+    "current_location":"الموقع الحالي",
+    "search_menu_restaurant_or_etc":"ابحث عن القائمة أو المطعم أو إلخ",
+    "all":"الكل",
+    "top_rated":"الأعلى تقييما",
+    "recommend":"يوصي به",
+    "view_all":"عرض الكل",
+    "home":"الرئيسية",
+    "favorites":"المفضله",
+    "track":"متابعة",
+    "profile":"الملف الشخصي",
+    "history":"السجل",
+    "order_now":"اطلب الآن",
+    "notifications":"الإشعارات",
+    "unread":"غير مقروء",
+    "read":"مقروئة",
+    "are_you_sure_you_want_to_remove_it_from_favorites":"هل أنت متأكد من أنك تريد إزالته من المفضلة",
+    "yes":"موافق",
+    "reviews":"مشاهدة",
+    "spicy":"حار",
+    "quantity":"الكمية",
+    "mild":"متوسط",
+    "hot":"عالي",
+    "add_to_cart":"إضافة إلى السلة",
+    "filter":"فلترة",
+    "min":" الأدنى",
+    "max":"الأعلي",
+    "category":"الصنف",
+    "location":"الموقع",
+    "dish":"أطباق",
+    "find_your_location":"العثور على موقعك",
+    "your_location":"موقعك",
+    "set_location":"تعيين الموقع",
+    "checkout":"الدفع",
+    "pay_with":"ادفع بإستخدام:",
+    "change":"تغيير",
+    "promo_code":"الرمز الترويجي؟",
+    "enter_your_promo":"أدخل الرمز الترويجي الخاص بك",
+    "add":"إضافة",
+    "card":"بطاقة",
+    "cash":"نقداً",
+    "card_type":"نوع البطاقة:",
+    "sub_total":"المجموع الفرعي",
+    "delivery_charge":"رسوم التوصيل",
+    "discount":"خصم",
+    "total":"مجموع:",
+    "place_my_order":"تأكيد طلبي",
+    "add_card":"إضافة بطاقة",
+    "name":"الاسم",
+    "card_number":"رقم البطاقة",
+    "expiry":"تاريخ الإنتهاء",
+    "cvc":"CVC",
+    "we_will_send_you_an_order_details_to_your_email_after_the_successfull_payment":"سوف نرسل لك تفاصيل الطلب إلى بريدك الإلكتروني بعد الدفع الناجح",
+    "pay_for_the_order":"ادفع ثمن الطلب",
+    "your_order_done_successfully":"تم طلبك بنجاح",
+    "you_will_get_your_order_within_12_min_thanks_for_using_our_services":"سوف تحصل على طلبك في غضون 12 دقيقة. شكرا لاستخدامك لخدماتنا",
+    "track_your_order":"تتبع طلبك",
+    "on_the_way":"في الطريق",
+    "all_details":"كل التفاصيل",
+    "order_placed":"تم تقديم الطلب",
+    "delivered":"تم التسليم",
+    "your_delivery_hero":"بطل التوصيل الخاص بك",
+    "chat":"الدردشة",
+    "write_your_message":"اكتب رسالتك",
+    "order_details":"تفاصيل الطلب",
+    "order_id":"معرف الطلب",
+    "order_received":"تم استلام الطلب",
+    "cooking_your_order":"يتم طبخ طلبك ",
+    "courier_is_picking_up_order":"ساعي يستلم الطلب",
+    "order_delivered":"تم تسليم الطلب",
+    "live_track":"تتبع مباشرة",
+    "my_account":"حسابي",
+    "personal_information":"المعلومات الالشخصية ",
+    "language":"اللغة",
+    "privacy_policy":"سياسة الخصوصية ",
+    "setting":"الإعدادات  ",
+    "push_notifications":"دفع الإشعارات ",
+    "promotional_notifications":"الإشعارات الترويجية",
+    "more":"أكثر",
+    "help_center":"مركز المساعدة",
+    "log_out":"تسجيل الخروج",
+    "username":"اسم المستخدم ",
+    "address":"العنوان ",
+    "update":"تحديث",
+    "cart":"السلة",
+    "load_more":"حمل المزيد",
+    "cart_empty":"السلة فارغة",
+    "you_do_not_have_add_any_foods_in_cart_at_this_time":"ليس لديك إضافة أي أطعمة في عربة التسوق في الوقت الحالي ",
+    "history_empty":"السجل فارغ",
+    "you-do_not_have_order_any_foods_before":"لم تطلب أي أطعمة من قبل"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
