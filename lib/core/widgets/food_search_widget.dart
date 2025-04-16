@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class FoodSearchWidget extends StatefulWidget {
   const FoodSearchWidget({super.key,  this.showFilterButton=true});
@@ -25,7 +26,7 @@ class _FoodSearchWidgetState extends State<FoodSearchWidget> {
       child: TextField(
         controller: _searchController,
         decoration: InputDecoration(
-          hintText: 'Search menu, restaurant or etc',
+          hintText: S.of(context).search_menu_restaurant_or_etc,
           hintStyle: TextStyle(fontSize: 12),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
           prefixIcon: Icon(Icons.search),

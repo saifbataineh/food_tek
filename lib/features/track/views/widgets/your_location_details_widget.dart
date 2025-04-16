@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class YourLocationDetailsWidget extends StatelessWidget {
   const YourLocationDetailsWidget({
@@ -16,7 +17,7 @@ class YourLocationDetailsWidget extends StatelessWidget {
           thickness: 1,
         ),
         Text(
-          "your location",
+          S.of(context).your_location,
           style: TextStyle(color: Colors.grey),
         ),
         Row(children: [

@@ -175,5 +175,10 @@
     "cart_empty":"Cart Empty",
     "you_do_not_have_add_any_foods_in_cart_at_this_time":"You don’t have add any foods in cart at this time ",
     "history_empty":"History Empty",
-    "you_do_not_have_order_any_foods_before":"You don’t have order any foods before"
+    "you_do_not_have_order_any_foods_before":"You don’t have order any foods before",
+    "burger":"burger",
+    "pizza":"pizza",
+    "sandwish":"sandwish",
+    "recorder":"recorder",
+    "archived":"archived"
 }

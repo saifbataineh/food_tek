@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class LocationDropDownMenu extends StatefulWidget {
   const LocationDropDownMenu({super.key});
@@ -23,7 +24,7 @@ class _LocationDropDownMenuState extends State<LocationDropDownMenu> {
             child: DropdownButton(
               underline: SizedBox(),
               hint: Text(
-                "current location",
+                S.of(context).current_location,
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 12),
               ),
               items: [

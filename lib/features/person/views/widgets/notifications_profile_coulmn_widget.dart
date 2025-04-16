@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/features/person/views/widgets/notification_switch.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class NotifiationsProfileColumnWidget extends StatelessWidget {
   const NotifiationsProfileColumnWidget({super.key});
@@ -14,11 +15,11 @@ class NotifiationsProfileColumnWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Notifications",
+            S.of(context).notifications,
             style: Theme.of(context)
                 .textTheme
                 .labelMedium!
-                .copyWith(color: AppColors.midnightShadow),
+                .copyWith(color:Theme.of(context).brightness==Brightness.dark?Colors.white :AppColors.midnightShadow),
           ),
           ListTile(
             trailing: NotificationSwitch(),
@@ -26,7 +27,7 @@ class NotifiationsProfileColumnWidget extends StatelessWidget {
               Icons.notifications, 
               color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
             title: Text(
-              "Push Notification",
+              S.of(context).push_notifications,
               style: Theme.of(context).textTheme.labelSmall,
             ),
           ),
@@ -36,7 +37,7 @@ class NotifiationsProfileColumnWidget extends StatelessWidget {
               Icons.notifications_on,
                color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
             title: Text(
-              "Promotional Notifications",
+              S.of(context).promotional_notifications,
               style: Theme.of(context).textTheme.labelSmall,
             ),
           ),

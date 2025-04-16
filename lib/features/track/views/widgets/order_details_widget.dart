@@ -122,8 +122,8 @@ class OrderDetailsWidget extends StatelessWidget {
                 "Order received",
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.black
+                  ,fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 25),
@@ -131,7 +131,7 @@ class OrderDetailsWidget extends StatelessWidget {
                 "Cooking your order",
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.black,
+                  color: Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),

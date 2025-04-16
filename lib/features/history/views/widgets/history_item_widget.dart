@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:food_tek/generated/l10n.dart';
 import 'package:intl/intl.dart';
 
 class HistoryItemWidget extends StatelessWidget {
@@ -71,7 +72,8 @@ class HistoryItemWidget extends StatelessWidget {
                   Row(
                     children: [
                       Icon(Icons.repeat),
-                      Text("Recorder"),
+                     
+                      Text(S.of(context).recorder),
                     ],
                   ),
                 ],

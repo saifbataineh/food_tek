@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/cart/views/widgets/cart_details_row_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class CartDetailsContainerWidget extends StatelessWidget {
   const CartDetailsContainerWidget({
@@ -36,22 +37,22 @@ class CartDetailsContainerWidget extends StatelessWidget {
               spacing: responsiveHeight(context, 6),
               children: [
                 CartDeatilsRowWidget(
-                  category: "Sub-Total",
+                  category: S.of(context).sub_total,
                   price: "100",
                 ),
                 CartDeatilsRowWidget(
-                  category: "Delivery Charge",
+                  category: S.of(context).delivery_charge,
                   price: "10",
                 ),
                 CartDeatilsRowWidget(
-                  category: "Discount",
+                  category: S.of(context).discount,
                   price: "10",
                 ),
                 CartDeatilsRowWidget(
                   textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Colors.white,
                       ),
-                  category: "Total:",
+                  category: S.of(context).total,
                   price: "100",
                 ),
                 SizedBox(
@@ -65,7 +66,7 @@ class CartDetailsContainerWidget extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.whiteGrey,
                         foregroundColor: AppColors.mainColor),
-                    child: Text("Place My Order"),
+                    child: Text(S.of(context).place_my_order),
                   ),
                 )
               ],

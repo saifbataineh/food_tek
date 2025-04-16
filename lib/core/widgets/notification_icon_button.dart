@@ -3,6 +3,7 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/features/notifications/models/notification_model.dart';
 import 'package:food_tek/features/notifications/views/widgets/notification_widgets.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class NotificationIconButton extends StatelessWidget {
   NotificationIconButton({
@@ -37,13 +38,16 @@ class NotificationIconButton extends StatelessWidget {
         onPressed: () {
           //TOOD:ADD SERVICE
           showModalBottomSheet(
+            backgroundColor: Theme.of(context).cardColor,
+            
             context: context,
             builder: (BuildContext context) {
               return Container(
+                
                 height: responsiveHeight(context, 700),
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.mainColor,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
@@ -62,8 +66,8 @@ class NotificationIconButton extends StatelessWidget {
                             icon: const Icon(Icons.arrow_back),
                           ),
                         ),
-                        const Text(
-                          "Notifications",
+                         Text(
+                          S.of(context).notifications,
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
@@ -85,20 +89,23 @@ class NotificationIconButton extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const TabBar(
+                             TabBar(
                               tabAlignment: TabAlignment.center,
                               dividerColor: Colors.transparent,
                               padding: EdgeInsets.all(0),
-                              labelColor: Colors.black,
+                              unselectedLabelColor: Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.white
+                             , labelColor: Colors.black,
                               indicatorColor: Colors.green,
                               tabs: [
-                                Tab(text: "All"),
-                                Tab(text: "Unread"),
-                                Tab(text: "Archived"),
+                                Tab(text: S.of(context).all),
+                                Tab(text: S.of(context).unread),
+                            
+                                Tab(text: S.of(context).archived),
                               ],
                             ),
                             Expanded(
                               child: TabBarView(
+                                
                                 children: [
                                   ListView.builder(
                                     itemCount: notificationList.length,

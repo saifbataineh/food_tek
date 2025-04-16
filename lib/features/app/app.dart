@@ -36,7 +36,7 @@ class App extends StatelessWidget {
     return MaterialApp(
        themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      locale: Locale('en'),
+      locale: Locale('ar'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -47,7 +47,7 @@ class App extends StatelessWidget {
    theme: ThemeData(
 
     checkboxTheme: AppTheme.checkboxTheme,
-        cardColor: AppColors.black,
+        cardColor: Colors.white,
         scaffoldBackgroundColor: AppColors.whiteGrey,
         colorScheme: ColorScheme.light(primary: AppColors.mainColor),
         datePickerTheme: AppTheme.datePickerTheme,

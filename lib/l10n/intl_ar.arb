@@ -136,83 +136,12 @@
     "cart_empty":"السلة فارغة",
     "you_do_not_have_add_any_foods_in_cart_at_this_time":"ليس لديك إضافة أي أطعمة في عربة التسوق في الوقت الحالي ",
     "history_empty":"السجل فارغ",
-    "you-do_not_have_order_any_foods_before":"لم تطلب أي أطعمة من قبل"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    "you_do_not_have_order_any_foods_before":"لم تطلب أي أطعمة من قبل",
+        "burger":"برغر",
+    "pizza":"بيتزا",
+    "sandwish":"ساندوتش",
+    "recorder":"المسجل",
+    "archived":"الارشيف"
 
 
 }

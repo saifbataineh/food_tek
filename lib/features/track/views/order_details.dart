@@ -5,6 +5,7 @@ import 'package:food_tek/features/track/views/widgets/delivery_guy_deatils_widge
 import 'package:food_tek/features/track/views/widgets/order_details_widget.dart';
 import 'package:food_tek/features/track/views/widgets/your_location_details_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
+
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key});
 
@@ -16,7 +17,7 @@ class OrderDetails extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
           ),
-          title: Text(S.of(context).order_details),
+          title:  Text(S.of(context).order_details),
         ),
         body: SingleChildScrollView(
             child: Padding(

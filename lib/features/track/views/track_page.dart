@@ -10,9 +10,10 @@ import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:food_tek/features/track/views/widgets/delivery_guy_deatils_widget.dart';
 import 'package:food_tek/features/track/views/widgets/order_track_status_widget.dart';
 import 'package:food_tek/features/track/views/widgets/your_location_details_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
-import 'package:food_tek/generated/l10n.dart';
+
 
 class TrackPage extends StatefulWidget {
   const TrackPage({super.key});
@@ -177,18 +178,18 @@ class _TrackPageState extends State<TrackPage> {
                       children: [
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title:S.of(context).order_placed,
+                            title: S.of(context).order_placed,
                             value: 1,
                           ),
                         ),
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title:S.of(context).on_the_way,
+                            title:  S.of(context).on_the_way,
                           ),
                         ),
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title:S.of(context).delivered,
+                            title:  S.of(context).delivered,
                             value: 0,
                           ),
                         ),

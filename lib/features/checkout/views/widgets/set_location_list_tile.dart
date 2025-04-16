@@ -4,6 +4,7 @@ import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/services/location_service.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class SetLocationListTile extends StatefulWidget {
   const SetLocationListTile({
@@ -65,7 +66,7 @@ class _SetLocationListTileState extends State<SetLocationListTile> {
           style: TextButton.styleFrom(
               foregroundColor: AppColors.mainColor, padding: EdgeInsets.all(0)),
           child: Text(
-            "change",
+            S.of(context).change,
           ),
         ),
         subtitle: Text(

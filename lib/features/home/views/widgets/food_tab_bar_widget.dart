@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class FoodTabBarWidget extends StatefulWidget {
   const FoodTabBarWidget({
@@ -37,7 +38,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
           padding: EdgeInsets.all(5),
           margin: EdgeInsets.only(right: responsiveWidth(context, 12)),
           decoration: BoxDecoration(
-            color: 0 == selectedIndex ? AppColors.mainColor : Colors.white,
+            color: 0 == selectedIndex ? AppColors.mainColor : Theme.of(context).cardColor,
             border: Border.all(
               color: AppColors.seconadryColor,
             ),
@@ -48,9 +49,9 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
           child: FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
-              "All",
+              S.of(context).all,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: 0 == selectedIndex ? Colors.white : AppColors.black),
+                  color:  0 == selectedIndex ?  Colors.white :Theme.of(context).brightness==Brightness.dark?AppColors.whiteGrey: AppColors.black),
             ),
           ),
         ),
@@ -73,7 +74,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(
-                  "Burger",
+                  S.of(context).burger,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color:
                           1 == selectedIndex ?  Colors.white :Theme.of(context).brightness==Brightness.dark?AppColors.whiteGrey: AppColors.black),
@@ -84,7 +85,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
           padding: EdgeInsets.all(5),
           margin: EdgeInsets.only(right: responsiveWidth(context, 12)),
           decoration: BoxDecoration(
-            color: 2 == selectedIndex ? AppColors.mainColor : Colors.white,
+            color: 2 == selectedIndex ? AppColors.mainColor : Theme.of(context).cardColor,
             border: Border.all(
               color: AppColors.seconadryColor,
             ),
@@ -101,10 +102,10 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(
-                  "pizza",
+                  S.of(context).pizza,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color:
-                          2 == selectedIndex ? Colors.white : AppColors.black),
+                           2 == selectedIndex ?  Colors.white :Theme.of(context).brightness==Brightness.dark?AppColors.whiteGrey: AppColors.black),
                 ),
               )
             ],
@@ -114,7 +115,7 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
           padding: EdgeInsets.all(5),
           margin: EdgeInsets.only(right: responsiveWidth(context, 12)),
           decoration: BoxDecoration(
-            color: 3 == selectedIndex ? AppColors.mainColor : Colors.white,
+            color: 3 == selectedIndex ? AppColors.mainColor : Theme.of(context).cardColor,
             border: Border.all(
               color: AppColors.seconadryColor,
             ),
@@ -131,10 +132,10 @@ class _FoodTabBarWidgetState extends State<FoodTabBarWidget> {
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(
-                  "Sandwish",
+                  S.of(context).sandwish,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color:
-                          3 == selectedIndex ? Colors.white : AppColors.black),
+                          3 == selectedIndex ?  Colors.white :Theme.of(context).brightness==Brightness.dark?AppColors.whiteGrey: AppColors.black),
                 ),
               )
             ],

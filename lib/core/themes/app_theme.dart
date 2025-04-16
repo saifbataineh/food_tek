@@ -14,6 +14,7 @@ class AppTheme {
       foregroundColor: WidgetStatePropertyAll(AppColors.mainColor),
     ),
   );
+  
 
   static ElevatedButtonThemeData elevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
