@@ -12,6 +12,7 @@ import 'package:food_tek/features/track/views/widgets/order_track_status_widget.
 import 'package:food_tek/features/track/views/widgets/your_location_details_widget.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class TrackPage extends StatefulWidget {
   const TrackPage({super.key});
@@ -158,7 +159,7 @@ class _TrackPageState extends State<TrackPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("On The way"),
+                      Text(S.of(context).on_the_way),
                       TextButton(
                         style: TextButton.styleFrom(
                             foregroundColor: AppColors.mainColor),
@@ -166,7 +167,7 @@ class _TrackPageState extends State<TrackPage> {
                           AppNavigatorService.pushNamed(context,
                               routeName: Routes.orderDetails);
                         },
-                        child: Text("all details"),
+                        child: Text(S.of(context).all_details),
                       ),
                     ],
                   ),
@@ -176,18 +177,18 @@ class _TrackPageState extends State<TrackPage> {
                       children: [
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title: "order Placed",
+                            title:S.of(context).order_placed,
                             value: 1,
                           ),
                         ),
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title: "On the way",
+                            title:S.of(context).on_the_way,
                           ),
                         ),
                         Expanded(
                           child: OrderTrackStatusWidget(
-                            title: "Deliverd",
+                            title:S.of(context).delivered,
                             value: 0,
                           ),
                         ),

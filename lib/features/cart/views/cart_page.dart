@@ -11,6 +11,7 @@ import 'package:food_tek/features/cart/views/widgets/empty_page_widget.dart';
 import 'package:food_tek/features/history/views/widgets/history_grid_view_with_show_more_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class CartPage extends StatelessWidget {
   CartPage({super.key});
@@ -76,7 +77,7 @@ class CartPage extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Cart",
+                        S.of(context).cart,
                         style: Theme.of(context)
                             .textTheme
                             .labelMedium!
@@ -87,7 +88,7 @@ class CartPage extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "History",
+                        S.of(context).history,
                         style: GoogleFonts.inter(),
                       ),
                     ],
@@ -99,9 +100,9 @@ class CartPage extends StatelessWidget {
                   child: TabBarView(children: [
                     cartItems.isEmpty
                         ? EmptyPageWidget(
-                            title: 'Cart Empty',
+                            title:S.of(context).cart_empty,
                             subTitle:
-                                'You don’t have add any foods in cart at this time ')
+                                S.of(context).you_do_not_have_add_any_foods_in_cart_at_this_time)
                         : Stack(
                             children: [
                               ListView.separated(
@@ -124,8 +125,8 @@ class CartPage extends StatelessWidget {
                           ),
                     cartItems.isEmpty
                         ? EmptyPageWidget(
-                            title: 'History  Empty',
-                            subTitle: 'You don’t have order any foods before')
+                            title:S.of(context).history_empty,
+                            subTitle:S.of(context).you_do_not_have_order_any_foods_before)
                         : HistoryGridViewWithShowMoreWidget(),
                   ]))
             ],

@@ -7,6 +7,7 @@ import 'package:food_tek/features/home/models/person_model.dart';
 import 'package:food_tek/features/person/views/widgets/my_account_profile_column_widget.dart';
 import 'package:food_tek/features/person/views/widgets/notifications_profile_coulmn_widget.dart';
 import 'package:food_tek/features/person/views/widgets/personal_information_widget.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -70,7 +71,7 @@ class MoreProfileColumnWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "More",
+            S.of(context).more,
             style: Theme.of(context)
                 .textTheme
                 .labelMedium!
@@ -79,14 +80,14 @@ class MoreProfileColumnWidget extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.help_outline, color: Theme.of(context).brightness== Brightness.dark?AppColors.borderColor: AppColors.iconBlackColor),
             title: Text(
-              "Help Center",
+              S.of(context).help_center,
               style: Theme.of(context).textTheme.labelSmall,
             ),
           ),
           ListTile(
             leading: Icon(Icons.logout, color: Colors.red),
             title: Text(
-              "Log Out",
+              S.of(context).log_out,
               style: Theme.of(context)
                   .textTheme
                   .labelSmall!
