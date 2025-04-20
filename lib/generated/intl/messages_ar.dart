@@ -157,9 +157,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "quantity": MessageLookupByLibrary.simpleMessage("الكمية"),
     "read": MessageLookupByLibrary.simpleMessage("مقروئة"),
     "recommend": MessageLookupByLibrary.simpleMessage("يوصي به"),
-    "recorder": MessageLookupByLibrary.simpleMessage("المسجل"),
     "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
     "rememberme": MessageLookupByLibrary.simpleMessage("تذكرني"),
+    "reorder": MessageLookupByLibrary.simpleMessage("إعادة طلب"),
     "resetpassword": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين كلمة المرور",
     ),

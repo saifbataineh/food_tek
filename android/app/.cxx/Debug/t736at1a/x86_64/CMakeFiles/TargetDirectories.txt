@@ -1,0 +1,2 @@
+/Users/eng.abdalsahory/Desktop/foodTexApp/food_tek/android/app/.cxx/Debug/t736at1a/x86_64/CMakeFiles/edit_cache.dir
+/Users/eng.abdalsahory/Desktop/foodTexApp/food_tek/android/app/.cxx/Debug/t736at1a/x86_64/CMakeFiles/rebuild_cache.dir

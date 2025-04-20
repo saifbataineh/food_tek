@@ -999,9 +999,9 @@ class S {
     return Intl.message('sandwish', name: 'sandwish', desc: '', args: []);
   }
 
-  /// `recorder`
-  String get recorder {
-    return Intl.message('recorder', name: 'recorder', desc: '', args: []);
+  /// `reorder`
+  String get reorder {
+    return Intl.message('reorder', name: 'reorder', desc: '', args: []);
   }
 
   /// `archived`
