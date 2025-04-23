@@ -1000,8 +1000,8 @@ class S {
   }
 
   /// `reorder`
-  String get reorder {
-    return Intl.message('reorder', name: 'reorder', desc: '', args: []);
+  String get recorder {
+    return Intl.message('reorder', name: 'recorder', desc: '', args: []);
   }
 
   /// `archived`
