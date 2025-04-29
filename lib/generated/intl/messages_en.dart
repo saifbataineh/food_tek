@@ -76,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "delivery_charge": MessageLookupByLibrary.simpleMessage("Delivery Charge"),
     "discount": MessageLookupByLibrary.simpleMessage("Discount"),
     "dish": MessageLookupByLibrary.simpleMessage("Dish"),
+    "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "enter_your_promo": MessageLookupByLibrary.simpleMessage(
       "Enter Your Promo",

@@ -33,7 +33,7 @@ platform :android do
       app: "1:405526290982:android:639b53a171c78edf55bce7", # Your Firebase app ID
       testers: "saifbbataineh@gmail.com,  aseelsaad513@gmail.com, faez.alabadi@gmail.com,aboodeaaz1990@gmail.com,alabdallatanas97@gmail.com,demaalshalabi98@gmail.com,abdallahhaddad95@gmail.com", # Email addresses of testers
       android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
-      release_notes: "added arabic language to app kindly test it and check if there is something we missed  "
+      release_notes: "notify me if you get this email on group 13 whatsapp group and check all bugs you see and report it on jira and i fixed the radio buttons in checkout page "
 
       )
     end

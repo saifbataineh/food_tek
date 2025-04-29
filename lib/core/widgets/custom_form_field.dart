@@ -13,7 +13,8 @@ class CustomFormField extends StatefulWidget {
     required this.controller,
     this.enabled = true,
     this.keyboardType,
-    this.autofillHints, this.validator,
+    this.autofillHints,
+    this.validator,
   });
 
   final String label;
@@ -42,9 +43,8 @@ class _CustomFormFieldState extends State<CustomFormField> {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         TextFormField(
-          validator:widget.validator ,
-          
-          autofillHints:widget.autofillHints,
+          validator: widget.validator,
+          autofillHints: widget.autofillHints,
           keyboardType: widget.keyboardType,
           readOnly: !widget.enabled,
           controller: widget.controller,
@@ -64,13 +64,18 @@ class _CustomFormFieldState extends State<CustomFormField> {
                       });
                     },
                     icon: Icon(
-                      color:  Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.black,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
                         isObsecure ? Icons.visibility : Icons.visibility_off),
                   )
                 : widget.suffixIcon,
             prefixIcon: widget.prefixIcon,
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.formFieldBorderColor),
+              borderSide: BorderSide(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.grey
+                      : AppColors.formFieldBorderColor),
               borderRadius: BorderRadius.circular(10),
             ),
             border: OutlineInputBorder(

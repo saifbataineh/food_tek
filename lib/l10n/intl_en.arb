@@ -180,5 +180,6 @@
     "pizza":"pizza",
     "sandwish":"sandwish",
     "recorder":"reorder",
-    "archived":"archived"
+    "archived":"archived",
+    "editProfile":"Edit Profile"
 }

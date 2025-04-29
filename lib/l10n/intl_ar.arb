@@ -119,7 +119,7 @@
     "order_delivered":"تم تسليم الطلب",
     "live_track":"تتبع مباشرة",
     "my_account":"حسابي",
-    "personal_information":"المعلومات الالشخصية ",
+    "personal_information":"المعلومات الشخصية ",
     "language":"اللغة",
     "privacy_policy":"سياسة الخصوصية ",
     "setting":"الإعدادات  ",
@@ -141,7 +141,8 @@
     "pizza":"بيتزا",
     "sandwish":"ساندوتش",
     "recorder":"إعادة طلب",
-    "archived":"الارشيف"
+    "archived":"الارشيف",
+    "editProfile":"تعديل المعلومات الشخصية"
 
 
 }

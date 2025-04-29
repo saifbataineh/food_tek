@@ -70,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "delivery_charge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
     "discount": MessageLookupByLibrary.simpleMessage("خصم"),
     "dish": MessageLookupByLibrary.simpleMessage("أطباق"),
+    "editProfile": MessageLookupByLibrary.simpleMessage(
+      "تعديل المعلومات الشخصية",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "enter_your_promo": MessageLookupByLibrary.simpleMessage(
       "أدخل الرمز الترويجي الخاص بك",
@@ -140,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pay_for_the_order": MessageLookupByLibrary.simpleMessage("ادفع ثمن الطلب"),
     "pay_with": MessageLookupByLibrary.simpleMessage("ادفع بإستخدام:"),
     "personal_information": MessageLookupByLibrary.simpleMessage(
-      "المعلومات الالشخصية ",
+      "المعلومات الشخصية ",
     ),
     "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف "),
     "pizza": MessageLookupByLibrary.simpleMessage("بيتزا"),

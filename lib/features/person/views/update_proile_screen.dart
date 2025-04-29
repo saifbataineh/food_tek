@@ -20,7 +20,7 @@ class UpdateProileScreen extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Edit Profile"),
+        title: Text(S.of(context).editProfile),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -50,27 +50,28 @@ class UpdateProileScreen extends StatelessWidget {
                       ),
                       CustomFormField(
                         keyboardType: TextInputType.emailAddress,
-                        label:S.of(context).email,
+                        label: S.of(context).email,
                         controller: TextEditingController(),
                       ),
                       CustomFormField(
                         keyboardType: TextInputType.numberWithOptions(),
-                        label:S.of(context).phone_number,
+                        label: S.of(context).phone_number,
                         controller: TextEditingController(),
                       ),
                       CustomFormField(
                         isPassword: true,
-                        label:S.of(context).password,
+                        label: S.of(context).password,
                         controller: TextEditingController(),
                       ),
                       CustomFormField(
-                        label:S.of(context).address,
+                        label: S.of(context).address,
                         controller: TextEditingController(),
                       ),
                       SizedBox(
                           width: responsiveWidth(context, 230),
                           child: ElevatedButton(
-                              onPressed: () {}, child: Text(S.of(context).update)))
+                              onPressed: () {},
+                              child: Text(S.of(context).update)))
                     ],
                   ),
                 ),

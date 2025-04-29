@@ -5,6 +5,7 @@ import 'package:food_tek/core/widgets/current_location_widget.dart';
 import 'package:food_tek/core/widgets/food_search_widget.dart';
 import 'package:food_tek/core/widgets/food_favorite_grid_view_widget.dart';
 import 'package:food_tek/features/favorite/controllers/cubit/favorite_cubit.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class FavoritePage extends StatefulWidget {
   const FavoritePage({super.key});
@@ -25,7 +26,8 @@ class _FavoritePageState extends State<FavoritePage> {
           children: [
             CurrentLocationWidget(),
             FoodSearchWidget(),
-            Text("favorites", style: Theme.of(context).textTheme.displayMedium),
+            Text(S.of(context).favorites,
+                style: Theme.of(context).textTheme.displayMedium),
             BlocBuilder<FavoriteCubit, FavoriteState>(
               builder: (context, state) {
                 return FoodFavoriteGridViewWidget(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
@@ -50,7 +49,6 @@ class CheckOutPage extends StatelessWidget {
                 SizedBox(
                   height: responsiveHeight(context, 16),
                 ),
-                
                 TextField(
                   decoration: InputDecoration(
                     isDense: true,
@@ -75,23 +73,7 @@ class CheckOutPage extends StatelessWidget {
                     hintText: S.of(context).enter_your_promo,
                   ),
                 ),
-                Text(S.of(context).pay_with),
-                SizedBox(
-                  height: responsiveHeight(context, 16),
-                ),
-                PaymentRadioGroup(
-                  child: Text(S.of(context).cash),
-                ),
-                SizedBox(
-                  height: responsiveHeight(context, 16),
-                ),
-                Text(S.of(context).card_type),
-                SizedBox(
-                  height: responsiveHeight(context, 16),
-                ),
-                PaymentRadioGroup(
-                  child: Image.asset(AppImageStrings.visaIcon),
-                ),
+                PayemntRadioGroup(),
                 SizedBox(
                   height: responsiveHeight(context, 42),
                 ),
@@ -110,18 +92,77 @@ class CheckOutPage extends StatelessWidget {
   }
 }
 
-class PaymentRadioGroup extends StatefulWidget {
-  const PaymentRadioGroup({
+class PayemntRadioGroup extends StatefulWidget {
+  const PayemntRadioGroup({
     super.key,
-    required this.child,
   });
+
+  @override
+  State<PayemntRadioGroup> createState() => _PayemntRadioGroupState();
+}
+
+class _PayemntRadioGroupState extends State<PayemntRadioGroup> {
+  String groupValue = '';
+  String groupValue2 = '';
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(S.of(context).pay_with),
+        SizedBox(
+          height: responsiveHeight(context, 16),
+        ),
+        PaymentRadioGroup(
+          child2: Text(S.of(context).card),
+          groupValue: groupValue,
+          onChanged: (value) {
+            setState(() {
+              groupValue = value ?? '';
+            });
+          },
+          child: Text(S.of(context).cash),
+        ),
+        SizedBox(
+          height: responsiveHeight(context, 16),
+        ),
+        if (groupValue == '2') Text(S.of(context).card_type),
+        SizedBox(
+          height: responsiveHeight(context, 16),
+        ),
+        if (groupValue == '2')
+          PaymentRadioGroup(
+            child2: Image.asset(AppImageStrings.maserCardIcon),
+            groupValue: groupValue2,
+            onChanged: (value) {
+              setState(() {
+                groupValue2 = value ?? '';
+              });
+            },
+            child: Image.asset(AppImageStrings.visaIcon),
+          ),
+      ],
+    );
+  }
+}
+
+class PaymentRadioGroup extends StatefulWidget {
+  const PaymentRadioGroup(
+      {super.key,
+      required this.child,
+      required this.onChanged,
+      required this.groupValue,
+      required this.child2});
   final Widget child;
+  final Widget child2;
+  final String groupValue;
+  final ValueChanged<String?>? onChanged;
+
   @override
   State<PaymentRadioGroup> createState() => _PaymentRadioGroupState();
 }
 
 class _PaymentRadioGroupState extends State<PaymentRadioGroup> {
-  String groupValue = '';
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -129,16 +170,11 @@ class _PaymentRadioGroupState extends State<PaymentRadioGroup> {
         Row(
           children: [
             SizedBox(
-              height: responsiveHeight(context, 15),
-              child: Radio(
-                  value: "1",
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value ?? '';
-                    });
-                  }),
-            ),
+                height: responsiveHeight(context, 15),
+                child: Radio(
+                    value: "1",
+                    groupValue: widget.groupValue,
+                    onChanged: widget.onChanged)),
             widget.child,
           ],
         ),
@@ -148,14 +184,10 @@ class _PaymentRadioGroupState extends State<PaymentRadioGroup> {
               height: responsiveHeight(context, 15),
               child: Radio(
                   value: "2",
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value ?? '';
-                    });
-                  }),
+                  groupValue: widget.groupValue,
+                  onChanged: widget.onChanged),
             ),
-            widget.child,
+            widget.child2,
           ],
         ),
       ],
