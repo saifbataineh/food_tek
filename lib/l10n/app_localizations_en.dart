@@ -415,4 +415,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get editProfile => 'Edit Profile';
+
+  @override
+  String get cantBeEmpty => 'this field can\'t be empty';
+
+  @override
+  String get mustBeStrongPassword => 'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (! @ # \$ & * ~).';
+
+  @override
+  String get mustBeValidEmail => 'Please enter a valid email';
 }

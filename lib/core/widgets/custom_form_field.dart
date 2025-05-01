@@ -15,6 +15,7 @@ class CustomFormField extends StatefulWidget {
     this.keyboardType,
     this.autofillHints,
     this.validator,
+    this.errorMaxLines,
   });
 
   final String label;
@@ -27,12 +28,19 @@ class CustomFormField extends StatefulWidget {
   final TextInputType? keyboardType;
   final Iterable<String>? autofillHints;
   final String? Function(String? value)? validator;
+  final int? errorMaxLines;
   @override
   State<CustomFormField> createState() => _CustomFormFieldState();
 }
 
 class _CustomFormFieldState extends State<CustomFormField> {
   bool isObsecure = true;
+  @override
+  void dispose() {
+    widget.controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -52,6 +60,8 @@ class _CustomFormFieldState extends State<CustomFormField> {
           obscuringCharacter: '*',
           style: Theme.of(context).textTheme.bodySmall!,
           decoration: InputDecoration(
+            errorStyle: TextStyle(fontSize: 7),
+            errorMaxLines: widget.errorMaxLines,
             contentPadding: EdgeInsets.symmetric(
               horizontal: responsiveWidth(context, 14),
               vertical: responsiveHeight(context, 12.5),

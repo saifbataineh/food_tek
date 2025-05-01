@@ -40,6 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "birth_of_date": MessageLookupByLibrary.simpleMessage("Birth Of Date "),
     "burger": MessageLookupByLibrary.simpleMessage("burger"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "cantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "this field can\'t be empty",
+    ),
     "card": MessageLookupByLibrary.simpleMessage("Card"),
     "card_number": MessageLookupByLibrary.simpleMessage("Card Number"),
     "card_type": MessageLookupByLibrary.simpleMessage("Card Type:"),
@@ -110,6 +113,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "mild": MessageLookupByLibrary.simpleMessage("Mild"),
     "min": MessageLookupByLibrary.simpleMessage("Min"),
     "more": MessageLookupByLibrary.simpleMessage("More"),
+    "mustBeStrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (! @ # \$ & * ~).",
+    ),
+    "mustBeValidEmail": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid email",
+    ),
     "my_account": MessageLookupByLibrary.simpleMessage("My Account"),
     "name": MessageLookupByLibrary.simpleMessage("Name"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),

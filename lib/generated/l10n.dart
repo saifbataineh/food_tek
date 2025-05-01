@@ -1018,6 +1018,36 @@ class S {
       args: [],
     );
   }
+
+  /// `this field can't be empty`
+  String get cantBeEmpty {
+    return Intl.message(
+      'this field can\'t be empty',
+      name: 'cantBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (! @ # $ & * ~).`
+  String get mustBeStrongPassword {
+    return Intl.message(
+      'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (! @ # \$ & * ~).',
+      name: 'mustBeStrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email`
+  String get mustBeValidEmail {
+    return Intl.message(
+      'Please enter a valid email',
+      name: 'mustBeValidEmail',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

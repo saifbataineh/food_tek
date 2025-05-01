@@ -40,6 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "birth_of_date": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
     "burger": MessageLookupByLibrary.simpleMessage("برغر"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+    "cantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "هذا الحقل لا يمكن ان يكون فارغ ",
+    ),
     "card": MessageLookupByLibrary.simpleMessage("بطاقة"),
     "card_number": MessageLookupByLibrary.simpleMessage("رقم البطاقة"),
     "card_type": MessageLookupByLibrary.simpleMessage("نوع البطاقة:"),
@@ -108,6 +111,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "mild": MessageLookupByLibrary.simpleMessage("متوسط"),
     "min": MessageLookupByLibrary.simpleMessage(" الأدنى"),
     "more": MessageLookupByLibrary.simpleMessage("أكثر"),
+    "mustBeStrongPassword": MessageLookupByLibrary.simpleMessage(
+      "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل، وتحتوي على حرف كبير واحد على الأقل، وحرف صغير واحد على الأقل، ورقم واحد، وحرف خاص واحد على الأقل (! @ # \$ & * ~).",
+    ),
+    "mustBeValidEmail": MessageLookupByLibrary.simpleMessage(
+      "الرجاء ادخال بريد الكتروني صحيح",
+    ),
     "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
     "name": MessageLookupByLibrary.simpleMessage("الاسم"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),

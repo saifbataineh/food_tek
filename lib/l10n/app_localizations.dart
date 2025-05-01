@@ -910,6 +910,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Edit Profile'**
   String get editProfile;
+
+  /// No description provided for @cantBeEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'this field can\'t be empty'**
+  String get cantBeEmpty;
+
+  /// No description provided for @mustBeStrongPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (! @ # \$ & * ~).'**
+  String get mustBeStrongPassword;
+
+  /// No description provided for @mustBeValidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email'**
+  String get mustBeValidEmail;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

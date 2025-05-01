@@ -415,4 +415,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get editProfile => 'تعديل المعلومات الشخصية';
+
+  @override
+  String get cantBeEmpty => 'هذا الحقل لا يمكن ان يكون فارغ ';
+
+  @override
+  String get mustBeStrongPassword => 'يجب أن تتكون كلمة المرور من 6 أحرف على الأقل، وتحتوي على حرف كبير واحد على الأقل، وحرف صغير واحد على الأقل، ورقم واحد، وحرف خاص واحد على الأقل (! @ # \$ & * ~).';
+
+  @override
+  String get mustBeValidEmail => 'الرجاء ادخال بريد الكتروني صحيح';
 }
