@@ -8,7 +8,7 @@ import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/custom_form_field.dart';
 import 'package:food_tek/features/authintication/login/data/model/login_model.dart';
 import 'package:food_tek/features/authintication/login/presentation/cubit/login_cubit.dart';
-import 'package:food_tek/features/authintication/views/widgets/check_box_with_text_widget.dart';
+import 'package:food_tek/features/authintication/login/presentation/screens/widgets/check_box_with_text_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 import 'package:food_tek/core/extensions/string_extension.dart';
 
@@ -90,6 +90,7 @@ class LoginFormWidget extends StatelessWidget {
                             arguments: 0));
                   }
                   if (state is LoginStateError) {
+                    
                   ToastMessageService.showErrorMessage(state.message);
                   }
                 },

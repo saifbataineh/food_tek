@@ -424,4 +424,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mustBeValidEmail => 'Please enter a valid email';
+
+  @override
+  String get notAuthorized => 'you are not authorized to login';
+
+  @override
+  String get unExpectedError => 'Unexpected Error Occured!!';
 }

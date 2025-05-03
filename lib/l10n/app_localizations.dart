@@ -928,6 +928,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please enter a valid email'**
   String get mustBeValidEmail;
+
+  /// No description provided for @notAuthorized.
+  ///
+  /// In en, this message translates to:
+  /// **'you are not authorized to login'**
+  String get notAuthorized;
+
+  /// No description provided for @unExpectedError.
+  ///
+  /// In en, this message translates to:
+  /// **'Unexpected Error Occured!!'**
+  String get unExpectedError;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

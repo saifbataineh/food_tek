@@ -120,6 +120,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
     "name": MessageLookupByLibrary.simpleMessage("الاسم"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+    "notAuthorized": MessageLookupByLibrary.simpleMessage(
+      "لا تملك الصلاحية للدخول ",
+    ),
     "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "on_the_way": MessageLookupByLibrary.simpleMessage("في الطريق"),
     "onboarding1_text": MessageLookupByLibrary.simpleMessage(
@@ -198,6 +201,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "للإستمرار، يرجى تمكين الموقع في جهازك، والذي يستخدم خدمة الموقع من جوجل",
     ),
     "turnloc_title": MessageLookupByLibrary.simpleMessage("شغّل موقعك"),
+    "unExpectedError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع",
+    ),
     "unread": MessageLookupByLibrary.simpleMessage("غير مقروء"),
     "update": MessageLookupByLibrary.simpleMessage("تحديث"),
     "update_password": MessageLookupByLibrary.simpleMessage(

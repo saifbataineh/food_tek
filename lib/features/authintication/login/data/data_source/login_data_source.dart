@@ -21,7 +21,7 @@ class PostRemoteDataSource extends LoginDataSource {
       endpoint: NetworkConstants.login,
       body: body,
       
-      fromJsonT: (data) => "saif",
+      fromJsonT: (data) => data['token'],
     );
     return response;
   }

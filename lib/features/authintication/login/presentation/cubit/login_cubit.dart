@@ -10,18 +10,26 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit({required this.loginUseCase})
     : super(LoginStateIntl());
 
-  login({required LoginModel loginModel}) {
+  login({required LoginModel loginModel}) async{
     emit(LoginStateLoading());
-
-    loginUseCase
-        .call(MapParams(map: loginModel.toJson()))
-        .then(
-          (value) {
+try {
+ final value= await
+   loginUseCase
+        .call(MapParams(map: loginModel.toJson()));
+             //TODO:handle !active more efficent
+            print(value);
+            if (value['role']!="4"||value['IsActive']!="True") {
+              throw Exception('you are not authorized to login');
+            }
+            
             emit(LoginStateSuccess());
-          },
-          onError: (error) {
-            emit(LoginStateError(error.toString()));
-          },
-        );
+
+} catch (e) {
+  print(e.toString());
+    emit(LoginStateError(e.toString()));
+}
+   
+       
+       
   }
 }

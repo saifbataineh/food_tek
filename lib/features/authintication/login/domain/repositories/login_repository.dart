@@ -3,5 +3,5 @@ import 'package:food_tek/features/authintication/login/domain/entities/login_ent
 
 
 abstract class LoginRepository {
-  Future<String> login({required Map<String, dynamic> body});
+  Future<Map<String, dynamic>> login({required Map<String, dynamic> body});
 }

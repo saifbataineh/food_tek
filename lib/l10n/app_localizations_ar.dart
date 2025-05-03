@@ -424,4 +424,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get mustBeValidEmail => 'الرجاء ادخال بريد الكتروني صحيح';
+
+  @override
+  String get notAuthorized => 'لا تملك الصلاحية للدخول ';
+
+  @override
+  String get unExpectedError => 'حدث خطأ غير متوقع';
 }

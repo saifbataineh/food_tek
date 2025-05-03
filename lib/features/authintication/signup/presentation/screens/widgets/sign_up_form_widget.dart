@@ -5,8 +5,8 @@ import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/custom_form_field.dart';
-import 'package:food_tek/features/authintication/views/widgets/birth_auth_custom_form_field_widget.dart';
-import 'package:food_tek/features/authintication/views/widgets/phone_auth_custom_form_field_widget.dart';
+import 'package:food_tek/features/authintication/signup/presentation/screens/widgets/birth_auth_custom_form_field_widget.dart';
+import 'package:food_tek/features/authintication/signup/presentation/screens/widgets/phone_auth_custom_form_field_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class SignUpFormWidget extends StatefulWidget {

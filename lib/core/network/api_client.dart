@@ -55,7 +55,7 @@ class ApiClient<T> {
       var jsonBody = jsonDecode(response.body);
       return fromJsonT!(jsonBody);
     } else {
-      throw Exception("Something went wrong");
+      throw Exception(response.body);
     }
   }
 

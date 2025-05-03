@@ -1048,6 +1048,26 @@ class S {
       args: [],
     );
   }
+
+  /// `you are not authorized to login`
+  String get notAuthorized {
+    return Intl.message(
+      'you are not authorized to login',
+      name: 'notAuthorized',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unexpected Error Occured!!`
+  String get unExpectedError {
+    return Intl.message(
+      'Unexpected Error Occured!!',
+      name: 'unExpectedError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

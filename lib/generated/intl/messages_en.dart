@@ -122,6 +122,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "my_account": MessageLookupByLibrary.simpleMessage("My Account"),
     "name": MessageLookupByLibrary.simpleMessage("Name"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "notAuthorized": MessageLookupByLibrary.simpleMessage(
+      "you are not authorized to login",
+    ),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "on_the_way": MessageLookupByLibrary.simpleMessage("On The Way"),
     "onboarding1_text": MessageLookupByLibrary.simpleMessage(
@@ -205,6 +208,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "turnloc_title": MessageLookupByLibrary.simpleMessage(
       "Turn on your location",
+    ),
+    "unExpectedError": MessageLookupByLibrary.simpleMessage(
+      "Unexpected Error Occured!!",
     ),
     "unread": MessageLookupByLibrary.simpleMessage("Unread"),
     "update": MessageLookupByLibrary.simpleMessage("Update"),
