@@ -4,4 +4,6 @@ class NetworkConstants {
   static String auth = "Auth/";
   static String login = "${auth}Login";
   static String signUp = "${auth}SignUp";
+  static String resetPassword = "${auth}ResetPassword";
+  static String newPassword = "${auth}NewPassword";
 }

@@ -8,7 +8,7 @@ import 'package:food_tek/features/authintication/login/data/data_source/login_da
 import 'package:food_tek/features/authintication/login/data/repositories/login_repository_imp.dart';
 import 'package:food_tek/features/authintication/login/domain/use_cases/login_use_case.dart';
 import 'package:food_tek/features/authintication/login/presentation/cubit/login_cubit.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
+import 'package:food_tek/features/authintication/shared/widgets/auth_heading_widget.dart';
 import 'package:food_tek/features/authintication/login/presentation/screens/widgets/continue_with_widget.dart';
 import 'package:food_tek/features/authintication/login/presentation/screens/widgets/login_form_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
