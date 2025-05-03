@@ -4,10 +4,11 @@ import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/routes/routes.dart';
 import 'package:food_tek/core/themes/app_theme.dart';
 import 'package:food_tek/core/themes/dark_app_theme.dart';
-import 'package:food_tek/features/authintication/views/confirm_reset_password_page.dart';
 import 'package:food_tek/features/authintication/login/presentation/screens/login_page.dart';
-import 'package:food_tek/features/authintication/views/reset_password_page.dart';
+import 'package:food_tek/features/authintication/resetpassword/presentation/screens/confirm_reset_password_page.dart';
+import 'package:food_tek/features/authintication/resetpassword/presentation/screens/reset_password_page.dart';
 import 'package:food_tek/features/authintication/signup/presentation/screens/sign_up_page.dart';
+
 import 'package:food_tek/features/cart/views/cart_page.dart';
 import 'package:food_tek/features/checkout/views/congrats_check_out_page.dart';
 import 'package:food_tek/features/checkout/views/check_out_page.dart';

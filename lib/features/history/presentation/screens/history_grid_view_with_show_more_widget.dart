@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:food_tek/core/constants/app_colors.dart';
 import 'package:food_tek/core/constants/app_image_strings.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/history/views/widgets/history_item_widget.dart';
+import 'package:food_tek/features/history/presentation/screens/widgets/history_item_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
+import 'package:food_tek/generated/l10n.dart';
 
 class HistoryGridViewWithShowMoreWidget extends StatefulWidget {
   const HistoryGridViewWithShowMoreWidget({super.key});
@@ -86,7 +87,7 @@ class _HistoryGridViewWithShowMoreWidgetState
               child: Text(
                 style: Theme.of(context).textTheme.labelMedium!.copyWith(
                     color: AppColors.mainColor, fontWeight: FontWeight.w600),
-                "load more...",
+                "${S.of(context).load_more} ...",
               )),
         ],
       ),

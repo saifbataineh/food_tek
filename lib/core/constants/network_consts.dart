@@ -6,4 +6,5 @@ class NetworkConstants {
   static String signUp = "${auth}SignUp";
   static String resetPassword = "${auth}ResetPassword";
   static String newPassword = "${auth}NewPassword";
+  static String history = "getHistory";
 }

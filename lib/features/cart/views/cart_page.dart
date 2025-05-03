@@ -8,7 +8,7 @@ import 'package:food_tek/core/widgets/current_location_widget.dart';
 import 'package:food_tek/core/widgets/cart_details_container_widget.dart';
 import 'package:food_tek/features/cart/views/widgets/cart_item_widget.dart';
 import 'package:food_tek/features/cart/views/widgets/empty_page_widget.dart';
-import 'package:food_tek/features/history/views/widgets/history_grid_view_with_show_more_widget.dart';
+import 'package:food_tek/features/history/presentation/screens/history_grid_view_with_show_more_widget.dart';
 import 'package:food_tek/features/home/models/food_model.dart';
 import 'package:food_tek/generated/l10n.dart';
 import 'package:google_fonts/google_fonts.dart';

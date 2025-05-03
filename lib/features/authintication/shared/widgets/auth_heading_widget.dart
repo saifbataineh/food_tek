@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
-import 'package:food_tek/features/authintication/views/widgets/sub_head_line_text_widget.dart';
+import 'package:food_tek/features/authintication/shared/widgets/sub_head_line_text_widget.dart';
 
 class AuthHeadingWidget extends StatelessWidget {
   const AuthHeadingWidget(

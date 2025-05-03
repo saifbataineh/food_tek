@@ -9,7 +9,7 @@ import 'package:food_tek/features/authintication/signup/data/data_source/signup_
 import 'package:food_tek/features/authintication/signup/data/repositories/signup_repository_imp.dart';
 import 'package:food_tek/features/authintication/signup/domain/use_cases/signup_use_case.dart';
 import 'package:food_tek/features/authintication/signup/presentation/cubit/signup_cubit.dart';
-import 'package:food_tek/features/authintication/views/widgets/auth_heading_widget.dart';
+import 'package:food_tek/features/authintication/shared/widgets/auth_heading_widget.dart';
 import 'package:food_tek/features/authintication/signup/presentation/screens/widgets/sign_up_form_widget.dart';
 import 'package:food_tek/generated/l10n.dart';
 

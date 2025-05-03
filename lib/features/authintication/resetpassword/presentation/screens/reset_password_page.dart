@@ -6,7 +6,7 @@ import 'package:food_tek/core/services/app_navigator_service.dart';
 import 'package:food_tek/core/services/show_dialog_service.dart';
 import 'package:food_tek/core/utils/responsive_height_width.dart';
 import 'package:food_tek/core/widgets/custom_form_field.dart';
-import 'package:food_tek/features/authintication/views/widgets/pin_code_field.dart';
+import 'package:food_tek/features/authintication/shared/widgets/pin_code_field.dart';
 import 'package:food_tek/generated/l10n.dart';
 
 class ResetPasswordPage extends StatelessWidget {
